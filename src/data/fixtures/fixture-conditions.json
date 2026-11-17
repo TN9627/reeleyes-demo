@@ -1,0 +1,1006 @@
+[
+  {
+    "spotId": 1,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 23.33,
+      "highC": 26.11,
+      "lowC": 13.33,
+      "sky": "Sunny",
+      "windMph": 6,
+      "windDirection": "E",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1018.63,
+      "trend": "falling",
+      "change3hHpa": -1.35,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.79
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.79
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1019.59
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1019.4
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1019.21
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1019.01
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.82
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1018.63
+        }
+      ],
+      "station": {
+        "name": "Phoenix Sky Harbor",
+        "code": "KPHX",
+        "distanceMi": 3
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 2,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 23.33,
+      "highC": 26.11,
+      "lowC": 13.33,
+      "sky": "Sunny",
+      "windMph": 5,
+      "windDirection": "E",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1018.63,
+      "trend": "falling",
+      "change3hHpa": -1.35,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.79
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.79
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1019.59
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1019.4
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1019.21
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1019.01
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.82
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1018.63
+        }
+      ],
+      "station": {
+        "name": "Phoenix Sky Harbor",
+        "code": "KPHX",
+        "distanceMi": 4
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 3,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 22.22,
+      "highC": 25.56,
+      "lowC": 11.11,
+      "sky": "Sunny",
+      "windMph": 4,
+      "windDirection": "NE",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.95,
+      "trend": "falling",
+      "change3hHpa": -1.69,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.43
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.22
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1019.22
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1019.01
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.8
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.37
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.16
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.95
+        }
+      ],
+      "station": {
+        "name": "Falcon Field, Mesa",
+        "code": "KFFZ",
+        "distanceMi": 14
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": {
+      "cfs": 388,
+      "trend": "steady",
+      "change3hCfs": 4,
+      "observedAt": "2026-11-07T16:26:00Z",
+      "source": "USGS 09502000, below Stewart Mountain Dam"
+    },
+    "waterTemp": {
+      "c": 16.11,
+      "observedAt": "2026-11-07T16:26:00Z",
+      "source": "USGS 09502000, below Stewart Mountain Dam"
+    }
+  },
+  {
+    "spotId": 4,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, a breeze.",
+      "reasons": [
+        "Pressure falling slowly",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 22.78,
+      "highC": 25.56,
+      "lowC": 12.22,
+      "sky": "Sunny",
+      "windMph": 9,
+      "windDirection": "SW",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1018.29,
+      "trend": "falling",
+      "change3hHpa": -1.02,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.3
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.13
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.13
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.96
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.8
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.8
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.63
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.46
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1018.29
+        }
+      ],
+      "station": {
+        "name": "Deer Valley Airport",
+        "code": "KDVT",
+        "distanceMi": 16
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": {
+      "ft": 1672.4,
+      "change24hFt": -0.04,
+      "observedAt": "2026-11-07T10:41:00Z",
+      "source": "Central Arizona Project"
+    },
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 5,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 21.67,
+      "highC": 25,
+      "lowC": 10.56,
+      "sky": "Sunny",
+      "windMph": 7,
+      "windDirection": "E",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.95,
+      "trend": "falling",
+      "change3hHpa": -1.69,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.43
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.22
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1019.22
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1019.01
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.8
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.37
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.16
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.95
+        }
+      ],
+      "station": {
+        "name": "Falcon Field, Mesa",
+        "code": "KFFZ",
+        "distanceMi": 18
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 6,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling fast, a breeze.",
+      "reasons": [
+        "Pressure falling fast",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 21.11,
+      "highC": 24.44,
+      "lowC": 10,
+      "sky": "Sunny",
+      "windMph": 8,
+      "windDirection": "E",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.61,
+      "trend": "falling",
+      "change3hHpa": -2.03,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.42
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.19
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.96
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.74
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.51
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.29
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1017.84
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.61
+        }
+      ],
+      "station": {
+        "name": "Falcon Field, Mesa",
+        "code": "KFFZ",
+        "distanceMi": 24
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 7,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 21.11,
+      "highC": 24.44,
+      "lowC": 9.44,
+      "sky": "Sunny",
+      "windMph": 5,
+      "windDirection": "N",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.61,
+      "trend": "falling",
+      "change3hHpa": -1.69,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.3
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.09
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.09
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.88
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.67
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.46
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.03
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1017.82
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.61
+        }
+      ],
+      "station": {
+        "name": "Scottsdale Airport",
+        "code": "KSDL",
+        "distanceMi": 22
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": {
+      "ft": 1777.9,
+      "change24hFt": -0.16,
+      "observedAt": "2026-11-07T16:26:00Z",
+      "source": "USGS 09508300"
+    },
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 8,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling fast, a breeze.",
+      "reasons": [
+        "Pressure falling fast",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 20,
+      "highC": 23.33,
+      "lowC": 7.78,
+      "sky": "Mostly sunny",
+      "windMph": 11,
+      "windDirection": "SW",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1016.93,
+      "trend": "falling",
+      "change3hHpa": -2.37,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.3
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.07
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1018.83
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.59
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.36
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1017.88
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1017.64
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1017.17
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1016.93
+        }
+      ],
+      "station": {
+        "name": "Payson Airport",
+        "code": "KPAN",
+        "distanceMi": 36
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 9,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "A fair day: pressure steady, a breeze.",
+      "reasons": [
+        "Pressure steady",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 14.44,
+      "highC": 17.78,
+      "lowC": 0,
+      "sky": "Clear",
+      "windMph": 8,
+      "windDirection": "W",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1019.64,
+      "trend": "steady",
+      "change3hHpa": -0.34,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1019.98
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1019.64
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1019.64
+        }
+      ],
+      "station": {
+        "name": "Prescott Regional",
+        "code": "KPRC",
+        "distanceMi": 9
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 10,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Fish may be slow: pressure rising slowly, a breeze.",
+      "reasons": [
+        "Pressure rising slowly",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 6.67,
+      "highC": 12.22,
+      "lowC": -4.44,
+      "sky": "Clear",
+      "windMph": 12,
+      "windDirection": "SW",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1022.01,
+      "trend": "rising",
+      "change3hHpa": 1.02,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1021
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1021.12
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1021.25
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1021.38
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1021.5
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1021.63
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1021.76
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1021.89
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1022.01
+        }
+      ],
+      "station": {
+        "name": "Flagstaff Pulliam",
+        "code": "KFLG",
+        "distanceMi": 6
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 11,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 23.89,
+      "highC": 26.67,
+      "lowC": 11.11,
+      "sky": "Sunny",
+      "windMph": 6,
+      "windDirection": "SE",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.27,
+      "trend": "falling",
+      "change3hHpa": -1.35,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1018.63
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1018.43
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1018.43
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.24
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.05
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1017.85
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1017.66
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1017.47
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.27
+        }
+      ],
+      "station": {
+        "name": "Tucson International",
+        "code": "KTUS",
+        "distanceMi": 5
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 12,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, light wind.",
+      "reasons": [
+        "Pressure falling slowly",
+        "Light wind"
+      ]
+    },
+    "weather": {
+      "airTempC": 22.22,
+      "highC": 25,
+      "lowC": 5,
+      "sky": "Sunny",
+      "windMph": 7,
+      "windDirection": "S",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.95,
+      "trend": "falling",
+      "change3hHpa": -1.02,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1018.96
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1018.96
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1018.76
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.76
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.56
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.36
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018.36
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1018.15
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.95
+        }
+      ],
+      "station": {
+        "name": "Nogales International",
+        "code": "KOLS",
+        "distanceMi": 15
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": null,
+    "flow": null,
+    "waterTemp": null
+  },
+  {
+    "spotId": 13,
+    "fetchedAt": "2026-11-07T16:33:00Z",
+    "refreshFailed": false,
+    "verdict": {
+      "line": "Good day to go: pressure falling slowly, a breeze.",
+      "reasons": [
+        "Pressure falling slowly",
+        "A breeze"
+      ]
+    },
+    "weather": {
+      "airTempC": 24.44,
+      "highC": 27.22,
+      "lowC": 9.44,
+      "sky": "Sunny",
+      "windMph": 10,
+      "windDirection": "W",
+      "observedAt": "2026-11-07T16:33:00Z",
+      "source": "NWS"
+    },
+    "pressure": {
+      "hpa": 1017.61,
+      "trend": "falling",
+      "change3hHpa": -1.35,
+      "series": [
+        {
+          "at": "2026-11-07T13:29:00Z",
+          "hpa": 1018.96
+        },
+        {
+          "at": "2026-11-07T13:51:30Z",
+          "hpa": 1018.77
+        },
+        {
+          "at": "2026-11-07T14:14:00Z",
+          "hpa": 1018.77
+        },
+        {
+          "at": "2026-11-07T14:36:30Z",
+          "hpa": 1018.58
+        },
+        {
+          "at": "2026-11-07T14:59:00Z",
+          "hpa": 1018.38
+        },
+        {
+          "at": "2026-11-07T15:21:30Z",
+          "hpa": 1018.19
+        },
+        {
+          "at": "2026-11-07T15:44:00Z",
+          "hpa": 1018
+        },
+        {
+          "at": "2026-11-07T16:06:30Z",
+          "hpa": 1017.8
+        },
+        {
+          "at": "2026-11-07T16:29:00Z",
+          "hpa": 1017.61
+        }
+      ],
+      "station": {
+        "name": "Wickenburg",
+        "code": "E25",
+        "distanceMi": 38
+      },
+      "observedAt": "2026-11-07T16:29:00Z",
+      "source": "NWS"
+    },
+    "lakeLevel": {
+      "ft": 1118.2,
+      "change24hFt": 0,
+      "observedAt": "2026-11-06T20:41:00Z",
+      "source": "US Army Corps of Engineers"
+    },
+    "flow": null,
+    "waterTemp": {
+      "c": 18.89,
+      "observedAt": "2026-11-06T20:41:00Z",
+      "source": "US Army Corps of Engineers"
+    }
+  }
+]

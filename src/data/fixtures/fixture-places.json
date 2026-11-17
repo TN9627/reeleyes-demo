@@ -1,0 +1,66 @@
+[
+  {
+    "id": "phoenix",
+    "label": "Phoenix",
+    "zip": "85004",
+    "lat": 33.4515,
+    "lng": -112.0697,
+    "aliases": [
+      "phoenix",
+      "85004",
+      "phx",
+      "mesa",
+      "scottsdale",
+      "85201",
+      "85251"
+    ]
+  },
+  {
+    "id": "tempe",
+    "label": "Tempe",
+    "zip": "85281",
+    "lat": 33.4255,
+    "lng": -111.94,
+    "aliases": [
+      "tempe",
+      "85281",
+      "85282"
+    ]
+  },
+  {
+    "id": "tucson",
+    "label": "Tucson",
+    "zip": "85701",
+    "lat": 32.2226,
+    "lng": -110.9747,
+    "aliases": [
+      "tucson",
+      "85701",
+      "85719"
+    ]
+  },
+  {
+    "id": "flagstaff",
+    "label": "Flagstaff",
+    "zip": "86001",
+    "lat": 35.1983,
+    "lng": -111.6513,
+    "aliases": [
+      "flagstaff",
+      "86001",
+      "flag"
+    ]
+  },
+  {
+    "id": "yuma",
+    "label": "Yuma",
+    "zip": "85364",
+    "lat": 32.6927,
+    "lng": -114.6277,
+    "aliases": [
+      "yuma",
+      "85364",
+      "85365"
+    ]
+  }
+]

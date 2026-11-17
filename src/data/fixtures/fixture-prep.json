@@ -1,0 +1,4904 @@
+[
+  {
+    "spotId": 1,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "community",
+    "rules": [
+      {
+        "id": 1,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "Two-line fishing allowed; no live baitfish"
+        },
+        "summary": "Two-line fishing allowed; no live baitfish"
+      },
+      {
+        "id": 2,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "No fishing within 100 ft of the Mill Ave dam"
+        },
+        "summary": "No fishing within 100 ft of the Mill Ave dam"
+      },
+      {
+        "id": 3,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 4,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass",
+        "kind": "bag",
+        "value": {
+          "count": 2
+        },
+        "summary": "2 per day, minimum length 13 inches"
+      },
+      {
+        "id": 5,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 6,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 5,
+        "slug": "common-carp",
+        "name": "Common carp",
+        "where": "In shallow water.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let corn or dough bait sit on the bottom and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "12 lb line",
+              "Size 6 hook",
+              "Canned corn or dough bait"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put canned corn or dough bait on the hook.",
+              "Cast it out and let it sink to the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a small fly to a carp you can see in shallow water.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or carp nymph, size 8"
+            ],
+            "steps": [
+              "Look for carp in shallow water.",
+              "Tie the fly to the end of your line.",
+              "Cast the fly near a carp you can see.",
+              "Let it sink."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 2,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "community",
+    "rules": [
+      {
+        "id": 7,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "No boats or float tubes"
+        },
+        "summary": "No boats or float tubes"
+      },
+      {
+        "id": 8,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 9,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass",
+        "kind": "bag",
+        "value": {
+          "count": 2
+        },
+        "summary": "2 per day, minimum length 13 inches"
+      },
+      {
+        "id": 10,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 11,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 3,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 12,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "Single barbless hooks recommended (not required) for released trout"
+        },
+        "summary": "Single barbless hooks recommended (not required) for released trout"
+      },
+      {
+        "id": 13,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "No live baitfish"
+        },
+        "summary": "No live baitfish"
+      },
+      {
+        "id": 14,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 15,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 16,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 5,
+        "slug": "common-carp",
+        "name": "Common carp",
+        "where": "In shallow water.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let corn or dough bait sit on the bottom and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "12 lb line",
+              "Size 6 hook",
+              "Canned corn or dough bait"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put canned corn or dough bait on the hook.",
+              "Cast it out and let it sink to the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a small fly to a carp you can see in shallow water.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or carp nymph, size 8"
+            ],
+            "steps": [
+              "Look for carp in shallow water.",
+              "Tie the fly to the end of your line.",
+              "Cast the fly near a carp you can see.",
+              "Let it sink."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 6,
+        "slug": "smallmouth-bass",
+        "name": "Smallmouth bass",
+        "where": "Along rocks, and on rocky points and ledges under the water.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a soft lure on a small weighted hook and work it along the rocks.",
+            "recommended": true,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "1/8 oz jig head",
+              "Crayfish-colored soft plastic or tube jig"
+            ],
+            "steps": [
+              "Tie the jig head to the end of your line.",
+              "Put the soft plastic on the jig head.",
+              "Cast it near rocks.",
+              "Reel it back along the rocks."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "drop-shot",
+            "name": "Drop shot",
+            "summary": "Hang a soft bait on a hook above a weight, so it sits just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "6–8 lb fluorocarbon leader",
+              "Size 1 drop-shot hook",
+              "Drop-shot weight",
+              "3-inch minnow-style soft plastic or finesse worm"
+            ],
+            "steps": [
+              "Tie the leader to the end of your line.",
+              "Tie the hook onto the leader, leaving a tail of line below it.",
+              "Clip the weight to the end of that tail.",
+              "Hook on the soft plastic.",
+              "Cast to a rocky point or ledge and let the weight sit on the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or sculpin fly, size 6"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near rocks.",
+              "Let it sink.",
+              "Pull it back slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 4,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 17,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": "Striped bass",
+        "subject": "Striped bass",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 18,
+        "scope": "spot",
+        "speciesId": 2,
+        "speciesGroup": null,
+        "subject": "Largemouth bass",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day, no size limit"
+      },
+      {
+        "id": 19,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 20,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 21,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 22,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 9,
+        "slug": "flathead-catfish",
+        "name": "Flathead catfish",
+        "where": "On the bottom near deep cover, sunken trees and deep holes.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Heavy rod",
+              "20–30 lb line",
+              "4/0–7/0 circle hook",
+              "2–4 oz sliding sinker",
+              "Fresh-cut fish: bluegill, shad or carp"
+            ],
+            "steps": [
+              "Go at night.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a big chunk of fresh-cut fish on the hook, not stink bait.",
+              "Cast near sunken trees or a deep hole and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 7,
+        "slug": "striped-bass",
+        "name": "Striped bass",
+        "where": "In schools feeding near the surface, at dawn and dusk.",
+        "methods": [
+          {
+            "id": "bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on a hook and cast it out.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy spinning or casting rod",
+              "14–20 lb line",
+              "Circle hook",
+              "Fresh-cut shad or anchovy"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put a chunk of fresh-cut shad or anchovy on the hook.",
+              "Cast it out."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "spoon",
+            "name": "Spoon",
+            "summary": "Cast a heavy shiny metal lure into feeding fish and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy spinning or casting rod",
+              "14–20 lb line",
+              "3/4 oz white or chrome spoon, or a swimbait"
+            ],
+            "steps": [
+              "Go at dawn or dusk.",
+              "Look for splashing water and birds over it.",
+              "Tie the spoon to the end of your line.",
+              "Cast it into the splashing fish.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod with sinking line",
+              "White Clouser minnow"
+            ],
+            "steps": [
+              "Tie the Clouser minnow to the end of your line.",
+              "Cast it near the splashing fish.",
+              "Let it sink.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 5,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 23,
+        "scope": "spot",
+        "speciesId": 10,
+        "speciesGroup": null,
+        "subject": "Yellow bass",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 24,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 25,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 26,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 27,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 11,
+        "slug": "walleye",
+        "name": "Walleye",
+        "where": "Along rocky points.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Put a worm or leech on a weighted hook and drag it slowly along the bottom.",
+            "recommended": true,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "1/4–3/8 oz jig head",
+              "Nightcrawler or leech"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the jig head to the end of your line.",
+              "Put a nightcrawler or leech on the jig head.",
+              "Cast it out.",
+              "Drag it slowly along the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "bottom-bouncer",
+            "name": "Bottom bouncer",
+            "summary": "Pull a worm on a hook line behind a weighted wire that bumps along the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "Bottom-bouncer rig",
+              "Crawler harness (a short line with hooks)",
+              "Nightcrawler"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the bottom bouncer to your line.",
+              "Tie the crawler harness behind it.",
+              "Put a nightcrawler on the harness.",
+              "Drag it slowly along a rocky point."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod with sinking line",
+              "Clouser, size 4"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the Clouser to the end of your line.",
+              "Cast it out.",
+              "Let it sink.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 10,
+        "slug": "yellow-bass",
+        "name": "Yellow bass",
+        "where": "In schools, just off the bottom.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Size 8 hook",
+              "Bobber",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a small piece of nightcrawler on the hook.",
+              "Cast it out."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a small jig with a bit of worm and bounce it just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/16 oz white or chartreuse jig",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Put a small piece of nightcrawler on the jig.",
+              "Cast near a school of fish.",
+              "Let it sink to the bottom.",
+              "Lift and drop it just above the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small white streamer or Clouser, size 8"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near a school of fish.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 6,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 28,
+        "scope": "spot",
+        "speciesId": 10,
+        "speciesGroup": null,
+        "subject": "Yellow bass",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 29,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 30,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 31,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 11,
+        "slug": "walleye",
+        "name": "Walleye",
+        "where": "Along rocky points.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Put a worm or leech on a weighted hook and drag it slowly along the bottom.",
+            "recommended": true,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "1/4–3/8 oz jig head",
+              "Nightcrawler or leech"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the jig head to the end of your line.",
+              "Put a nightcrawler or leech on the jig head.",
+              "Cast it out.",
+              "Drag it slowly along the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "bottom-bouncer",
+            "name": "Bottom bouncer",
+            "summary": "Pull a worm on a hook line behind a weighted wire that bumps along the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "Bottom-bouncer rig",
+              "Crawler harness (a short line with hooks)",
+              "Nightcrawler"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the bottom bouncer to your line.",
+              "Tie the crawler harness behind it.",
+              "Put a nightcrawler on the harness.",
+              "Drag it slowly along a rocky point."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod with sinking line",
+              "Clouser, size 4"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the Clouser to the end of your line.",
+              "Cast it out.",
+              "Let it sink.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 10,
+        "slug": "yellow-bass",
+        "name": "Yellow bass",
+        "where": "In schools, just off the bottom.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Size 8 hook",
+              "Bobber",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a small piece of nightcrawler on the hook.",
+              "Cast it out."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a small jig with a bit of worm and bounce it just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/16 oz white or chartreuse jig",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Put a small piece of nightcrawler on the jig.",
+              "Cast near a school of fish.",
+              "Let it sink to the bottom.",
+              "Lift and drop it just above the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small white streamer or Clouser, size 8"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near a school of fish.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 7,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 32,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 33,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 34,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 5,
+        "slug": "common-carp",
+        "name": "Common carp",
+        "where": "In shallow water.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let corn or dough bait sit on the bottom and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "12 lb line",
+              "Size 6 hook",
+              "Canned corn or dough bait"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put canned corn or dough bait on the hook.",
+              "Cast it out and let it sink to the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a small fly to a carp you can see in shallow water.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or carp nymph, size 8"
+            ],
+            "steps": [
+              "Look for carp in shallow water.",
+              "Tie the fly to the end of your line.",
+              "Cast the fly near a carp you can see.",
+              "Let it sink."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 9,
+        "slug": "flathead-catfish",
+        "name": "Flathead catfish",
+        "where": "On the bottom near deep cover, sunken trees and deep holes.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Heavy rod",
+              "20–30 lb line",
+              "4/0–7/0 circle hook",
+              "2–4 oz sliding sinker",
+              "Fresh-cut fish: bluegill, shad or carp"
+            ],
+            "steps": [
+              "Go at night.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a big chunk of fresh-cut fish on the hook, not stink bait.",
+              "Cast near sunken trees or a deep hole and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 6,
+        "slug": "smallmouth-bass",
+        "name": "Smallmouth bass",
+        "where": "Along rocks, and on rocky points and ledges under the water.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a soft lure on a small weighted hook and work it along the rocks.",
+            "recommended": true,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "1/8 oz jig head",
+              "Crayfish-colored soft plastic or tube jig"
+            ],
+            "steps": [
+              "Tie the jig head to the end of your line.",
+              "Put the soft plastic on the jig head.",
+              "Cast it near rocks.",
+              "Reel it back along the rocks."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "drop-shot",
+            "name": "Drop shot",
+            "summary": "Hang a soft bait on a hook above a weight, so it sits just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "6–8 lb fluorocarbon leader",
+              "Size 1 drop-shot hook",
+              "Drop-shot weight",
+              "3-inch minnow-style soft plastic or finesse worm"
+            ],
+            "steps": [
+              "Tie the leader to the end of your line.",
+              "Tie the hook onto the leader, leaving a tail of line below it.",
+              "Clip the weight to the end of that tail.",
+              "Hook on the soft plastic.",
+              "Cast to a rocky point or ledge and let the weight sit on the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or sculpin fly, size 6"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near rocks.",
+              "Let it sink.",
+              "Pull it back slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 8,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 35,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": 15
+        },
+        "summary": "15 per day"
+      },
+      {
+        "id": 36,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass",
+        "kind": "size",
+        "value": {
+          "minIn": 13,
+          "note": "Minimum length 13 inches from Jan 1 – Apr 30"
+        },
+        "summary": "Minimum length 13 inches from Jan 1 – Apr 30"
+      },
+      {
+        "id": 37,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 38,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 5,
+        "slug": "common-carp",
+        "name": "Common carp",
+        "where": "In shallow water.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let corn or dough bait sit on the bottom and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "12 lb line",
+              "Size 6 hook",
+              "Canned corn or dough bait"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put canned corn or dough bait on the hook.",
+              "Cast it out and let it sink to the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a small fly to a carp you can see in shallow water.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or carp nymph, size 8"
+            ],
+            "steps": [
+              "Look for carp in shallow water.",
+              "Tie the fly to the end of your line.",
+              "Cast the fly near a carp you can see.",
+              "Let it sink."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 9,
+        "slug": "flathead-catfish",
+        "name": "Flathead catfish",
+        "where": "On the bottom near deep cover, sunken trees and deep holes.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Heavy rod",
+              "20–30 lb line",
+              "4/0–7/0 circle hook",
+              "2–4 oz sliding sinker",
+              "Fresh-cut fish: bluegill, shad or carp"
+            ],
+            "steps": [
+              "Go at night.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a big chunk of fresh-cut fish on the hook, not stink bait.",
+              "Cast near sunken trees or a deep hole and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 6,
+        "slug": "smallmouth-bass",
+        "name": "Smallmouth bass",
+        "where": "Along rocks, and on rocky points and ledges under the water.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a soft lure on a small weighted hook and work it along the rocks.",
+            "recommended": true,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "1/8 oz jig head",
+              "Crayfish-colored soft plastic or tube jig"
+            ],
+            "steps": [
+              "Tie the jig head to the end of your line.",
+              "Put the soft plastic on the jig head.",
+              "Cast it near rocks.",
+              "Reel it back along the rocks."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "drop-shot",
+            "name": "Drop shot",
+            "summary": "Hang a soft bait on a hook above a weight, so it sits just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium spinning rod",
+              "8–10 lb line",
+              "6–8 lb fluorocarbon leader",
+              "Size 1 drop-shot hook",
+              "Drop-shot weight",
+              "3-inch minnow-style soft plastic or finesse worm"
+            ],
+            "steps": [
+              "Tie the leader to the end of your line.",
+              "Tie the hook onto the leader, leaving a tail of line below it.",
+              "Clip the weight to the end of that tail.",
+              "Hook on the soft plastic.",
+              "Cast to a rocky point or ledge and let the weight sit on the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Crayfish or sculpin fly, size 6"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near rocks.",
+              "Let it sink.",
+              "Pull it back slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 9,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 39,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": null,
+        "subject": null,
+        "kind": "method",
+        "value": {
+          "text": "Electric motors only; no gas motors"
+        },
+        "summary": "Electric motors only; no gas motors"
+      },
+      {
+        "id": 40,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 41,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 42,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 43,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 44,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 10,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 45,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": "Walleye",
+        "subject": "Walleye",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day, 1 over 18 in"
+      },
+      {
+        "id": 46,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 47,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 48,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 11,
+        "slug": "walleye",
+        "name": "Walleye",
+        "where": "Along rocky points.",
+        "methods": [
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Put a worm or leech on a weighted hook and drag it slowly along the bottom.",
+            "recommended": true,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "1/4–3/8 oz jig head",
+              "Nightcrawler or leech"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the jig head to the end of your line.",
+              "Put a nightcrawler or leech on the jig head.",
+              "Cast it out.",
+              "Drag it slowly along the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "bottom-bouncer",
+            "name": "Bottom bouncer",
+            "summary": "Pull a worm on a hook line behind a weighted wire that bumps along the bottom.",
+            "recommended": false,
+            "bring": [
+              "Medium-light spinning rod",
+              "6–10 lb line",
+              "Bottom-bouncer rig",
+              "Crawler harness (a short line with hooks)",
+              "Nightcrawler"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the bottom bouncer to your line.",
+              "Tie the crawler harness behind it.",
+              "Put a nightcrawler on the harness.",
+              "Drag it slowly along a rocky point."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod with sinking line",
+              "Clouser, size 4"
+            ],
+            "steps": [
+              "Fish in low light or at night.",
+              "Tie the Clouser to the end of your line.",
+              "Cast it out.",
+              "Let it sink.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 10,
+        "slug": "yellow-bass",
+        "name": "Yellow bass",
+        "where": "In schools, just off the bottom.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Size 8 hook",
+              "Bobber",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a small piece of nightcrawler on the hook.",
+              "Cast it out."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a small jig with a bit of worm and bounce it just off the bottom.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/16 oz white or chartreuse jig",
+              "Small piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Put a small piece of nightcrawler on the jig.",
+              "Cast near a school of fish.",
+              "Let it sink to the bottom.",
+              "Lift and drop it just above the bottom."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small white streamer or Clouser, size 8"
+            ],
+            "steps": [
+              "Tie the fly to the end of your line.",
+              "Cast it near a school of fish.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 11,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "community",
+    "rules": [
+      {
+        "id": 49,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 50,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass",
+        "kind": "bag",
+        "value": {
+          "count": 2
+        },
+        "summary": "2 per day, minimum length 13 inches"
+      },
+      {
+        "id": 51,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 52,
+        "scope": "community",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 12,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 53,
+        "scope": "spot",
+        "speciesId": 2,
+        "speciesGroup": null,
+        "subject": "Largemouth bass",
+        "kind": "size",
+        "value": {
+          "minIn": 13,
+          "note": "Minimum length 13 inches"
+        },
+        "summary": "Minimum length 13 inches"
+      },
+      {
+        "id": 54,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Trout",
+        "subject": "Trout",
+        "kind": "bag",
+        "value": {
+          "count": 4
+        },
+        "summary": "4 per day"
+      },
+      {
+        "id": 55,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 56,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 57,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      },
+      {
+        "id": 58,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 1,
+        "slug": "rainbow-trout",
+        "name": "Rainbow trout",
+        "where": null,
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "Size 8–10 hook",
+              "Sliding sinker",
+              "18 in leader (a short piece of line)",
+              "PowerBait, rainbow or chartreuse"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the leader to the end of your line.",
+              "Tie the hook to the other end of the leader.",
+              "Put PowerBait on the hook.",
+              "Cast out and let the sinker settle on the bottom."
+            ],
+            "bite": "When the line pulls or the rod bends, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "spinner",
+            "name": "Spinner",
+            "summary": "Cast a small lure with a spinning blade and reel it back.",
+            "recommended": false,
+            "bring": [
+              "Light spinning rod",
+              "4–6 lb mono line",
+              "#1 or 1/16 oz spinner, like a Panther Martin"
+            ],
+            "steps": [
+              "Tie the spinner to the end of your line.",
+              "Cast it out.",
+              "Reel it back slowly and steadily."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Olive woolly bugger, size 10"
+            ],
+            "steps": [
+              "Tie the woolly bugger to the end of your line.",
+              "Cast it out.",
+              "Pull the line back in slowly by hand."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "spotId": 13,
+    "ruleSet": {
+      "years": "2025–26",
+      "sourceUrl": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf"
+    },
+    "layer": "statewide",
+    "rules": [
+      {
+        "id": 59,
+        "scope": "spot",
+        "speciesId": null,
+        "speciesGroup": "Crappie",
+        "subject": "Crappie",
+        "kind": "bag",
+        "value": {
+          "count": 25
+        },
+        "summary": "25 per day"
+      },
+      {
+        "id": 60,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Bass",
+        "subject": "Bass (largemouth, smallmouth)",
+        "kind": "bag",
+        "value": {
+          "count": 6
+        },
+        "summary": "6 per day"
+      },
+      {
+        "id": 61,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Catfish",
+        "subject": "Catfish (channel, flathead)",
+        "kind": "bag",
+        "value": {
+          "count": 10
+        },
+        "summary": "10 per day"
+      },
+      {
+        "id": 62,
+        "scope": "statewide",
+        "speciesId": null,
+        "speciesGroup": "Sunfish",
+        "subject": "Sunfish",
+        "kind": "bag",
+        "value": {
+          "count": null
+        },
+        "summary": "No limit"
+      }
+    ],
+    "gear": [
+      {
+        "speciesId": 4,
+        "slug": "bluegill",
+        "name": "Bluegill",
+        "where": "Near weeds.",
+        "methods": [
+          {
+            "id": "bobber",
+            "name": "Bobber",
+            "summary": "Hang bait under a bobber and wait for the bobber to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "Size 10 hook",
+              "Small bobber",
+              "Piece of nightcrawler"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Clip the bobber onto the line above the hook.",
+              "Put a piece of nightcrawler on the hook.",
+              "Cast near weeds."
+            ],
+            "bite": "When the bobber goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "jig",
+            "name": "Jig",
+            "summary": "Cast a tiny jig and reel it back slowly so it swims.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4 lb line",
+              "1/64 oz tube jig"
+            ],
+            "steps": [
+              "Tie the jig to the end of your line.",
+              "Cast it past weeds or other cover.",
+              "Reel it back slowly so it swims."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a light fly that floats on the water like an insect.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Foam spider, size 12"
+            ],
+            "steps": [
+              "Tie the foam spider to the end of your line.",
+              "Cast it near weeds.",
+              "Let it sit on the water."
+            ],
+            "bite": "If it disappears, lift the rod."
+          }
+        ]
+      },
+      {
+        "speciesId": 3,
+        "slug": "channel-catfish",
+        "name": "Channel catfish",
+        "where": "On the bottom, and off the deep side of points at dusk.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Hot dog, chicken liver or stink bait"
+            ],
+            "steps": [
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put hot dog, chicken liver or stink bait on the hook.",
+              "Cast out and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          },
+          {
+            "id": "cut-bait",
+            "name": "Cut bait",
+            "summary": "Put a chunk of fresh fish on the bottom where catfish feed at dusk.",
+            "recommended": false,
+            "bring": [
+              "Medium rod",
+              "10–15 lb line",
+              "Size 2–4 circle hook",
+              "1/2 oz sliding sinker",
+              "Cut shad"
+            ],
+            "steps": [
+              "Go at dusk.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a chunk of cut shad on the hook.",
+              "Cast off the deep side of a point and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 8,
+        "slug": "crappie",
+        "name": "Crappie",
+        "where": "Around brush and docks.",
+        "methods": [
+          {
+            "id": "float",
+            "name": "Float",
+            "summary": "Hang a small jig under a float and wait for the float to dip.",
+            "recommended": true,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "1/32 oz marabou or tube jig",
+              "Small float"
+            ],
+            "steps": [
+              "Go in early spring or fall, when they bite best.",
+              "Tie the jig to the end of your line.",
+              "Clip the float onto the line above the jig.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "slip-float",
+            "name": "Slip float",
+            "summary": "Hang a jig under a float that slides, so you can set how deep the jig hangs.",
+            "recommended": false,
+            "bring": [
+              "Ultralight rod",
+              "4–6 lb line",
+              "Float stopper",
+              "Slip float",
+              "1.5 in tube or curly-tail jig"
+            ],
+            "steps": [
+              "Tie the float stopper onto your line.",
+              "Slide the slip float onto your line.",
+              "Tie the jig to the end of your line.",
+              "Slide the stopper so the jig hangs at the depth the fish are holding.",
+              "Cast near brush or a dock."
+            ],
+            "bite": "When the float goes under, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a fly that looks like a small fish or creature and pull it back by hand.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Small streamer, size 10"
+            ],
+            "steps": [
+              "Tie the streamer to the end of your line.",
+              "Cast it near brush or a dock.",
+              "Pull it back in short pulls."
+            ],
+            "bite": "If you feel a pull or the line stops, lift the rod and pull the line tight."
+          }
+        ]
+      },
+      {
+        "speciesId": 9,
+        "slug": "flathead-catfish",
+        "name": "Flathead catfish",
+        "where": "On the bottom near deep cover, sunken trees and deep holes.",
+        "methods": [
+          {
+            "id": "bottom",
+            "name": "Bottom",
+            "summary": "Let bait rest on the bottom with a sinker and wait for a bite.",
+            "recommended": true,
+            "bring": [
+              "Heavy rod",
+              "20–30 lb line",
+              "4/0–7/0 circle hook",
+              "2–4 oz sliding sinker",
+              "Fresh-cut fish: bluegill, shad or carp"
+            ],
+            "steps": [
+              "Go at night.",
+              "Slide the sinker onto your line.",
+              "Tie the hook to the end of your line.",
+              "Put a big chunk of fresh-cut fish on the hook, not stink bait.",
+              "Cast near sunken trees or a deep hole and let it settle on the bottom."
+            ],
+            "bite": "When the rod bends and stays bent, reel in steadily.",
+            "requirement": null
+          }
+        ]
+      },
+      {
+        "speciesId": 2,
+        "slug": "largemouth-bass",
+        "name": "Largemouth bass",
+        "where": "Near reeds and docks.",
+        "methods": [
+          {
+            "id": "worm",
+            "name": "Plastic worm",
+            "summary": "Cast a soft plastic worm with no weight and let it sink slowly.",
+            "recommended": true,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Worm hook",
+              "Green-pumpkin Senko"
+            ],
+            "steps": [
+              "Tie the hook to the end of your line.",
+              "Put the Senko on the hook.",
+              "Cast it near reeds or docks.",
+              "Let it sink slowly."
+            ],
+            "bite": "If the line twitches or moves off, lift the rod and reel in.",
+            "requirement": null
+          },
+          {
+            "id": "crankbait",
+            "name": "Crankbait",
+            "summary": "Cast a plastic lure that dives as you reel it back.",
+            "recommended": false,
+            "bring": [
+              "Medium-heavy casting rod",
+              "12–15 lb fluorocarbon line",
+              "Squarebill crankbait"
+            ],
+            "steps": [
+              "Go at first light.",
+              "Tie the crankbait to the end of your line.",
+              "Cast it along rocks.",
+              "Reel it back."
+            ],
+            "bite": "If you feel a tug, lift the rod and keep reeling.",
+            "requirement": null
+          },
+          {
+            "id": "fly",
+            "name": "Fly",
+            "summary": "Cast a floating bug and make it pop on the surface.",
+            "recommended": false,
+            "requirement": "Needs a fly rod",
+            "bring": [
+              "Fly rod",
+              "Deer-hair popper"
+            ],
+            "steps": [
+              "Go at dawn.",
+              "Tie the popper to the end of your line.",
+              "Cast it near reeds or docks.",
+              "Pull the line in short tugs so it pops on the surface."
+            ],
+            "bite": "If a fish takes the fly, lift the rod."
+          }
+        ]
+      }
+    ]
+  }
+]

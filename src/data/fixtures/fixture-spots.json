@@ -1,0 +1,1708 @@
+[
+  {
+    "id": 1,
+    "name": "Tempe Town Lake",
+    "kind": "community_pond",
+    "communityClass": "lake",
+    "lat": 33.4329,
+    "lng": -111.9364,
+    "county": "Maricopa",
+    "speciesIds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "lastStockedOn": "2026-11-02",
+    "nextStockingOn": null,
+    "isFree": true,
+    "hours": {
+      "summary": "Open 6 am – 10 pm",
+      "opensAt": "06:00",
+      "closesAt": "22:00"
+    },
+    "speciesNote": "Rainbow trout: stocked Nov–Mar.",
+    "stockingNote": "Every 2 weeks through March",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      },
+      {
+        "id": 5,
+        "name": "Common carp",
+        "slug": "common-carp",
+        "group": "Other"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-11-02"
+      }
+    ],
+    "hoursDetail": [
+      "Fishing allowed from shore, all marked areas",
+      "No fishing from the pedestrian bridges"
+    ],
+    "feeNote": null,
+    "photo": {
+      "key": "spots/150/1",
+      "width": 1206,
+      "height": 905,
+      "title": "Tempe Town Lake and the Tempe skyline from the air",
+      "author": "FSXIV",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Tempe_Town_Lake_-_panoramio.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/150/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Tempe Town Lake and the Tempe skyline from the air",
+        "author": "FSXIV",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Tempe_Town_Lake_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/150/2",
+        "width": 1206,
+        "height": 1821,
+        "title": "Tempe Town Lake with the pedestrian bridge",
+        "author": "davidpinter",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Tempe_Town_Lake,_Tempe,_Arizona_-_panoramio_(2).jpg"
+        }
+      },
+      {
+        "key": "spots/150/3",
+        "width": 1206,
+        "height": 1821,
+        "title": "The Tempe Town Lake rail bridge",
+        "author": "davidpinter",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Tempe_Town_Lake_Train_Bridge_Crossing,_Tempe,_Arizona_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/150/4",
+        "width": 1206,
+        "height": 1821,
+        "title": "Tempe Town Lake and the pedestrian bridge",
+        "author": "davidpinter",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Tempe_Town_Lake_Walk_Bridge,_Tempe,_Arizona_-_panoramio.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Papago Ponds",
+    "kind": "community_pond",
+    "communityClass": "pond",
+    "lat": 33.456,
+    "lng": -111.9466,
+    "county": "Maricopa",
+    "speciesIds": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "lastStockedOn": "2026-10-26",
+    "nextStockingOn": null,
+    "isFree": true,
+    "hours": {
+      "summary": "Open 5 am – 11 pm",
+      "opensAt": "05:00",
+      "closesAt": "23:00"
+    },
+    "speciesNote": "Rainbow trout: stocked Nov–Mar.",
+    "stockingNote": "Every 2 weeks through March",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-10-26"
+      }
+    ],
+    "hoursDetail": [
+      "Three connected ponds, shore only",
+      "Pond 1 is closest to parking"
+    ],
+    "feeNote": null,
+    "photo": {
+      "key": "spots/1358/1",
+      "width": 1206,
+      "height": 804,
+      "title": "Papago Park pond with the buttes beyond",
+      "author": "Chris English",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:2013,_Papago_Park,_Papago_Buttes,_Hole_in_the_Rock,_Camelback_Mountain_in_the_Distance_-_panoramio.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/1358/1",
+        "width": 1206,
+        "height": 804,
+        "title": "Papago Park pond with the buttes beyond",
+        "author": "Chris English",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:2013,_Papago_Park,_Papago_Buttes,_Hole_in_the_Rock,_Camelback_Mountain_in_the_Distance_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/0/1",
+        "width": 1206,
+        "height": 804,
+        "title": "Papago Ponds from the east bank",
+        "author": "Sample Author",
+        "license": {
+          "name": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sample.jpg"
+        }
+      },
+      {
+        "key": "spots/1358/2",
+        "width": 1206,
+        "height": 905,
+        "title": "Papago Park pond at sunset",
+        "author": "Chris English",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:2014,_Last_Light_on_a_Papago_Park_Pond_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/1358/3",
+        "width": 1206,
+        "height": 905,
+        "title": "Palms around a Papago Park pond",
+        "author": "Dougtone",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Papago_Park_-_Phoenix,_Arizona_-_4263766831.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Lower Salt River",
+    "kind": "river",
+    "communityClass": null,
+    "lat": 33.5486,
+    "lng": -111.6636,
+    "county": "Maricopa",
+    "speciesIds": [
+      1,
+      2,
+      6,
+      3,
+      5
+    ],
+    "lastStockedOn": "2026-11-02",
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": "Rainbow trout: stocked Oct–Mar.",
+    "stockingNote": "Weekly through March",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 6,
+        "name": "Smallmouth bass",
+        "slug": "smallmouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 5,
+        "name": "Common carp",
+        "slug": "common-carp",
+        "group": "Other"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-11-02"
+      }
+    ],
+    "hoursDetail": [
+      "Tonto Pass required to park at any recreation site",
+      "Water Users and Phon D. Sutton are the main access points"
+    ],
+    "feeNote": "Tonto Pass $8/day",
+    "photo": {
+      "key": "spots/132/1",
+      "width": 1206,
+      "height": 905,
+      "title": "The Lower Salt River at sunrise",
+      "author": "Z Glyph",
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Sunrise_Reflections,_Lower_Salt_River,_December_2012_-_panoramio.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/132/1",
+        "width": 1206,
+        "height": 905,
+        "title": "The Lower Salt River at sunrise",
+        "author": "Z Glyph",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sunrise_Reflections,_Lower_Salt_River,_December_2012_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/132/2",
+        "width": 1206,
+        "height": 905,
+        "title": "Lower Salt River and Sonoran desert shore",
+        "author": "Z Glyph",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sonora_Flats,_Lower_Salt_River,_March_2013_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/132/3",
+        "width": 1206,
+        "height": 905,
+        "title": "Lower Salt River beneath the Goldfield cliffs",
+        "author": "Z Glyph",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Goldfield_Views,_Lower_Salt_River,_January_2013_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/132/4",
+        "width": 1206,
+        "height": 905,
+        "title": "Mist over a riffle on the Lower Salt River",
+        "author": "Z Glyph",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Mist_dancing_over_a_riffle,_Lower_Salt_River,_December_2012_-_panoramio.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lake Pleasant",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 33.853,
+    "lng": -112.27,
+    "county": "Maricopa",
+    "speciesIds": [
+      7,
+      2,
+      8,
+      3,
+      9,
+      4
+    ],
+    "lastStockedOn": null,
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": null,
+    "stockingNote": null,
+    "species": [
+      {
+        "id": 7,
+        "name": "Striped bass",
+        "slug": "striped-bass",
+        "group": "Striped bass"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 9,
+        "name": "Flathead catfish",
+        "slug": "flathead-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [],
+    "hoursDetail": [
+      "Regional park gate staffed 6 am – 8 pm",
+      "Pleasant Harbor Marina ramp open 24 hours"
+    ],
+    "feeNote": "$7 per vehicle",
+    "photo": {
+      "key": "spots/349/1",
+      "width": 1206,
+      "height": 801,
+      "title": "Lake Pleasant at low water",
+      "author": "Cathixx",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Lake_Pleasant,_Arizona_02.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/349/1",
+        "width": 1206,
+        "height": 801,
+        "title": "Lake Pleasant at low water",
+        "author": "Cathixx",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lake_Pleasant,_Arizona_02.jpg"
+        }
+      },
+      {
+        "key": "spots/349/2",
+        "width": 1206,
+        "height": 678,
+        "title": "Lake Pleasant looking east",
+        "author": "Tia Peterson",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:East-facing_view_of_Lake_Pleasant.jpg"
+        }
+      },
+      {
+        "key": "spots/349/3",
+        "width": 1206,
+        "height": 804,
+        "title": "Lake Pleasant from the Pipeline Canyon Trail",
+        "author": "John Menard",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lake_Pleasant_from_Pipeline_Canyon_Trail.jpg"
+        }
+      },
+      {
+        "key": "spots/349/4",
+        "width": 1206,
+        "height": 801,
+        "title": "Lake Pleasant shoreline and islands",
+        "author": "Cathixx",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lake_Pleasant,_Arizona_01.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Saguaro Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 33.5652,
+    "lng": -111.535,
+    "county": "Maricopa",
+    "speciesIds": [
+      2,
+      10,
+      11,
+      1,
+      3,
+      4
+    ],
+    "lastStockedOn": "2026-10-19",
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": "Rainbow trout: stocked in winter.",
+    "stockingNote": "Monthly, November–February",
+    "species": [
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 10,
+        "name": "Yellow bass",
+        "slug": "yellow-bass",
+        "group": "Other"
+      },
+      {
+        "id": 11,
+        "name": "Walleye",
+        "slug": "walleye",
+        "group": "Walleye"
+      },
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-10-19"
+      }
+    ],
+    "hoursDetail": [
+      "Tonto Pass required to park",
+      "Butcher Jones shoreline is the best walk-in access"
+    ],
+    "feeNote": "Tonto Pass $8/day",
+    "photo": {
+      "key": "spots/130/1",
+      "width": 1206,
+      "height": 622,
+      "title": "Saguaro Lake at dawn from the shore",
+      "author": "Z Glyph",
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Saguaro_Lake_AM,_Tonto_National_Forest,_March_2014_-_panoramio.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/130/1",
+        "width": 1206,
+        "height": 622,
+        "title": "Saguaro Lake at dawn from the shore",
+        "author": "Z Glyph",
+        "license": {
+          "name": "CC BY 3.0",
+          "url": "https://creativecommons.org/licenses/by/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Saguaro_Lake_AM,_Tonto_National_Forest,_March_2014_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/130/2",
+        "width": 1206,
+        "height": 905,
+        "title": "Saguaro Lake and the marina",
+        "author": "2candle",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Saguaro_Lake-Arizona-and_marina.jpg"
+        }
+      },
+      {
+        "key": "spots/130/3",
+        "width": 1206,
+        "height": 804,
+        "title": "Boating on Saguaro Lake",
+        "author": "Nicholas Hartmann",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Saguaro_Lake_boating_1.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Canyon Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 33.5359,
+    "lng": -111.4269,
+    "county": "Maricopa",
+    "speciesIds": [
+      2,
+      10,
+      11,
+      1,
+      3
+    ],
+    "lastStockedOn": "2026-10-05",
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": "Rainbow trout: stocked in winter.",
+    "stockingNote": "Monthly, October–March",
+    "species": [
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 10,
+        "name": "Yellow bass",
+        "slug": "yellow-bass",
+        "group": "Other"
+      },
+      {
+        "id": 11,
+        "name": "Walleye",
+        "slug": "walleye",
+        "group": "Walleye"
+      },
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-10-05"
+      }
+    ],
+    "hoursDetail": [
+      "Acacia and Palo Verde day-use sites close at 10 pm",
+      "Tonto Pass required to park"
+    ],
+    "feeNote": "Tonto Pass $8/day",
+    "photo": {
+      "key": "spots/19/1",
+      "width": 1206,
+      "height": 804,
+      "title": "Canyon Lake and the Superstition foothills",
+      "author": "dconvertini",
+      "license": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Canyon_Lake,_Arizona,_USA_5-2024_5.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/19/1",
+        "width": 1206,
+        "height": 804,
+        "title": "Canyon Lake and the Superstition foothills",
+        "author": "dconvertini",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Canyon_Lake,_Arizona,_USA_5-2024_5.jpg"
+        }
+      },
+      {
+        "key": "spots/19/2",
+        "width": 1206,
+        "height": 541,
+        "title": "Canyon Lake from Canyon Lake Vista",
+        "author": "Beyond My Ken",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:2021_Canyon_Lake,_Arizona,_from_Canyon_Lake_Vista.jpg"
+        }
+      },
+      {
+        "key": "spots/19/3",
+        "width": 1206,
+        "height": 810,
+        "title": "Canyon Lake in early spring",
+        "author": "Alan Stark",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Canyon_Lake_2_(4468814742).jpg"
+        }
+      },
+      {
+        "key": "spots/19/4",
+        "width": 1206,
+        "height": 905,
+        "title": "A sheltered arm of Canyon Lake",
+        "author": "Alan Levine",
+        "license": {
+          "name": "CC BY 2.0",
+          "url": "https://creativecommons.org/licenses/by/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Small_Arm_of_Canyon_Lake_(5612201544).jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Bartlett Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 33.8186,
+    "lng": -111.6336,
+    "county": "Maricopa",
+    "speciesIds": [
+      2,
+      6,
+      8,
+      9,
+      3,
+      5
+    ],
+    "lastStockedOn": null,
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": null,
+    "stockingNote": null,
+    "species": [
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 6,
+        "name": "Smallmouth bass",
+        "slug": "smallmouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 9,
+        "name": "Flathead catfish",
+        "slug": "flathead-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 5,
+        "name": "Common carp",
+        "slug": "common-carp",
+        "group": "Other"
+      }
+    ],
+    "stocking": [],
+    "hoursDetail": [
+      "Tonto Pass required to park",
+      "Marina store 7 am – 5 pm"
+    ],
+    "feeNote": "Tonto Pass $8/day",
+    "photo": {
+      "key": "spots/216/1",
+      "width": 1206,
+      "height": 869,
+      "title": "Bartlett Lake coves and desert hills",
+      "author": "Scotwriter21",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Bartlett_Lake_SW02.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/216/1",
+        "width": 1206,
+        "height": 869,
+        "title": "Bartlett Lake coves and desert hills",
+        "author": "Scotwriter21",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Bartlett_Lake_SW02.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Roosevelt Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 33.6714,
+    "lng": -111.1555,
+    "county": "Gila",
+    "speciesIds": [
+      2,
+      6,
+      8,
+      9,
+      3,
+      5
+    ],
+    "lastStockedOn": null,
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": null,
+    "stockingNote": null,
+    "species": [
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 6,
+        "name": "Smallmouth bass",
+        "slug": "smallmouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 9,
+        "name": "Flathead catfish",
+        "slug": "flathead-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 5,
+        "name": "Common carp",
+        "slug": "common-carp",
+        "group": "Other"
+      }
+    ],
+    "stocking": [],
+    "hoursDetail": [
+      "Tonto Pass required to park",
+      "Cholla and Windy Hill ramps usable at current level"
+    ],
+    "feeNote": "Tonto Pass $8/day",
+    "photo": {
+      "key": "spots/126/1",
+      "width": 1206,
+      "height": 905,
+      "title": "Roosevelt Lake from the shore",
+      "author": "Dartrider",
+      "license": {
+        "name": "Public domain",
+        "url": null
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:LakerooseveltAZ.JPG"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/126/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Roosevelt Lake from the shore",
+        "author": "Dartrider",
+        "license": {
+          "name": "Public domain",
+          "url": null
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:LakerooseveltAZ.JPG"
+        }
+      },
+      {
+        "key": "spots/126/2",
+        "width": 1206,
+        "height": 474,
+        "title": "Theodore Roosevelt Lake from lake level",
+        "author": "Philcomanforterie",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_Lake_from_lake_level.jpg"
+        }
+      },
+      {
+        "key": "spots/126/3",
+        "width": 1206,
+        "height": 563,
+        "title": "At the edge of Roosevelt Lake",
+        "author": "Alan Levine",
+        "license": {
+          "name": "CC BY 2.0",
+          "url": "https://creativecommons.org/licenses/by/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:At_The_Edge_of_Roosevelt_Lake_(9512475875).jpg"
+        }
+      },
+      {
+        "key": "spots/126/4",
+        "width": 1206,
+        "height": 905,
+        "title": "Theodore Roosevelt Dam and the lake",
+        "author": "U.S. Bureau of Reclamation",
+        "license": {
+          "name": "Public domain",
+          "url": null
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:TheodoreRooseveltDam.005.140817.jpg"
+        }
+      },
+      {
+        "key": "spots/9996/1",
+        "width": 1206,
+        "height": 923,
+        "title": "Salt River and SR 288 bridge near Roosevelt Lake",
+        "author": "Alan Stark",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Bridge_over_Salt_River_(6827992800).jpg"
+        }
+      },
+      {
+        "key": "spots/495/1",
+        "width": 1206,
+        "height": 905,
+        "title": "The Verde River below Bartlett Dam",
+        "author": "Dave's98JeepTJ",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Verde_River_flowing_South._-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/315/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Horseshoe Reservoir looking north",
+        "author": "KTrnZ",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Horseshoe_Reservoir,_AZ.jpg"
+        }
+      },
+      {
+        "key": "spots/63/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Haigler Creek pool",
+        "author": "chuckreynolds",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Haigler_Creek_Az_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/63/2",
+        "width": 1206,
+        "height": 1608,
+        "title": "Haigler Creek canyon",
+        "author": "chuckreynolds",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Haigler_Creek_Az_-_panoramio_-_chuckreynolds_(3).jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Lynx Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 34.5197,
+    "lng": -112.3858,
+    "county": "Yavapai",
+    "speciesIds": [
+      1,
+      2,
+      3,
+      8,
+      4
+    ],
+    "lastStockedOn": "2026-10-12",
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 6 am – 10 pm",
+      "opensAt": "06:00",
+      "closesAt": "22:00"
+    },
+    "speciesNote": "Rainbow trout: stocked spring–fall.",
+    "stockingNote": "Season ended Oct 18; resumes in April",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-10-12"
+      }
+    ],
+    "hoursDetail": [
+      "Electric motors only",
+      "Day-use fee at the north shore lot"
+    ],
+    "feeNote": "$5 per vehicle",
+    "photo": {
+      "key": "spots/92/1",
+      "width": 1206,
+      "height": 905,
+      "title": "Lynx Lake and the pine forest around it",
+      "author": "Benjamin Cody",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Lynx_Lake.JPG"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/92/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Lynx Lake and the pine forest around it",
+        "author": "Benjamin Cody",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lynx_Lake.JPG"
+        }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Upper Lake Mary",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 35.0547,
+    "lng": -111.5272,
+    "county": "Coconino",
+    "speciesIds": [
+      11,
+      2,
+      8,
+      10,
+      3
+    ],
+    "lastStockedOn": null,
+    "nextStockingOn": null,
+    "isFree": true,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": null,
+    "stockingNote": null,
+    "species": [
+      {
+        "id": 11,
+        "name": "Walleye",
+        "slug": "walleye",
+        "group": "Walleye"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 10,
+        "name": "Yellow bass",
+        "slug": "yellow-bass",
+        "group": "Other"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      }
+    ],
+    "stocking": [],
+    "hoursDetail": [
+      "Ramp closes when ice forms, usually in December"
+    ],
+    "feeNote": null,
+    "photo": {
+      "key": "spots/154/1",
+      "width": 1206,
+      "height": 801,
+      "title": "Upper Lake Mary in the afternoon light",
+      "author": "Brady Smith, Coconino National Forest",
+      "license": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Upper_Lake_Mary_(4017061133).jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/154/1",
+        "width": 1206,
+        "height": 801,
+        "title": "Upper Lake Mary in the afternoon light",
+        "author": "Brady Smith, Coconino National Forest",
+        "license": {
+          "name": "CC BY-SA 2.0",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Upper_Lake_Mary_(4017061133).jpg"
+        }
+      },
+      {
+        "key": "spots/154/2",
+        "width": 1206,
+        "height": 469,
+        "title": "Panorama of the Upper Lake Mary narrows",
+        "author": "U.S. Forest Service",
+        "license": {
+          "name": "Public domain",
+          "url": null
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Panorama_of_Upper_Lake_Mary_Narrows_(14703068467).jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Kennedy Lake",
+    "kind": "community_pond",
+    "communityClass": "lake",
+    "lat": 32.1817,
+    "lng": -111.0093,
+    "county": "Pima",
+    "speciesIds": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "lastStockedOn": "2026-11-02",
+    "nextStockingOn": null,
+    "isFree": true,
+    "hours": {
+      "summary": "Open 6 am – 10:30 pm",
+      "opensAt": "06:00",
+      "closesAt": "22:30"
+    },
+    "speciesNote": "Rainbow trout: stocked Nov–Mar.",
+    "stockingNote": "Every 2 weeks through March",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-11-02"
+      }
+    ],
+    "hoursDetail": [
+      "Shore fishing only",
+      "Lighted east shore"
+    ],
+    "feeNote": null,
+    "photo": null,
+    "photos": []
+  },
+  {
+    "id": 12,
+    "name": "Patagonia Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 31.4914,
+    "lng": -110.8536,
+    "county": "Santa Cruz",
+    "speciesIds": [
+      1,
+      2,
+      8,
+      3,
+      4
+    ],
+    "lastStockedOn": "2026-10-26",
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 4 am – 10 pm",
+      "opensAt": "04:00",
+      "closesAt": "22:00"
+    },
+    "speciesNote": "Rainbow trout: stocked in winter.",
+    "stockingNote": "Every 3 weeks through February",
+    "species": [
+      {
+        "id": 1,
+        "name": "Rainbow trout",
+        "slug": "rainbow-trout",
+        "group": "Trout"
+      },
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      }
+    ],
+    "stocking": [
+      {
+        "speciesId": 1,
+        "stockedOn": "2026-10-26"
+      }
+    ],
+    "hoursDetail": [
+      "State park; gate closes at 10 pm",
+      "No-wake zone east of the marina"
+    ],
+    "feeNote": "$20 per vehicle",
+    "photo": {
+      "key": "spots/111/1",
+      "width": 1206,
+      "height": 905,
+      "title": "Patagonia Lake and the hills above its shore",
+      "author": "Burley Packwood",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Patagonia_Lake.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/111/1",
+        "width": 1206,
+        "height": 905,
+        "title": "Patagonia Lake and the hills above its shore",
+        "author": "Burley Packwood",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Patagonia_Lake.jpg"
+        }
+      },
+      {
+        "key": "spots/111/2",
+        "width": 1206,
+        "height": 905,
+        "title": "Patagonia Lake looking south",
+        "author": "All Fronts Quiet",
+        "license": {
+          "name": "CC BY-SA 3.0",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Patagonia_Lake_looking_south_-_panoramio.jpg"
+        }
+      },
+      {
+        "key": "spots/111/3",
+        "width": 1206,
+        "height": 506,
+        "title": "Looking west across Patagonia Lake",
+        "author": "Fredlyfish4",
+        "license": {
+          "name": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Patagonia_Lake_2011-02-22.JPG"
+        }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Alamo Lake",
+    "kind": "lake",
+    "communityClass": null,
+    "lat": 34.235,
+    "lng": -113.58,
+    "county": "La Paz",
+    "speciesIds": [
+      2,
+      8,
+      3,
+      4,
+      9
+    ],
+    "lastStockedOn": null,
+    "nextStockingOn": null,
+    "isFree": false,
+    "hours": {
+      "summary": "Open 24 hours",
+      "opensAt": "00:00",
+      "closesAt": "24:00"
+    },
+    "speciesNote": null,
+    "stockingNote": null,
+    "species": [
+      {
+        "id": 2,
+        "name": "Largemouth bass",
+        "slug": "largemouth-bass",
+        "group": "Bass"
+      },
+      {
+        "id": 8,
+        "name": "Crappie",
+        "slug": "crappie",
+        "group": "Crappie"
+      },
+      {
+        "id": 3,
+        "name": "Channel catfish",
+        "slug": "channel-catfish",
+        "group": "Catfish"
+      },
+      {
+        "id": 4,
+        "name": "Bluegill",
+        "slug": "bluegill",
+        "group": "Sunfish"
+      },
+      {
+        "id": 9,
+        "name": "Flathead catfish",
+        "slug": "flathead-catfish",
+        "group": "Catfish"
+      }
+    ],
+    "stocking": [],
+    "hoursDetail": [
+      "State park entry station open 8 am – 5 pm",
+      "Self-pay after hours"
+    ],
+    "feeNote": "$15 per vehicle",
+    "photo": {
+      "key": "spots/0/2",
+      "width": 1206,
+      "height": 804,
+      "title": "Alamo Lake from the dam",
+      "author": "Sample Author",
+      "license": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source": {
+        "name": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Sample.jpg"
+      }
+    },
+    "photos": [
+      {
+        "key": "spots/0/2",
+        "width": 1206,
+        "height": 804,
+        "title": "Alamo Lake from the dam",
+        "author": "Sample Author",
+        "license": {
+          "name": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sample.jpg"
+        }
+      },
+      {
+        "key": "spots/0/3",
+        "width": 1206,
+        "height": 804,
+        "title": "Alamo Lake at sunset",
+        "author": "Sample Author",
+        "license": {
+          "name": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source": {
+          "name": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sample.jpg"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Rainbow trout",
+    "slug": "rainbow-trout",
+    "group": "Trout"
+  },
+  {
+    "id": 2,
+    "name": "Largemouth bass",
+    "slug": "largemouth-bass",
+    "group": "Bass"
+  },
+  {
+    "id": 3,
+    "name": "Channel catfish",
+    "slug": "channel-catfish",
+    "group": "Catfish"
+  },
+  {
+    "id": 4,
+    "name": "Bluegill",
+    "slug": "bluegill",
+    "group": "Sunfish"
+  },
+  {
+    "id": 5,
+    "name": "Common carp",
+    "slug": "common-carp",
+    "group": "Other"
+  },
+  {
+    "id": 6,
+    "name": "Smallmouth bass",
+    "slug": "smallmouth-bass",
+    "group": "Bass"
+  },
+  {
+    "id": 7,
+    "name": "Striped bass",
+    "slug": "striped-bass",
+    "group": "Striped bass"
+  },
+  {
+    "id": 8,
+    "name": "Crappie",
+    "slug": "crappie",
+    "group": "Crappie"
+  },
+  {
+    "id": 9,
+    "name": "Flathead catfish",
+    "slug": "flathead-catfish",
+    "group": "Catfish"
+  },
+  {
+    "id": 10,
+    "name": "Yellow bass",
+    "slug": "yellow-bass",
+    "group": "Other"
+  },
+  {
+    "id": 11,
+    "name": "Walleye",
+    "slug": "walleye",
+    "group": "Walleye"
+  }
+]
