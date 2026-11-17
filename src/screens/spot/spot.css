@@ -1,0 +1,643 @@
+/* The Spot screen, its hero, photo viewer, species sheet and directions dialog. Prefix: sp-. */
+
+/* ---------- Hero ---------- */
+
+.sp-hero {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  transition:
+    height 0.4s cubic-bezier(0.2, 0.9, 0.25, 1),
+    opacity 0.15s ease-out;
+}
+
+.sp-hero[data-faded] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-hero {
+    transition: opacity 0.15s ease-out;
+  }
+}
+
+.sp-hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--map-land);
+  transform-origin: bottom center;
+}
+
+.sp-hero-pager {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.sp-hero-page {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: var(--map-land);
+  overflow: hidden;
+}
+
+.sp-hero-page img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.sp-hero-page img[data-loaded] {
+  opacity: 1;
+}
+
+.sp-hero-page:focus-visible {
+  outline-offset: -4px;
+}
+
+.sp-hero-map {
+  position: absolute;
+  inset: 0;
+}
+
+.sp-hero-map[data-over-photos] {
+  animation: sp-fade 0.2s ease-out;
+}
+
+.sp-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keep the map's credit clear of the content sheet, which covers the hero's bottom 24pt. */
+.sp-map .leaflet-bottom {
+  bottom: 24px;
+}
+
+.sp-map-expand {
+  position: absolute;
+  inset: 0;
+  z-index: 500;
+}
+
+.sp-map-unavailable {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--map-land);
+}
+
+.sp-hero-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  min-height: 24px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: 0.3;
+  transition: opacity 0.15s;
+}
+
+.sp-hero-dot[data-current] {
+  opacity: 1;
+}
+
+.sp-hero-credit {
+  position: absolute;
+  right: 14px;
+  bottom: 34px;
+}
+
+.sp-hero-map-button {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  z-index: 600;
+}
+
+.sp-credit-popover {
+  position: absolute;
+  right: 0;
+  bottom: 52px;
+  z-index: 5;
+  width: 300px;
+  max-width: calc(100vw - 28px);
+  padding: 14px 16px 4px;
+  border-radius: var(--radius-card);
+  background: var(--menu-bg);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+  box-shadow: var(--glass-shadow);
+  transform-origin: bottom right;
+  animation: sp-pop 0.22s cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+
+.sp-underline {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sp-credit-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 44px;
+  color: var(--accent);
+}
+
+/* ---------- Content sheet ---------- */
+
+/* Eggshell with 24pt top corners, rising 24pt over the hero's bottom edge. */
+.sp-content {
+  position: relative;
+  z-index: 1;
+  margin-top: -24px;
+  padding: 0 calc(var(--safe-right) + var(--space-screen-inset)) 28px calc(var(--safe-left) + var(--space-screen-inset));
+  background: var(--background);
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+}
+
+.sp-title {
+  padding-top: 18px;
+}
+
+.sp-kind {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.sp-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.sp-actions > * {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.sp-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.sp-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0 8px;
+}
+
+.sp-fact:first-child {
+  padding-left: 0;
+}
+
+.sp-fact:last-child {
+  padding-right: 0;
+}
+
+.sp-fact + .sp-fact {
+  box-shadow: inset 1px 0 0 var(--hairline);
+}
+
+.sp-row-text {
+  padding: 13px 16px;
+}
+
+.sp-species-row .row-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sp-species-name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+
+.sp-show-all {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  text-align: center;
+  transition: opacity 0.12s;
+}
+
+.sp-show-all:active {
+  opacity: 0.7;
+}
+
+.sp-stocking-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 11px 16px;
+}
+
+.sp-stocking-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sp-stocking-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 16px;
+}
+
+/* ---------- Species sheet (inside the shared Sheet) ---------- */
+
+.sp-sheet-content {
+  padding: 8px 0 8px;
+}
+
+.sp-sheet-title {
+  padding: 8px 6px 0;
+}
+
+.sp-sheet-title:focus {
+  outline: none;
+}
+
+.sp-sheet-meta {
+  padding: 2px 6px 0;
+}
+
+.sp-method-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 16px;
+  text-align: left;
+  transition: opacity 0.12s;
+}
+
+.sp-press-row:active {
+  opacity: 0.6;
+}
+
+.sp-method-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sp-method-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 8px;
+  row-gap: 2px;
+}
+
+.sp-method-check {
+  flex: none;
+  width: 22px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+.sp-bring-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 16px;
+}
+
+.sp-bring-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-top: calc(0.647rem - 3px);
+  border-radius: 50%;
+  background: var(--ink-tertiary);
+}
+
+.sp-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 50px;
+  padding: 11px 16px;
+}
+
+.sp-step-number {
+  flex: none;
+  width: 1.647rem;
+  height: 1.647rem;
+  border-radius: 50%;
+  background: var(--fill-strong);
+  display: grid;
+  place-items: center;
+}
+
+.sp-step-number[data-bite] {
+  background: none;
+  box-shadow: inset 0 0 0 1.5px var(--ink-tertiary);
+}
+
+.sp-step-text {
+  flex: 1;
+  min-width: 0;
+  min-height: 1.647rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.sp-fade-in {
+  animation: sp-fade 0.25s ease-out;
+}
+
+/* ---------- Directions dialog (an iOS confirmation dialog) ---------- */
+
+.sp-dialog-root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.sp-dialog-scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--scrim);
+  animation: sp-fade 0.25s ease-out;
+  transition: opacity 0.22s ease-in;
+}
+
+.sp-dialog-root[data-closing] .sp-dialog-scrim {
+  opacity: 0;
+}
+
+.sp-dialog {
+  position: absolute;
+  left: calc(var(--safe-left) + 8px);
+  right: calc(var(--safe-right) + 8px);
+  bottom: calc(var(--safe-bottom) + 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: sp-rise 0.32s var(--ease-ios);
+  transition: transform 0.22s var(--ease-ios);
+}
+
+.sp-dialog-root[data-closing] .sp-dialog {
+  transform: translateY(calc(100% + 16px));
+}
+
+.sp-dialog-group {
+  border-radius: var(--radius-button);
+  overflow: hidden;
+  background: var(--menu-bg);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+}
+
+.sp-dialog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  text-align: center;
+  color: var(--ink-secondary);
+}
+
+.sp-dialog-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 57px;
+  padding: 0 16px;
+  border-top: 1px solid var(--hairline);
+  font-size: 1.176rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.sp-dialog-action:active {
+  background: var(--fill-strong);
+}
+
+.sp-dialog-cancel {
+  border-top: 0;
+  border-radius: var(--radius-button);
+  background: var(--card);
+  font-weight: 600;
+}
+
+/* ---------- Photo viewer (black in either appearance) ---------- */
+
+.sp-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  color: var(--on-photo);
+  color-scheme: dark;
+  animation: sp-viewer-in 0.28s cubic-bezier(0.2, 0.9, 0.25, 1);
+  transition: opacity 0.2s ease-in;
+}
+
+.sp-viewer[data-closing] {
+  opacity: 0;
+}
+
+.sp-viewer :focus-visible {
+  outline-color: var(--on-photo);
+}
+
+.sp-viewer-top {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--safe-top) calc(var(--safe-right) + 8px) 0 calc(var(--safe-left) + 8px);
+}
+
+.sp-viewer-close {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+.sp-viewer-close:active {
+  opacity: 0.6;
+}
+
+.sp-viewer-count {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+}
+
+.sp-viewer-pager {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.sp-viewer-page {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.sp-viewer-zoom {
+  width: 100%;
+  height: 100%;
+}
+
+.sp-viewer-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  transform-origin: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.sp-viewer-image[data-animating] {
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+
+.sp-viewer-bottom {
+  flex: none;
+  padding-bottom: var(--safe-bottom);
+}
+
+.sp-viewer-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px calc(var(--safe-right) + 20px) 0 calc(var(--safe-left) + 20px);
+}
+
+.sp-viewer-credit {
+  color: var(--on-photo-secondary);
+}
+
+/* 44pt thumbnails, centred while they fit, scrolling once they don't. */
+.sp-viewer-strip {
+  display: flex;
+  justify-content: safe center;
+  gap: 8px;
+  margin: 12px 0 8px;
+  padding: 0 20px;
+}
+
+.sp-viewer-thumb {
+  position: relative;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sp-viewer-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sp-viewer-thumb[data-current]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1.5px var(--on-photo);
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes sp-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes sp-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes sp-rise {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes sp-viewer-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-viewer,
+  .sp-dialog {
+    animation-name: sp-fade;
+  }
+}
