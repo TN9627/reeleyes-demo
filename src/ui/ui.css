@@ -43,8 +43,14 @@
   to { transform: translateX(100%); }
 }
 
-.layer.is-welcome {
+.layer.is-welcome,
+.bottom-chrome.is-welcome {
   --chrome-bottom: var(--tab-bar-bottom);
+}
+
+/* Welcome has no tab bar: the note alone, with no fade over Welcome's buttons. */
+.bottom-chrome.is-welcome::before {
+  content: none;
 }
 
 /* ---------- Screen and navigation bar ---------- */
