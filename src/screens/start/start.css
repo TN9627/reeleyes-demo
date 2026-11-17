@@ -1,0 +1,122 @@
+/* Start point search, prompt and sheet (Views/StartViews.swift). Area prefix: start- */
+
+/* ---------- Search ---------- */
+
+.start-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 12px;
+  background: var(--fill-strong);
+  border-radius: var(--radius-control);
+  box-shadow: inset 0 0 0 1.5px transparent;
+}
+
+.start-field-focused {
+  box-shadow: inset 0 0 0 1.5px var(--data);
+}
+
+.start-input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  appearance: none;
+}
+
+.start-input::placeholder {
+  color: var(--ink-tertiary);
+}
+
+.start-input::-webkit-search-cancel-button,
+.start-input::-webkit-search-decoration {
+  appearance: none;
+}
+
+.start-input:focus-visible {
+  outline: none;
+}
+
+.start-clear {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -12px;
+}
+
+.start-error {
+  padding: 8px 6px 0;
+}
+
+.start-list-header {
+  padding: 20px 6px 8px;
+}
+
+.start-place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+/* ---------- Prompt (Today with no start) ---------- */
+
+.start-prompt-title {
+  padding: 8px 6px 0;
+}
+
+.start-prompt-message {
+  padding: 6px 6px 14px;
+}
+
+.start-prompt-action {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+/* ---------- Sheet ---------- */
+
+.start-sheet-body {
+  padding: 8px var(--space-screen-inset) 20px;
+}
+
+.start-sheet-rows {
+  margin-bottom: 18px;
+}
+
+.start-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.start-row-glyph {
+  flex: none;
+  width: 22px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+.start-row-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.start-row-check {
+  flex: none;
+  color: var(--accent);
+}

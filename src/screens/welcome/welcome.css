@@ -1,0 +1,127 @@
+/* Welcome (Views/WelcomeView.swift). Area prefix: welcome- */
+
+.welcome-screen {
+  /* 440 pt on an 844 pt iPhone, scaled with the screen's height, 300 pt at least. */
+  --welcome-hero-h: clamp(300px, calc(100dvh * 440 / 844), 440px);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+
+.welcome-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* ---------- Hero ---------- */
+
+.welcome-hero {
+  position: relative;
+  height: var(--welcome-hero-h);
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--map-water-deep) 0%, var(--map-water) 55%, var(--background) 100%);
+}
+
+.welcome-hero-ripples {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  aspect-ratio: 560 / 440;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.welcome-hero-mark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--welcome-hero-h) * 232 / 440 - 52px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.welcome-hero-icon {
+  width: 104px;
+  height: 104px;
+  border-radius: 23.4px; /* 22.5% of the icon, the home screen's proportion */
+  box-shadow: var(--shadow-icon);
+}
+
+.welcome-hero-icon-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-appearance='light']) .welcome-hero-icon-light {
+    display: none;
+  }
+  :root:not([data-appearance='light']) .welcome-hero-icon-dark {
+    display: block;
+  }
+}
+
+:root[data-appearance='dark'] .welcome-hero-icon-light {
+  display: none;
+}
+
+:root[data-appearance='dark'] .welcome-hero-icon-dark {
+  display: block;
+}
+
+.welcome-hero-name {
+  color: var(--ink);
+  letter-spacing: -0.4px;
+  /* A label on the art: past the largest standard size it would spill out of the hero. */
+  font-size: min(1.647rem, 37px);
+}
+
+/* ---------- Text ---------- */
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px 24px;
+  text-align: center;
+}
+
+.welcome-question {
+  max-width: 320px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.welcome-today {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.welcome-pitch {
+  max-width: 300px;
+  color: var(--ink-secondary);
+  font-style: italic;
+}
+
+/* ---------- Actions: pinned to the bottom at every text size ---------- */
+
+.welcome-actions {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px var(--space-welcome-inset) calc(16px + var(--safe-bottom));
+  background: var(--background);
+}
+
+.welcome-actions > :first-child {
+  align-self: stretch;
+}
