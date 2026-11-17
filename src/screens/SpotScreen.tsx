@@ -18,7 +18,7 @@ import {
   weekLabel,
   type StockingLine,
 } from "../logic/spotFacts";
-import { toggleFavorite, useAppState } from "../state/appState";
+import { favoriteTapped, useAppState } from "../state/appState";
 import { Glyph, spotKindGlyph } from "../ui/Glyph";
 import { SpeciesImage } from "../ui/Media";
 import { BarButton, Screen } from "../ui/Screen";
@@ -102,7 +102,7 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
           glyph="saved"
           glyphVariant={saved ? "fill" : "none"}
           ariaLabel={saved ? "Remove from Saved" : "Save Spot"}
-          onClick={() => toggleFavorite(spot.id)}
+          onClick={() => favoriteTapped(spot.id, spot.name)}
         />
       }
     >

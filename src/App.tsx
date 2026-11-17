@@ -7,6 +7,7 @@ import SavedScreen from './screens/SavedScreen'
 import SpotScreen from './screens/SpotScreen'
 import TodayScreen from './screens/TodayScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
+import { SignInSheet } from './screens/signin/SignInSheet'
 import { useAppState } from './state/appState'
 import { useColorScheme } from './ui/colorScheme'
 import { historyIndex, LayerContext, navMemory, stackFor, tabForRoot, tabRoots, type Tab } from './ui/navigation'
@@ -126,6 +127,8 @@ function Tabs({ pathname }: { pathname: string }) {
         <TabBar />
         <SampleDataNote />
       </div>
+      {/* iOS RootView's `.sheet(item: $app.signInRequest)`: the heart's sign-in sheet, over any tab. */}
+      <SignInSheet />
     </div>
   )
 }

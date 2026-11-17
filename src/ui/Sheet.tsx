@@ -19,6 +19,8 @@ export interface SheetProps {
   done?: SheetAction | null
   /** The cancellation slot (Filters' Reset). */
   cancel?: SheetAction
+  /** No toolbar (the sign-in sheet): only the grabber; `title` still names the dialog. */
+  hidesTitleBar?: boolean
   children: ReactNode
 }
 
@@ -28,7 +30,7 @@ const exitMs = 280
  * An iOS sheet: rises from the bottom over a scrim, a grabber and inline title bar with
  * Reset and Done slots, Eggshell ground, its own scroll view. Drag the bar down to dismiss.
  */
-export function Sheet({ open, onClose, title, subtitle, detent = 'large', done, cancel, children }: SheetProps) {
+export function Sheet({ open, onClose, title, subtitle, detent = 'large', done, cancel, hidesTitleBar, children }: SheetProps) {
   const [mounted, setMounted] = useState(open)
   const [closing, setClosing] = useState(false)
   const [drag, setDrag] = useState(0)
@@ -110,7 +112,7 @@ export function Sheet({ open, onClose, title, subtitle, detent = 'large', done, 
       >
         <div className="sheet-bar" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp}>
           <span className="sheet-grabber" aria-hidden="true" />
-          <div className="sheet-bar-row">
+          <div className={`sheet-bar-row ${hidesTitleBar ? 'visually-hidden' : ''}`}>
             <div className="sheet-bar-side">
               {cancel && (
                 <button type="button" className="sheet-action glass t-body c-accent" onClick={cancel.onClick} disabled={cancel.disabled}>

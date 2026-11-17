@@ -1,22 +1,17 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { appearanceTitles, setAppearance, useAppState, type Appearance } from '../state/appState'
 import { Glyph } from './Glyph'
 import { BarButton, type BarButtonProps } from './Screen'
 
-export interface PickerMenuProps<T extends string | number> {
-  /** The trigger, drawn as a toolbar button. */
-  trigger: Omit<BarButtonProps, 'onClick' | 'badge'>
-  options: { value: T; label: string }[]
-  value: T
-  onChange: (value: T) => void
-}
+/** A menu's trigger, drawn as a toolbar button. */
+type MenuTrigger = Omit<BarButtonProps, 'onClick' | 'badge'>
 
 /**
- * A toolbar Menu holding one Picker (the range menu, Appearance): a glass popover under
- * the trigger with a checkmark on the current option.
+ * A toolbar Menu: the trigger opens a glass popover under it. `items` renders the menu's
+ * buttons and gets `close`. Focus goes to `[data-autofocus]`, else the first item.
  */
-export function PickerMenu<T extends string | number>({ trigger, options, value, onChange }: PickerMenuProps<T>) {
+function MenuPopover({ trigger, items }: { trigger: MenuTrigger; items: (close: () => void) => ReactNode }) {
   const [open, setOpen] = useState(false)
   const anchorRef = useRef<HTMLSpanElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -35,7 +30,8 @@ export function PickerMenu<T extends string | number>({ trigger, options, value,
 
   useEffect(() => {
     if (!open) return
-    menuRef.current?.querySelector<HTMLElement>('[aria-checked="true"]')?.focus({ preventScroll: true })
+    const menu = menuRef.current
+    ;(menu?.querySelector<HTMLElement>('[data-autofocus]') ?? menu?.querySelector<HTMLElement>('button'))?.focus({ preventScroll: true })
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setOpen(false)
     }
@@ -59,30 +55,82 @@ export function PickerMenu<T extends string | number>({ trigger, options, value,
               aria-label={trigger.ariaLabel}
               style={position ? { top: position.top, left: position.left, right: position.right, transformOrigin: position.origin } : { visibility: 'hidden' }}
             >
-              {options.map((option) => {
-                const checked = option.value === value
-                return (
-                  <button
-                    key={String(option.value)}
-                    type="button"
-                    role="menuitemradio"
-                    aria-checked={checked}
-                    className="menu-item t-body"
-                    onClick={() => {
-                      setOpen(false)
-                      if (!checked) onChange(option.value)
-                    }}
-                  >
-                    <span className="menu-check">{checked && <Glyph name="checked" size="0.95em" weight={2.4} />}</span>
-                    <span>{option.label}</span>
-                  </button>
-                )
-              })}
+              {items(() => setOpen(false))}
             </div>
           </div>,
           document.body,
         )}
     </>
+  )
+}
+
+export interface PickerMenuProps<T extends string | number> {
+  trigger: MenuTrigger
+  options: { value: T; label: string }[]
+  value: T
+  onChange: (value: T) => void
+}
+
+/** A toolbar Menu holding one Picker (the range menu, Appearance), with a checkmark on the current option. */
+export function PickerMenu<T extends string | number>({ trigger, options, value, onChange }: PickerMenuProps<T>) {
+  return (
+    <MenuPopover
+      trigger={trigger}
+      items={(close) =>
+        options.map((option) => {
+          const checked = option.value === value
+          return (
+            <button
+              key={String(option.value)}
+              type="button"
+              role="menuitemradio"
+              aria-checked={checked}
+              data-autofocus={checked || undefined}
+              className="menu-item t-body"
+              onClick={() => {
+                close()
+                if (!checked) onChange(option.value)
+              }}
+            >
+              <span className="menu-check">{checked && <Glyph name="checked" size="0.95em" weight={2.4} />}</span>
+              <span>{option.label}</span>
+            </button>
+          )
+        })
+      }
+    />
+  )
+}
+
+export interface ActionMenuItem {
+  label: string
+  /** `Button(role: .destructive)`: system red. */
+  destructive?: boolean
+  onClick: () => void
+}
+
+/** A toolbar Menu of plain buttons (Saved's account menu: Sign out, Delete account). */
+export function ActionMenu({ trigger, items }: { trigger: MenuTrigger; items: ActionMenuItem[] }) {
+  return (
+    <MenuPopover
+      trigger={trigger}
+      items={(close) =>
+        items.map((item) => (
+          <button
+            key={item.label}
+            type="button"
+            role="menuitem"
+            className={`menu-item is-action t-body ${item.destructive ? 'is-destructive' : ''}`}
+            onClick={() => {
+              close()
+              item.onClick()
+            }}
+          >
+            {item.label}
+          </button>
+        ))
+      }
+    />
   )
 }
 
