@@ -23,7 +23,7 @@ export function TabBar() {
             aria-current={selected ? 'page' : undefined}
             onClick={() => nav.selectTab(tab)}
           >
-            <Glyph name={glyph} variant={selected && glyph === 'saved' ? 'fill' : 'none'} size={25} weight={selected ? 2 : 1.85} />
+            <Glyph name={glyph} variant={glyph === 'saved' ? 'fill' : 'none'} size={25} weight={selected ? 2 : 1.85} />
             <span className="tab-bar-title">{title}</span>
           </button>
         )

@@ -9,7 +9,7 @@ It recreates the native SwiftUI app's flow (Welcome, Today, Spot, Prep, Saved, L
 What differs from the iOS app:
 
 - Drive times come from a sample table for Phoenix, Tempe, Tucson, Flagstaff and Yuma; the iOS app computes them with Apple Maps on the device. A browser location uses the nearest of those cities.
-- Maps are OpenStreetMap data with CARTO tiles instead of Apple Maps.
+- Maps are Esri basemap tiles (OpenStreetMap and other data) instead of Apple Maps.
 - Icons stand in for SF Symbols, which can't ship on the web.
 
 ## Run it
@@ -35,4 +35,4 @@ bin/deploy         # builds, then publishes dist/ to the gh-pages branch
 
 ## Credits
 
-Spot photos are from Wikimedia Commons under the licenses named in the photo viewer, with each author credited there. Map data © OpenStreetMap contributors, tiles © CARTO. Species artwork and the app icon belong to the ReelEyes project.
+Spot photos are from Wikimedia Commons under the licenses named in the photo viewer, with each author credited there. Map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors. Species artwork and the app icon belong to the ReelEyes project.

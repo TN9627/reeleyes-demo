@@ -273,13 +273,14 @@
 
 .tab-bar {
   position: absolute;
-  left: calc(20px + var(--safe-left));
-  right: calc(20px + var(--safe-right));
+  left: var(--safe-left);
+  right: var(--safe-right);
   bottom: var(--tab-bar-bottom);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* iOS 26 hugs its tabs: three ~90pt items in a centered capsule, not the full width. */
+  width: min(274px, calc(100% - 40px));
   height: var(--tab-bar-height);
-  max-width: 480px;
   margin: 0 auto;
   padding: 4px;
   border-radius: 31px;
