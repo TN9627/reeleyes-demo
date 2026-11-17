@@ -1,0 +1,364 @@
+/*
+ * ReelEyes design tokens: every Assets.xcassets color set (light and dark), the
+ * iOS text styles, spacing, radii and the one card shadow from DESIGN.md.
+ *
+ * Appearance follows the system unless the Appearance menu picked one:
+ * <html data-appearance="light|dark"> (set by src/state).
+ *
+ * Text sizes are rem against the iOS body size (17px), so on iPhone they follow
+ * Dynamic Type through `font: -apple-system-body`.
+ */
+
+:root {
+  /* Colors (light) */
+  --accent: #a84044;
+  --tint-fill: #b5474b;
+  --on-tint: #ffffff;
+  --background: #faf8f3;
+  --card: #ffffff;
+  --ink: #2a231f;
+  --ink-secondary: #645b54;
+  --ink-tertiary: #766e67;
+  --hairline: rgba(42, 35, 31, 0.13);
+  --fill: rgba(42, 35, 31, 0.05);
+  --fill-strong: rgba(42, 35, 31, 0.09);
+  --data: #7a90a5;
+  --data-ink: #4e6377;
+  --data-soft: rgba(125, 147, 168, 0.18);
+  --warn: #9a5b12;
+  --warn-soft: rgba(184, 120, 40, 0.12);
+  --map-land: #ece6d8;
+  --map-water: #cbd6df;
+  --map-water-deep: #b5c5d2;
+  --on-photo: #ffffff;
+  --on-photo-secondary: rgba(255, 255, 255, 0.72);
+  --viewer-background: #000000;
+  --dots-background: rgba(0, 0, 0, 0.3);
+  --system-red: #ff3b30;
+
+  /* System materials (tab bar, toolbar glass, sheets' dimming) */
+  --glass: rgba(250, 248, 243, 0.72);
+  --glass-strong: rgba(250, 248, 243, 0.9);
+  --glass-edge: rgba(255, 255, 255, 0.7);
+  --glass-shadow: 0 6px 24px rgba(42, 35, 31, 0.12), 0 1px 3px rgba(42, 35, 31, 0.08);
+  --glass-selected: rgba(42, 35, 31, 0.07);
+  --scrim: rgba(0, 0, 0, 0.22);
+  --switch-off: rgba(120, 120, 128, 0.16);
+  --menu-bg: rgba(250, 248, 243, 0.86);
+
+  /* The Glass On Media Rule: Eggshell at 90% over photos and maps */
+  --glass-on-media: rgba(250, 248, 243, 0.9);
+
+  /* Shadows */
+  --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-icon: 0 6px 10px rgba(0, 0, 0, 0.14);
+
+  /* Type */
+  --font-system: -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-serif: ui-serif, 'New York', 'Iowan Old Style', Georgia, serif;
+
+  /* Spacing (DESIGN.md spacing) */
+  --space-hairline-gap: 2px;
+  --space-header-inset: 6px;
+  --space-chip-gap: 8px;
+  --space-stack-gap: 10px;
+  --space-row-vertical: 12px;
+  --space-screen-inset: 14px;
+  --space-row-inset: 16px;
+  --space-feature-padding: 18px;
+  --space-section-top: 22px;
+  --space-screen-bottom: 24px;
+  --space-welcome-inset: 26px;
+
+  /* Radii */
+  --radius-skeleton-line: 4px;
+  --radius-skeleton-title: 6px;
+  --radius-thumbnail: 11px;
+  --radius-control: 12px;
+  --radius-button: 14px;
+  --radius-card: 16px;
+  --radius-sheet: 24px;
+  --radius-pill: 9999px;
+
+  /* Chrome geometry (read by src/ui) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --nav-bar-height: 52px;
+  --tab-bar-height: 62px;
+  --sample-note-height: 18px;
+  /* The sample-data note sits in the home-indicator zone, the floating tab bar on top of it */
+  --note-bottom: max(calc(var(--safe-bottom) - 16px), 4px);
+  --tab-bar-bottom: calc(var(--note-bottom) + var(--sample-note-height));
+  /* Space a tab screen leaves at the bottom so content clears the tab bar and the note */
+  --chrome-bottom: calc(var(--tab-bar-bottom) + var(--tab-bar-height) + 8px);
+
+  /* Motion: iOS push and sheet curves */
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+  --duration-push: 380ms;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-appearance='light']) {
+    --accent: #e2817b;
+    --tint-fill: #b9494c;
+    --on-tint: #ffffff;
+    --background: #1c1b1a;
+    --card: #272524;
+    --ink: #ede6d6;
+    --ink-secondary: #ada699;
+    --ink-tertiary: #9a9387;
+    --hairline: rgba(237, 230, 214, 0.12);
+    --fill: rgba(237, 230, 214, 0.06);
+    --fill-strong: rgba(237, 230, 214, 0.11);
+    --data: #8ea5ba;
+    --data-ink: #a9bdd0;
+    --data-soft: rgba(142, 165, 186, 0.18);
+    --warn: #e0a85a;
+    --warn-soft: rgba(224, 168, 90, 0.14);
+    --map-land: #2b2927;
+    --map-water: #34414c;
+    --map-water-deep: #2a343d;
+    --system-red: #ff453a;
+    --glass: rgba(39, 37, 36, 0.72);
+    --glass-strong: rgba(39, 37, 36, 0.9);
+    --glass-edge: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --glass-selected: rgba(237, 230, 214, 0.1);
+    --scrim: rgba(0, 0, 0, 0.45);
+    --switch-off: rgba(120, 120, 128, 0.32);
+    --menu-bg: rgba(39, 37, 36, 0.88);
+    --glass-on-media: rgba(28, 27, 26, 0.9);
+    color-scheme: dark;
+  }
+}
+
+:root[data-appearance='dark'] {
+  --accent: #e2817b;
+  --tint-fill: #b9494c;
+  --on-tint: #ffffff;
+  --background: #1c1b1a;
+  --card: #272524;
+  --ink: #ede6d6;
+  --ink-secondary: #ada699;
+  --ink-tertiary: #9a9387;
+  --hairline: rgba(237, 230, 214, 0.12);
+  --fill: rgba(237, 230, 214, 0.06);
+  --fill-strong: rgba(237, 230, 214, 0.11);
+  --data: #8ea5ba;
+  --data-ink: #a9bdd0;
+  --data-soft: rgba(142, 165, 186, 0.18);
+  --warn: #e0a85a;
+  --warn-soft: rgba(224, 168, 90, 0.14);
+  --map-land: #2b2927;
+  --map-water: #34414c;
+  --map-water-deep: #2a343d;
+  --system-red: #ff453a;
+  --glass: rgba(39, 37, 36, 0.72);
+  --glass-strong: rgba(39, 37, 36, 0.9);
+  --glass-edge: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --glass-selected: rgba(237, 230, 214, 0.1);
+  --scrim: rgba(0, 0, 0, 0.45);
+  --switch-off: rgba(120, 120, 128, 0.32);
+  --menu-bg: rgba(39, 37, 36, 0.88);
+  --glass-on-media: rgba(28, 27, 26, 0.9);
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-system);
+  font-size: 17px;
+  line-height: 1.294;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* iPhone: 1rem is the Dynamic Type body size, so every text style scales with it. */
+@supports (font: -apple-system-body) {
+  html {
+    font: -apple-system-body;
+    font-family: var(--font-system);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--background);
+  color: var(--ink);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+#root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: inherit;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+input,
+textarea {
+  caret-color: var(--accent);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--data);
+  outline-offset: 2px;
+}
+
+/* Hide scrollbars like iOS; scrolling stays (touch, wheel, keyboard). */
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-y::-webkit-scrollbar,
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- iOS text styles (DESIGN.md typography) ---------- */
+
+.t-large-title { font-size: 2rem; line-height: 1.206; font-weight: 700; letter-spacing: 0.011em; }
+.t-title { font-size: 1.647rem; line-height: 1.214; font-weight: 700; letter-spacing: 0.012em; }
+.t-title-figure { font-size: 1.647rem; line-height: 1.214; font-weight: 600; font-variant-numeric: tabular-nums; }
+.t-title3 { font-size: 1.176rem; line-height: 1.25; font-weight: 700; letter-spacing: 0.019em; }
+.t-title3-semibold { font-size: 1.176rem; line-height: 1.25; font-weight: 600; letter-spacing: 0.019em; }
+.t-headline { font-size: 1rem; line-height: 1.294; font-weight: 600; letter-spacing: -0.024em; }
+.t-body { font-size: 1rem; line-height: 1.294; font-weight: 400; letter-spacing: -0.024em; }
+.t-callout { font-size: 0.941rem; line-height: 1.3125; font-weight: 400; letter-spacing: -0.02em; }
+.t-subheadline { font-size: 0.882rem; line-height: 1.333; font-weight: 400; letter-spacing: -0.015em; }
+.t-subheadline-semibold { font-size: 0.882rem; line-height: 1.333; font-weight: 600; letter-spacing: -0.015em; }
+.t-footnote { font-size: 0.765rem; line-height: 1.385; font-weight: 400; letter-spacing: -0.006em; }
+.t-footnote-semibold { font-size: 0.765rem; line-height: 1.385; font-weight: 600; letter-spacing: -0.006em; }
+.t-caption { font-size: 0.706rem; line-height: 1.333; font-weight: 400; }
+
+.tnum { font-variant-numeric: tabular-nums; }
+.bold { font-weight: 700; }
+.semibold { font-weight: 600; }
+.italic { font-style: italic; }
+.serif { font-family: var(--font-serif); }
+
+/* Colors as text */
+.c-ink { color: var(--ink); }
+.c-ink-secondary { color: var(--ink-secondary); }
+.c-ink-tertiary { color: var(--ink-tertiary); }
+.c-accent { color: var(--accent); }
+.c-data { color: var(--data); }
+.c-data-ink { color: var(--data-ink); }
+.c-warn { color: var(--warn); }
+.c-red { color: var(--system-red); }
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
