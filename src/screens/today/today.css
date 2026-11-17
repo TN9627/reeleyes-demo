@@ -1,0 +1,65 @@
+/* Today (Views/TodayView.swift). Every selector is prefixed `today-`. */
+
+/* ---------- Start line ---------- */
+
+.today-start-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 var(--space-row-inset);
+  border-radius: var(--radius-button);
+  background: var(--fill-strong);
+  color: var(--ink);
+  text-align: left;
+}
+
+.today-start-line:active {
+  opacity: 0.7;
+}
+
+.today-start-line-glyph {
+  display: inline-flex;
+  flex: none;
+  color: var(--ink-secondary);
+}
+
+.today-start-line-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.today-start-line-change {
+  flex: none;
+  margin-left: 18px; /* Spacer(minLength: 8) between two 10pt gaps */
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Chip row ---------- */
+
+.today-chips {
+  padding-top: 12px;
+}
+
+/* ---------- Farther, footnote ---------- */
+
+.today-farther {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+
+.today-footnote {
+  padding-top: 6px;
+}
+
+/* ---------- Filters sheet ---------- */
+
+.today-filters-form {
+  padding-top: 8px; /* the Sheet body already insets 14px */
+}
