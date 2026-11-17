@@ -85,7 +85,7 @@
 /* ---------- Sheet ---------- */
 
 .start-sheet-body {
-  padding: 8px var(--space-screen-inset) 20px;
+  padding-top: 8px;
 }
 
 .start-sheet-rows {

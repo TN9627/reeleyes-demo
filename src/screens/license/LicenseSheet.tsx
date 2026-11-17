@@ -12,9 +12,7 @@ import "./license.css";
 export function LicenseSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <Sheet open={open} onClose={onClose} title="License" detent="large">
-      <div className="license-sheet-body">
-        <LicenseContent />
-      </div>
+      <LicenseContent />
     </Sheet>
   );
 }
