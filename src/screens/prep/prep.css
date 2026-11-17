@@ -1,0 +1,622 @@
+/* Prep screen (Views/PrepView.swift, ConditionsGrid.swift, GearViews.swift). Every selector is prefixed prep-. */
+
+/* ---------- Conditions grid ---------- */
+
+.prep-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-gap);
+}
+
+.prep-grid-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-stack-gap);
+}
+
+.prep-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.prep-tile-nofeed {
+  opacity: 0.85;
+}
+
+.prep-tile-label {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink-secondary);
+}
+
+.prep-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.prep-tile-header > :last-child:not(:first-child) {
+  text-align: right;
+}
+
+.prep-tile-detail {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.prep-secondary {
+  color: var(--ink-secondary);
+}
+
+.prep-trend {
+  font-weight: 600;
+  color: var(--data-ink);
+}
+
+.prep-big {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.prep-big-value {
+  font-size: 1.647rem;
+  line-height: 1.214;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.prep-big-unit {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink-secondary);
+}
+
+.prep-dim,
+.prep-big.prep-dim {
+  color: var(--ink-tertiary);
+}
+
+.prep-source {
+  padding-top: 4px;
+  font-size: 0.706rem;
+  line-height: 1.333;
+  color: var(--ink-tertiary);
+}
+
+.prep-wind-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.prep-wind-arrow {
+  color: var(--ink-secondary);
+}
+
+/* Pressure trace */
+
+.prep-chart {
+  position: relative;
+  height: 64px;
+  margin-top: 6px;
+}
+
+.prep-chart svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.prep-chart-area {
+  fill: var(--data-soft);
+}
+
+.prep-chart-line {
+  fill: none;
+  stroke: var(--data);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.prep-chart-point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.prep-chart-captions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.706rem;
+  line-height: 1.333;
+  color: var(--ink-tertiary);
+}
+
+/* Sky band */
+
+.prep-sky {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prep-sky-track {
+  position: relative;
+  height: 18px;
+  margin-top: 4px;
+}
+
+.prep-sky-rail,
+.prep-sky-day {
+  position: absolute;
+  top: 4px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+}
+
+.prep-sky-rail {
+  left: 0;
+  right: 0;
+  background: var(--fill-strong);
+}
+
+.prep-sky-day {
+  background: var(--data-soft);
+  box-shadow: inset 0 0 0 1.2px var(--data);
+}
+
+.prep-sky-now {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 18px;
+  margin-left: -1.5px;
+  border-radius: 1.5px;
+  background: var(--accent);
+}
+
+.prep-sky-ticks {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.prep-sky-tick {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.prep-sky-tick-end {
+  align-items: flex-end;
+}
+
+.prep-sky-tick-label {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink-secondary);
+}
+
+.prep-sky-tick-time {
+  font-size: 1rem;
+  line-height: 1.294;
+  font-weight: 600;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+}
+
+/* Water */
+
+.prep-water-values {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.prep-water-value {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prep-water-caption {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.prep-water-caption.prep-dim {
+  color: var(--ink-tertiary);
+}
+
+/* ---------- Screen ---------- */
+
+.prep-content {
+  padding-top: 8px;
+}
+
+.prep-body {
+  font-size: 1rem;
+  line-height: 1.294;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+}
+
+.prep-sub {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink-secondary);
+}
+
+.prep-inset {
+  padding: 0 var(--space-header-inset);
+}
+
+.prep-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+}
+
+.prep-loading {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+/* ---------- Conditions header ---------- */
+
+.prep-conditions-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.prep-conditions-header:empty {
+  display: none;
+}
+
+.prep-banner-action {
+  flex: none;
+  min-height: 44px;
+  margin: -12px -4px -12px 0;
+  padding: 0 4px;
+  font-size: 0.882rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.prep-banner-action:disabled {
+  color: var(--ink-tertiary);
+}
+
+.prep-verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prep-verdict-line {
+  font-size: 1.176rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0.019em;
+  color: var(--ink);
+}
+
+.prep-stamp {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 var(--space-header-inset);
+  font-size: 0.765rem;
+  line-height: 1.385;
+  color: var(--ink-secondary);
+}
+
+.prep-stamp-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--data);
+}
+
+/* ---------- License ---------- */
+
+.prep-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prep-chevron {
+  flex: none;
+  color: var(--ink-tertiary);
+  transition: transform 0.3s var(--ease-ios);
+}
+
+.prep-chevron-open {
+  transform: rotate(90deg);
+}
+
+/* ---------- Rules ---------- */
+
+/* FactStrip: Prep covers its top and bottom hairlines with the card color, so none show. */
+.prep-facts {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  margin: 0 16px;
+  padding: 12px 0;
+}
+
+.prep-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  padding: 0 8px;
+}
+
+.prep-fact:first-child {
+  padding-left: 0;
+}
+
+.prep-fact:last-child {
+  padding-right: 0;
+}
+
+.prep-fact + .prep-fact {
+  border-left: 1px solid var(--hairline);
+}
+
+.prep-fact-label {
+  font-size: 0.765rem;
+  line-height: 1.385;
+  color: var(--ink-secondary);
+}
+
+.prep-fact-value {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.prep-fact-detail {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  letter-spacing: -0.015em;
+  color: var(--ink-secondary);
+}
+
+.prep-disclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+  font-size: 1rem;
+  line-height: 1.294;
+  letter-spacing: -0.024em;
+  color: var(--accent);
+}
+
+.prep-disclosure:active {
+  opacity: 0.6;
+}
+
+.prep-rules {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 14px;
+}
+
+.prep-rule {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 0;
+  border-top: 1px solid var(--hairline);
+  font-size: 1rem;
+  line-height: 1.294;
+  letter-spacing: -0.024em;
+}
+
+/* The card's own divider already sits above the first rule. */
+.prep-rule:first-child {
+  border-top: 0;
+}
+
+.prep-rule-text {
+  color: var(--ink);
+}
+
+.prep-rule-trailing {
+  color: var(--ink-secondary);
+  text-align: right;
+}
+
+.prep-rules-subhead {
+  padding: 14px 0 4px;
+  font-size: 0.765rem;
+  line-height: 1.385;
+  color: var(--ink-secondary);
+}
+
+.prep-rules-note {
+  padding-top: 12px;
+  font-size: 0.765rem;
+  line-height: 1.385;
+  color: var(--ink-secondary);
+}
+
+.prep-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  min-height: 32px;
+  padding-top: 4px;
+  font-size: 0.765rem;
+  line-height: 1.385;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---------- Gear and bait ---------- */
+
+.prep-gear-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-gap);
+}
+
+.prep-gear-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-stack-gap);
+}
+
+.prep-species-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  min-width: 0;
+  padding: 10px 12px 12px;
+  text-align: left;
+  background: var(--card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.prep-species-card-stocked {
+  box-shadow: inset 0 0 0 1.5px var(--data), var(--shadow-card);
+}
+
+.prep-species-card:active {
+  opacity: 0.7;
+}
+
+.prep-species-name {
+  font-size: 0.882rem;
+  line-height: 1.333;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.prep-species-stocked {
+  font-size: 0.765rem;
+  line-height: 1.385;
+  font-weight: 600;
+  color: var(--data-ink);
+}
+
+.prep-show-all {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  font-size: 1rem;
+  letter-spacing: -0.024em;
+  text-align: center;
+  color: var(--accent);
+}
+
+.prep-show-all:active {
+  opacity: 0.7;
+}
+
+.prep-gear-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 18px;
+  text-align: center;
+  background: var(--card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.prep-gear-empty-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5px var(--data);
+  color: var(--data);
+}
+
+.prep-gear-empty-title {
+  font-size: 1rem;
+  line-height: 1.294;
+  font-weight: 600;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+}
+
+/* ---------- Failed section, Try again, spinner ---------- */
+
+.prep-failed {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+}
+
+.prep-failed .prep-link {
+  margin-top: 6px;
+}
+
+.prep-try-again {
+  margin-top: 14px;
+}
+
+.prep-ptr-indicator {
+  display: flex;
+  color: var(--ink-secondary);
+}
+
+/* ---------- Pull to refresh ---------- */
+
+.prep-ptr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.prep-ptr-settle {
+  transition: height 0.3s var(--ease-ios);
+}
