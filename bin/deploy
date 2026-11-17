@@ -1,0 +1,19 @@
+#!/bin/sh
+# Build the PWA and publish dist/ to the gh-pages branch, which GitHub Pages
+# serves at https://tn9627.github.io/reeleyes-demo/. No GitHub Actions involved.
+set -eu
+cd "$(dirname "$0")/.."
+
+bun run build
+touch dist/.nojekyll # serve files and folders that start with _ as-is
+
+rev=$(git rev-parse --short HEAD)
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+cp -R dist/. "$tmp"
+cd "$tmp"
+git init -q -b gh-pages
+git add -A
+git commit -qm "Deploy $rev"
+git push -qf "$(git -C "$OLDPWD" remote get-url origin)" gh-pages
+echo "Deployed $rev to gh-pages: https://tn9627.github.io/reeleyes-demo/"
