@@ -1,15 +1,22 @@
 import type { SpotSummary } from '../data/types'
 
-/** CARTO basemaps (no key): Voyager in light, Dark Matter in dark, like MapKit's muted snapshots per appearance. */
+/**
+ * Esri's keyless basemaps (CARTO's now watermark every tile without an API key): World Street
+ * Map in light, muted further in CSS, and Dark Gray Canvas in dark, like MapKit's muted
+ * snapshots per appearance. 256px tiles addressed {z}/{y}/{x}.
+ */
 export function tileTemplate(scheme: 'light' | 'dark'): string {
-  const style = scheme === 'dark' ? 'dark_all' : 'rastertiles/voyager'
-  return `https://{s}.basemaps.cartocdn.com/${style}/{z}/{x}/{y}{r}.png`
+  const service = scheme === 'dark' ? 'Canvas/World_Dark_Gray_Base' : 'World_Street_Map'
+  return `https://server.arcgisonline.com/ArcGIS/rest/services/${service}/MapServer/tile/{z}/{y}/{x}`
 }
 
-export const tileSubdomains = ['a', 'b', 'c', 'd']
+/** The deepest zoom each basemap draws; deeper views scale its tiles up. */
+export function maxTileZoom(scheme: 'light' | 'dark'): number {
+  return scheme === 'dark' ? 16 : 19
+}
 
 export const tileAttributionHTML =
-  '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> © <a href="https://carto.com/attributions" target="_blank" rel="noreferrer">CARTO</a>'
+  'Tiles © <a href="https://www.esri.com" target="_blank" rel="noreferrer">Esri</a>, HERE, Garmin, © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
 
 /**
  * The map's span in meters (MapSnapshotView / SpotHeroMap): ponds are small, community lakes

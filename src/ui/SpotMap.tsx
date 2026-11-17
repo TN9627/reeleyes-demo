@@ -2,7 +2,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useEffect, useRef } from 'react'
 import { useColorScheme } from './colorScheme'
-import { tileAttributionHTML, tileSubdomains, tileTemplate, zoomFor } from './maps'
+import { maxTileZoom, tileAttributionHTML, tileTemplate, zoomFor } from './maps'
 
 export interface SpotMapProps {
   lat: number
@@ -18,7 +18,7 @@ export interface SpotMapProps {
   className?: string
 }
 
-/** A live map centred on a Spot (SpotHeroMap), on Map Land, with OpenStreetMap and CARTO credited. */
+/** A live map centred on a Spot (SpotHeroMap), on Map Land, with its tile sources credited. */
 export function SpotMap({ lat, lng, meters, interactive, pin = true, onFailure, className }: SpotMapProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<L.Map | null>(null)
@@ -27,13 +27,14 @@ export function SpotMap({ lat, lng, meters, interactive, pin = true, onFailure, 
   const onFailureRef = useRef(onFailure)
   onFailureRef.current = onFailure
 
-  const zoomForContainer = () => zoomFor(meters, containerRef.current?.clientHeight || 300, lat)
+  // Whole zoom levels: fractional ones leave hairline seams between raster tiles.
+  const zoomForContainer = () => Math.round(zoomFor(meters, containerRef.current?.clientHeight || 300, lat))
 
   useEffect(() => {
     const map = L.map(containerRef.current!, {
       center: [lat, lng],
       zoom: zoomForContainer(),
-      zoomSnap: 0,
+      zoomSnap: 1,
       zoomControl: false,
       attributionControl: true,
       dragging: false,
@@ -73,9 +74,8 @@ export function SpotMap({ lat, lng, meters, interactive, pin = true, onFailure, 
     let loadedAny = false
     let errors = 0
     const layer = L.tileLayer(tileTemplate(scheme), {
-      subdomains: tileSubdomains,
+      maxNativeZoom: maxTileZoom(scheme),
       maxZoom: 19,
-      detectRetina: false,
       attribution: tileAttributionHTML,
     })
     layer.on('tileload', () => {

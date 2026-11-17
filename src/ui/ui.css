@@ -758,6 +758,12 @@
   font-family: var(--font-system);
 }
 
+/* MapKit's muted emphasis: the street basemap, quieter (per tile, so Leaflet's seam blending still works). */
+.map-thumb,
+.spot-map .leaflet-tile {
+  filter: saturate(0.7) contrast(0.95);
+}
+
 .spot-map .leaflet-control-attribution {
   padding: 1px 6px;
   border-radius: 6px 0 0 0;

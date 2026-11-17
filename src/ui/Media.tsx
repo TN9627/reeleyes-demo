@@ -4,7 +4,7 @@ import type { SpotMetaLine } from '../logic/todayLayout'
 import { useColorScheme } from './colorScheme'
 import { Glyph } from './Glyph'
 import { photoURL, speciesImageURL } from './images'
-import { mapSpan, tileSubdomains, tileTemplate, zoomFor } from './maps'
+import { maxTileZoom, mapSpan, tileTemplate, zoomFor } from './maps'
 import { DriveTimeText } from './Surfaces'
 
 export interface MapThumbProps {
@@ -26,8 +26,8 @@ export interface MapThumbProps {
  */
 export function MapThumb({ lat, lng, meters, width, height, pin, className, style }: MapThumbProps) {
   const scheme = useColorScheme()
-  const zoom = Math.min(zoomFor(meters, height, lat), 18)
-  const z = Math.floor(zoom)
+  const zoom = Math.min(zoomFor(meters, height, lat), 19)
+  const z = Math.min(Math.floor(zoom), maxTileZoom(scheme))
   const scale = 2 ** (zoom - z)
   const tile = 256 * scale
   const worldPx = 256 * 2 ** z
@@ -36,12 +36,11 @@ export function MapThumb({ lat, lng, meters, width, height, pin, className, styl
   const cy = (0.5 - Math.log((1 + sinLat) / (1 - sinLat)) / (4 * Math.PI)) * worldPx * scale
   const left = cx - width / 2
   const top = cy - height / 2
-  const template = tileTemplate(scheme).replace('{r}', '@2x')
+  const template = tileTemplate(scheme)
   const tiles = []
   for (let x = Math.floor(left / tile); x <= Math.floor((left + width) / tile); x++) {
     for (let y = Math.floor(top / tile); y <= Math.floor((top + height) / tile); y++) {
-      const s = tileSubdomains[(x + y) % tileSubdomains.length]!
-      const src = template.replace('{s}', s).replace('{z}', String(z)).replace('{x}', String(x)).replace('{y}', String(y))
+      const src = template.replace('{z}', String(z)).replace('{x}', String(x)).replace('{y}', String(y))
       tiles.push(<MapTile key={src} src={src} left={x * tile - left} top={y * tile - top} size={tile} />)
     }
   }

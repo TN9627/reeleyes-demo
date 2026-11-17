@@ -38,7 +38,7 @@ export default defineConfig({
         runtimeCaching: [
           {
             // Map tiles seen once stay available offline.
-            urlPattern: /^https:\/\/[a-d]\.basemaps\.cartocdn\.com\//,
+            urlPattern: /^https:\/\/server\.arcgisonline\.com\/ArcGIS\/rest\/services\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'map-tiles',
