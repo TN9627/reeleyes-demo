@@ -11,6 +11,7 @@ import { AppearanceMenu, PickerMenu } from "../ui/Menu";
 import { BarButton, Screen, ToolbarGroup } from "../ui/Screen";
 import { StartPrompt, StartSheet } from "./start";
 import { FiltersSheet } from "./today/FiltersSheet";
+import { PullToRefresh } from "./prep/PullToRefresh";
 import { RecommendationList } from "./today/RecommendationList";
 import { StartLine } from "./today/StartLine";
 import "./today/today.css";
@@ -35,10 +36,24 @@ export default function TodayScreen() {
   const now = useMinuteClock();
   const [startSheetOpen, setStartSheetOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Swift's `.refreshable { await today.load() }`: pull down to read the Recommendation again.
+  // The data is bundled, so the reload is a short spinner and a fresh read of the same sample.
+  const [refreshing, setRefreshing] = useState(false);
+  const [reloads, setReloads] = useState(0);
+  const refresh = () => {
+    if (refreshing) return;
+    setRefreshing(true);
+    setTimeout(() => {
+      setReloads((n) => n + 1);
+      setRefreshing(false);
+    }, 700);
+  };
 
   const result = useMemo(
     () => (start ? recommendation({ start: start.coordinate, rangeMinutes, filters, showFarther, now }) : null),
-    [start, rangeMinutes, filters, showFarther, now],
+    // `reloads` re-reads on pull to refresh.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [start, rangeMinutes, filters, showFarther, now, reloads],
   );
   const toggles = activeToggleCount(filters);
 
@@ -65,7 +80,7 @@ export default function TodayScreen() {
       {!start || !result ? (
         <StartPrompt />
       ) : (
-        <>
+        <PullToRefresh refreshing={refreshing} onRefresh={refresh}>
           <StartLine start={start} onChange={() => setStartSheetOpen(true)} />
           <SpeciesChips groups={result.chipGroups} filters={filters} />
           <RecommendationList
@@ -75,7 +90,7 @@ export default function TodayScreen() {
             place={start.label}
             onChangeStart={() => setStartSheetOpen(true)}
           />
-        </>
+        </PullToRefresh>
       )}
       <StartSheet open={startSheetOpen} onClose={() => setStartSheetOpen(false)} />
       <FiltersSheet open={filtersOpen} onClose={() => setFiltersOpen(false)} />
