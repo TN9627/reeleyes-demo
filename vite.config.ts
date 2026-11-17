@@ -5,9 +5,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 // Served from GitHub Pages under /reeleyes-demo/ with hash routes, so every URL is relative.
 export default defineConfig({
   base: './',
-  // Phones on the LAN can open the dev and preview servers.
-  server: { host: true },
-  preview: { host: true },
+  // Phones on the LAN can open the dev and preview servers, and so can a Cloudflare quick
+  // tunnel (`cloudflared tunnel --url http://localhost:5173`, README: Run it).
+  server: { host: true, allowedHosts: ['.trycloudflare.com'] },
+  preview: { host: true, allowedHosts: ['.trycloudflare.com'] },
   plugins: [
     react(),
     VitePWA({
