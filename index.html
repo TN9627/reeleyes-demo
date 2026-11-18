@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ReelEyes</title>
+    <meta name="description" content="Plan an Arizona fishing trip: Spots ranked by drive time, with conditions, rules and gear. Demo on sample data." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF8F3" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1C1B1A" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="ReelEyes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png" />
+    <script>
+      // Apply a saved Appearance pick before first paint.
+      try {
+        var saved = JSON.parse(localStorage.getItem('reeleyes.state.v1') || '{}').appearance
+        if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-appearance', saved)
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-B_6qDKrL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BF2ABJvM.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
