@@ -1,0 +1,173 @@
+/* Views/AlertViews.swift and WeatherSafety.swift. Every selector is prefixed safety-. */
+
+.safety-bold {
+  font-weight: 700;
+}
+
+.safety-pre {
+  white-space: pre-wrap;
+}
+
+.safety-gap-4 { margin-top: 4px; }
+.safety-gap-6 { margin-top: 6px; }
+.safety-gap-12 { margin-top: 12px; }
+.safety-gap-18 { margin-top: 18px; }
+.safety-gap-20 { margin-top: 20px; }
+
+/* ---------- Alert banner and sheet ---------- */
+
+.safety-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--alert-soft);
+  text-align: left;
+}
+
+.safety-alert:active {
+  opacity: 0.7;
+}
+
+.safety-alert-glyph {
+  flex: none;
+  margin-top: 1px;
+}
+
+.safety-alert-text {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.safety-alert-chevron {
+  flex: none;
+  margin-top: 3px;
+}
+
+/* Title 2, bold. */
+.safety-alert-title {
+  margin-top: 4px;
+  font-size: 1.294rem;
+  line-height: 1.273;
+  font-weight: 700;
+  letter-spacing: 0.021em;
+}
+
+.safety-link-button {
+  text-decoration: none;
+}
+
+/* ---------- Links along a card's foot ---------- */
+
+.safety-cite {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-height: 32px;
+  padding-top: 7px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.safety-cite > svg {
+  flex: none;
+  align-self: center;
+}
+
+.safety-card-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: -8px;
+}
+
+.safety-card-links-rule {
+  height: 0.5px;
+  margin: 0 calc(-1 * var(--card-links-inset));
+  background: var(--hairline);
+}
+
+.safety-card-links-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  padding-top: 4px;
+}
+
+.safety-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--accent);
+}
+
+.safety-card-link:active {
+  opacity: 0.6;
+}
+
+.safety-card-link-glyph {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---------- Reading sheet ---------- */
+
+.safety-reading {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px 32px;
+}
+
+.safety-reading-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-top: 0.5px solid var(--hairline);
+}
+
+.safety-reading-credit {
+  margin-top: 14px;
+}
+
+.safety-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safety-bullets > li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* ---------- Heat and cold notices ---------- */
+
+.safety-notice {
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-notice-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.safety-notice-line {
+  margin-top: 6px;
+}
+
+.safety-notice-tips {
+  margin-top: 8px;
+}

@@ -1,0 +1,315 @@
+/* Views/DetailsCards.swift. Every selector is prefixed details-. */
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.details-spacer {
+  flex: 1 1 8px;
+  min-width: 8px;
+}
+
+.details-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.details-row-baseline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ---------- Air pressure ---------- */
+
+.details-pressure {
+  min-height: 150px;
+}
+
+.details-pressure-value {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+/* 28pt semibold, scaled with Title. */
+.details-figure {
+  font-size: 1.647rem;
+  line-height: 1.2;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.details-pressure-trend {
+  flex: 1;
+  margin-left: 4px;
+  text-align: right;
+}
+
+.details-pressure-chart {
+  height: 52px;
+  margin-top: 4px;
+}
+
+.details-pressure-chart > svg {
+  display: block;
+}
+
+.details-chart-line {
+  fill: none;
+  stroke: var(--data);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.details-chart-rule {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+/* Caption 2. */
+.details-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.647rem;
+  line-height: 1.182;
+  letter-spacing: 0.006em;
+  color: var(--ink-tertiary);
+}
+
+/* ---------- Sun and moon ---------- */
+
+.details-sky-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  white-space: nowrap;
+}
+
+/* Title 2, bold. */
+.details-sky-clock {
+  flex: none;
+  font-size: 1.294rem;
+  line-height: 1.273;
+  font-weight: 700;
+  letter-spacing: 0.021em;
+  font-variant-numeric: tabular-nums;
+}
+
+.details-sky-time > * {
+  flex-shrink: 0;
+}
+
+.details-sky-phase {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--fill);
+}
+
+.details-line {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.details-moon-line {
+  gap: 7px;
+}
+
+.details-arc {
+  position: relative;
+  height: 124px;
+}
+
+.details-arc-canvas {
+  height: 100%;
+}
+
+.details-arc-canvas > svg {
+  display: block;
+}
+
+.details-arc-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(6px);
+}
+
+.details-bar {
+  position: relative;
+  height: 44px;
+  touch-action: pan-y;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.details-bar:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.details-bar > * {
+  position: absolute;
+}
+
+.details-bar-track {
+  left: 0;
+  right: 0;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--track-night);
+}
+
+.details-bar-track > span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.details-bar-capsule {
+  height: 4px;
+  border-radius: 2px;
+}
+
+.details-bar-now {
+  width: 2px;
+  height: 22px;
+  background: var(--ink-secondary);
+}
+
+.details-bar-stem {
+  width: 3px;
+  height: 34px;
+  background: var(--accent);
+}
+
+.details-bar-thumb {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: var(--card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.details-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.details-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 18px;
+  white-space: nowrap;
+}
+
+.details-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.details-swatch-mark {
+  flex: none;
+  width: 16px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.details-swatch-mark.is-bar {
+  height: 4px;
+}
+
+.details-rule {
+  height: 1px;
+  margin: 6px 0;
+  background: var(--hairline);
+}
+
+.details-sun-times {
+  display: flex;
+  align-items: flex-start;
+}
+
+.details-sun-time {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  white-space: nowrap;
+}
+
+.details-sun-time.is-trailing {
+  align-items: flex-end;
+}
+
+.details-legend-line {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.details-moon-times {
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ---------- Water ---------- */
+
+.details-water {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.details-water-values {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.details-water-value {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.details-water-figure {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.details-water-none {
+  padding: 0 6px;
+}
+
+.details-source {
+  padding-top: 4px;
+}
