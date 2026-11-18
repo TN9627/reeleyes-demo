@@ -297,7 +297,8 @@
       2,
       6,
       3,
-      5
+      5,
+      12
     ],
     "lastStockedOn": "2026-11-02",
     "nextStockingOn": null,
@@ -338,6 +339,12 @@
         "id": 5,
         "name": "Common carp",
         "slug": "common-carp",
+        "group": "Other"
+      },
+      {
+        "id": 12,
+        "name": "Sucker",
+        "slug": "sucker",
         "group": "Other"
       }
     ],

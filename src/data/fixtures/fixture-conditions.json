@@ -3,13 +3,6 @@
     "spotId": 1,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 23.33,
       "highC": 26.11,
@@ -78,13 +71,6 @@
     "spotId": 2,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 23.33,
       "highC": 26.11,
@@ -153,13 +139,6 @@
     "spotId": 3,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 22.22,
       "highC": 25.56,
@@ -238,13 +217,6 @@
     "spotId": 4,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, a breeze.",
-      "reasons": [
-        "Pressure falling slowly",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 22.78,
       "highC": 25.56,
@@ -318,13 +290,6 @@
     "spotId": 5,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 21.67,
       "highC": 25,
@@ -393,13 +358,6 @@
     "spotId": 6,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling fast, a breeze.",
-      "reasons": [
-        "Pressure falling fast",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 21.11,
       "highC": 24.44,
@@ -468,13 +426,6 @@
     "spotId": 7,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 21.11,
       "highC": 24.44,
@@ -548,13 +499,6 @@
     "spotId": 8,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling fast, a breeze.",
-      "reasons": [
-        "Pressure falling fast",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 20,
       "highC": 23.33,
@@ -623,13 +567,6 @@
     "spotId": 9,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "A fair day: pressure steady, a breeze.",
-      "reasons": [
-        "Pressure steady",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 14.44,
       "highC": 17.78,
@@ -698,13 +635,6 @@
     "spotId": 10,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Fish may be slow: pressure rising slowly, a breeze.",
-      "reasons": [
-        "Pressure rising slowly",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 6.67,
       "highC": 12.22,
@@ -773,13 +703,6 @@
     "spotId": 11,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 23.89,
       "highC": 26.67,
@@ -848,13 +771,6 @@
     "spotId": 12,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, light wind.",
-      "reasons": [
-        "Pressure falling slowly",
-        "Light wind"
-      ]
-    },
     "weather": {
       "airTempC": 22.22,
       "highC": 25,
@@ -923,13 +839,6 @@
     "spotId": 13,
     "fetchedAt": "2026-11-07T16:33:00Z",
     "refreshFailed": false,
-    "verdict": {
-      "line": "Good day to go: pressure falling slowly, a breeze.",
-      "reasons": [
-        "Pressure falling slowly",
-        "A breeze"
-      ]
-    },
     "weather": {
       "airTempC": 24.44,
       "highC": 27.22,

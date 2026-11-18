@@ -64,5 +64,11 @@
     "name": "Walleye",
     "slug": "walleye",
     "group": "Walleye"
+  },
+  {
+    "id": 12,
+    "name": "Sucker",
+    "slug": "sucker",
+    "group": "Other"
   }
 ]
