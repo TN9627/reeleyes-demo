@@ -1,0 +1,370 @@
+/* TodayHeroView.swift: the day picker, the "Back to now" pill and the Today hero card. */
+
+/* ---------- Day picker ---------- */
+
+.day-picker {
+  display: grid;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.day-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  min-height: 72px;
+  padding: 8px 2px;
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  color: var(--ink);
+  transition: background-color 0.2s var(--ease-ios), color 0.2s var(--ease-ios);
+}
+
+.day-chip.is-selected {
+  background: var(--ink);
+  color: var(--background);
+  box-shadow: none;
+}
+
+.day-chip:active {
+  opacity: 0.7;
+}
+
+/* FitLine: one line that shrinks (a scale set in TodayHero.tsx) rather than wraps or truncates. */
+.fit-line {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fit-line > span {
+  display: inline-block;
+  transform-origin: left center;
+}
+
+.day-chip-label {
+  font-size: 0.765rem;
+  font-weight: 600;
+  line-height: 1.385;
+}
+
+.day-chip-icon {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+.day-chip-temps {
+  display: flex;
+  gap: 4px;
+  font-size: 0.765rem;
+  line-height: 1.385;
+  white-space: nowrap;
+}
+
+.day-chip-low {
+  color: var(--ink-secondary);
+}
+
+.day-chip.is-selected .day-chip-low {
+  color: color-mix(in srgb, var(--background) 70%, transparent);
+}
+
+.day-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ink-tertiary) 50%, transparent);
+}
+
+/* ---------- Back to now ---------- */
+
+.now-button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-pill);
+  font-size: 0.882rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--accent);
+}
+
+.now-button:active {
+  opacity: 0.6;
+}
+
+/* ---------- Hero card ---------- */
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 16px 20px 20px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 14px 12px 16px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.hero-band.is-tappable:active {
+  opacity: 0.75;
+}
+
+.hero-kicker {
+  min-height: 16px;
+  overflow: hidden;
+  font-size: 0.706rem;
+  font-weight: 600;
+  line-height: 1.333;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--ink-secondary);
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-dot {
+  display: flex;
+  flex: none;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.hero-dot > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.hero-text {
+  max-width: 290px;
+  min-height: 44px;
+  color: var(--ink-secondary);
+  text-wrap: pretty;
+}
+
+.hero-hourly {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-hourly-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hero-window-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.hero-window-line > :last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-window-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Room for a hazard badge overhanging a slot's top corner; the negative margin keeps the card's spacing. */
+.hero-slots {
+  display: flex;
+  gap: 6px;
+  margin: -5px -20px 0;
+  padding: 5px 20px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.hero-slots::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-slots::after {
+  content: '';
+  flex: none;
+  width: 14px;
+}
+
+.hero-slot {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 56px;
+  height: 92px;
+  border-radius: 14px;
+  background: var(--fill);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.hero-slot.is-selected {
+  background: var(--ink);
+  color: var(--background);
+}
+
+.hero-slot.is-sun-event {
+  background: var(--sun-event-fill);
+  box-shadow: inset 0 0 0 1.5px var(--sun-event-edge);
+  color: var(--sun-event-ink);
+}
+
+.hero-slot:active {
+  opacity: 0.7;
+}
+
+.hero-slot-label {
+  max-width: 52px;
+  font-weight: 600;
+}
+
+.hero-slot-window {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  left: 8px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+}
+
+.hero-slot-hazard {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--warn);
+}
+
+.hero-hour-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  color: var(--ink);
+}
+
+.hero-spacer {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--fill);
+}
+
+.hero-weather-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-temperature {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.hero-weather-words {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.hero-chips {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.hero-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--fill);
+}
+
+.hero-chip.is-capped {
+  background: var(--rating-fair-soft);
+  box-shadow: inset 0 0 0 1.5px var(--rating-fair);
+}
+
+.hero-chip-glyph {
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.hero-footer {
+  text-align: center;
+  color: var(--ink-tertiary);
+}

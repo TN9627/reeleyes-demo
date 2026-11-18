@@ -1,251 +1,4 @@
-/* Prep screen (Views/PrepView.swift, ConditionsGrid.swift, GearViews.swift). Every selector is prefixed prep-. */
-
-/* ---------- Conditions grid ---------- */
-
-.prep-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-stack-gap);
-}
-
-.prep-grid-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-stack-gap);
-}
-
-.prep-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.prep-tile-nofeed {
-  opacity: 0.85;
-}
-
-.prep-tile-label {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink-secondary);
-}
-
-.prep-tile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.prep-tile-header > :last-child:not(:first-child) {
-  text-align: right;
-}
-
-.prep-tile-detail {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-}
-
-.prep-secondary {
-  color: var(--ink-secondary);
-}
-
-.prep-trend {
-  font-weight: 600;
-  color: var(--data-ink);
-}
-
-.prep-big {
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
-  color: var(--ink);
-  white-space: nowrap;
-}
-
-.prep-big-value {
-  font-size: 1.647rem;
-  line-height: 1.214;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
-.prep-big-unit {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink-secondary);
-}
-
-.prep-dim,
-.prep-big.prep-dim {
-  color: var(--ink-tertiary);
-}
-
-.prep-source {
-  padding-top: 4px;
-  font-size: 0.706rem;
-  line-height: 1.333;
-  color: var(--ink-tertiary);
-}
-
-.prep-wind-label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.prep-wind-arrow {
-  color: var(--ink-secondary);
-}
-
-/* Pressure trace */
-
-.prep-chart {
-  position: relative;
-  height: 64px;
-  margin-top: 6px;
-}
-
-.prep-chart svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.prep-chart-area {
-  fill: var(--data-soft);
-}
-
-.prep-chart-line {
-  fill: none;
-  stroke: var(--data);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.prep-chart-point {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.prep-chart-captions {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.706rem;
-  line-height: 1.333;
-  color: var(--ink-tertiary);
-}
-
-/* Sky band */
-
-.prep-sky {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.prep-sky-track {
-  position: relative;
-  height: 18px;
-  margin-top: 4px;
-}
-
-.prep-sky-rail,
-.prep-sky-day {
-  position: absolute;
-  top: 4px;
-  height: 10px;
-  border-radius: var(--radius-pill);
-}
-
-.prep-sky-rail {
-  left: 0;
-  right: 0;
-  background: var(--fill-strong);
-}
-
-.prep-sky-day {
-  background: var(--data-soft);
-  box-shadow: inset 0 0 0 1.2px var(--data);
-}
-
-.prep-sky-now {
-  position: absolute;
-  top: 0;
-  width: 3px;
-  height: 18px;
-  margin-left: -1.5px;
-  border-radius: 1.5px;
-  background: var(--accent);
-}
-
-.prep-sky-ticks {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.prep-sky-tick {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.prep-sky-tick-end {
-  align-items: flex-end;
-}
-
-.prep-sky-tick-label {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink-secondary);
-}
-
-.prep-sky-tick-time {
-  font-size: 1rem;
-  line-height: 1.294;
-  font-weight: 600;
-  letter-spacing: -0.024em;
-  color: var(--ink);
-}
-
-/* Water */
-
-.prep-water-values {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  row-gap: 10px;
-}
-
-.prep-water-value {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.prep-water-caption {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-}
-
-.prep-water-caption.prep-dim {
-  color: var(--ink-tertiary);
-}
+/* Prep screen (Views/PrepView.swift). The hero has todayHero.css; Details, safety and gear have their own. */
 
 /* ---------- Screen ---------- */
 
@@ -253,22 +6,9 @@
   padding-top: 8px;
 }
 
-.prep-body {
-  font-size: 1rem;
-  line-height: 1.294;
-  letter-spacing: -0.024em;
-  color: var(--ink);
-}
-
-.prep-sub {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  letter-spacing: -0.015em;
-  color: var(--ink-secondary);
-}
-
-.prep-inset {
-  padding: 0 var(--space-header-inset);
+/* A scroll target (Swift's .id + proxy.scrollTo(anchor: .top)): lands just under the navigation bar. */
+.prep-anchor {
+  scroll-margin-top: calc(var(--safe-top) + var(--nav-bar-height));
 }
 
 .prep-card-text {
@@ -276,12 +16,6 @@
   flex-direction: column;
   gap: 2px;
   padding: 12px 16px;
-}
-
-.prep-loading {
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
 }
 
 /* ---------- Conditions header ---------- */
@@ -311,53 +45,118 @@
   color: var(--ink-tertiary);
 }
 
-.prep-verdict {
+/* NoteLine (WindowViews.swift): an amber glyph before a footnote. */
+.note-line {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.prep-verdict-line {
-  font-size: 1.176rem;
-  line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: 0.019em;
-  color: var(--ink);
-}
-
-.prep-stamp {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 var(--space-header-inset);
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 10px;
   font-size: 0.765rem;
   line-height: 1.385;
   color: var(--ink-secondary);
 }
 
-.prep-stamp-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--data);
+.note-line-glyph {
+  flex: none;
+  align-self: flex-start;
+  margin-top: 0.12em;
+  color: var(--warn);
+}
+
+/* Over the hero: inset like a section header, and the stack's spacing replaces its own top padding. */
+.prep-header-note {
+  margin-top: -10px;
+  padding-right: var(--space-header-inset);
+  padding-left: var(--space-header-inset);
+}
+
+/* ---------- Loading and failed ---------- */
+
+.prep-skeleton-header {
+  padding-top: 4px;
+}
+
+.prep-skeleton-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prep-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+.prep-skeleton-bar {
+  display: block;
+  border-radius: var(--radius-skeleton-title);
+  background: var(--fill-strong);
+}
+
+.prep-details-failed {
+  padding-top: 4px;
+}
+
+.prep-failed {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+}
+
+.prep-failed .prep-link {
+  margin-top: 6px;
+}
+
+.prep-try-again {
+  margin-top: 14px;
 }
 
 /* ---------- License ---------- */
 
+.prep-license-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 44px;
+  padding: 16px;
+  text-align: left;
+}
+
+.prep-license-row:active {
+  opacity: 0.6;
+}
+
+.prep-license-tile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--fill);
+  color: var(--ink);
+}
+
+.prep-license-chevron {
+  flex: none;
+  margin-left: auto;
+  color: var(--ink-tertiary);
+}
+
 .prep-row-text {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 2px;
-}
-
-.prep-chevron {
-  flex: none;
-  color: var(--ink-tertiary);
-  transition: transform 0.3s var(--ease-ios);
-}
-
-.prep-chevron-open {
-  transform: rotate(90deg);
+  min-width: 0;
 }
 
 /* ---------- Rules ---------- */
@@ -430,6 +229,16 @@
   opacity: 0.6;
 }
 
+.prep-chevron {
+  flex: none;
+  color: var(--ink-tertiary);
+  transition: transform 0.3s var(--ease-ios);
+}
+
+.prep-chevron-open {
+  transform: rotate(90deg);
+}
+
 .prep-rules {
   display: flex;
   flex-direction: column;
@@ -489,126 +298,12 @@
   color: var(--accent);
 }
 
-/* ---------- Gear and bait ---------- */
-
-.prep-gear-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-stack-gap);
-}
-
-.prep-gear-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-stack-gap);
-}
-
-.prep-species-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 6px;
-  min-width: 0;
-  padding: 10px 12px 12px;
-  text-align: left;
-  background: var(--card);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-}
-
-.prep-species-card-stocked {
-  box-shadow: inset 0 0 0 1.5px var(--data), var(--shadow-card);
-}
-
-.prep-species-card:active {
-  opacity: 0.7;
-}
-
-.prep-species-name {
-  font-size: 0.882rem;
-  line-height: 1.333;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-}
-
-.prep-species-stocked {
-  font-size: 0.765rem;
-  line-height: 1.385;
-  font-weight: 600;
-  color: var(--data-ink);
-}
-
-.prep-show-all {
-  display: block;
-  width: 100%;
-  min-height: 44px;
-  margin-top: 4px;
-  font-size: 1rem;
-  letter-spacing: -0.024em;
-  text-align: center;
-  color: var(--accent);
-}
-
-.prep-show-all:active {
-  opacity: 0.7;
-}
-
-.prep-gear-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 24px 18px;
-  text-align: center;
-  background: var(--card);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-}
-
-.prep-gear-empty-glyph {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 4px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1.5px var(--data);
-  color: var(--data);
-}
-
-.prep-gear-empty-title {
-  font-size: 1rem;
-  line-height: 1.294;
-  font-weight: 600;
-  letter-spacing: -0.024em;
-  color: var(--ink);
-}
-
-/* ---------- Failed section, Try again, spinner ---------- */
-
-.prep-failed {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 16px;
-}
-
-.prep-failed .prep-link {
-  margin-top: 6px;
-}
-
-.prep-try-again {
-  margin-top: 14px;
-}
+/* ---------- Pull to refresh (also on Today and Saved) ---------- */
 
 .prep-ptr-indicator {
   display: flex;
   color: var(--ink-secondary);
 }
-
-/* ---------- Pull to refresh ---------- */
 
 .prep-ptr {
   display: flex;

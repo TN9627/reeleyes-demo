@@ -8,7 +8,8 @@
  *   nav.tab                      the tab the current stack belongs to
  *   const { isTop, depth } = useLayer()   the screen's place in its stack (depth 0 = tab root)
  *
- * Spot and Prep read their id with react-router's `useParams()` (`/spot/:id`, `/spot/:id/prep`).
+ * Spot, Prep and Verdict read their id with react-router's `useParams()` (`/spot/:id`, `/spot/:id/prep`,
+ * `/spot/:id/prep/verdict`).
  */
 
 import { createContext, useContext } from 'react'
@@ -26,6 +27,8 @@ export function tabForRoot(pathname: string): Tab | null {
 /** The paths of a stack, root first: `/spot/3/prep` on Today → `/`, `/spot/3`, `/spot/3/prep`. */
 export function stackFor(pathname: string, tab: Tab): string[] {
   if (tabForRoot(pathname)) return [pathname]
+  const verdict = pathname.match(/^\/spot\/([^/]+)\/prep\/verdict$/)
+  if (verdict) return [tabRoots[tab], `/spot/${verdict[1]}`, `/spot/${verdict[1]}/prep`, pathname]
   const prep = pathname.match(/^\/spot\/([^/]+)\/prep$/)
   if (prep) return [tabRoots[tab], `/spot/${prep[1]}`, pathname]
   const spot = pathname.match(/^\/spot\/([^/]+)$/)

@@ -1,22 +1,22 @@
 // Port of PrepView.rulesSection: the key limits strip, then every rule for the Spot behind a disclosure.
 
-import { useState } from "react";
 import type { Prep } from "../../data/types";
 import { keyLimits, ruleLabel } from "../../logic/freshness";
+import { Glyph } from "../../ui/Glyph";
 import { Card, SectionHeader } from "../../ui/Surfaces";
-import { Disclosure, RulesLink } from "./parts";
+import { RulesLink } from "./parts";
 
 const regulationsURL = "https://www.azgfd.com/fishing-2/";
 
-export function RulesSection({ prep }: { prep: Prep }) {
-  const [open, setOpen] = useState(false);
+/** `open` lives in Prep, so the species sheet's rule line can open Rules and scroll to it. */
+export function RulesSection({ prep, open, setOpen }: { prep: Prep; open: boolean; setOpen: (open: boolean) => void }) {
   const ruleSet = prep.ruleSet ?? null;
   const limits = keyLimits(prep);
   const layerName = prep.layer === "community" ? "Community water" : "Statewide";
   const spotRules = prep.rules.filter((r) => r.scope === "spot");
   const layerRules = prep.rules.filter((r) => r.scope !== "spot");
   return (
-    <section>
+    <section id="prep-rules" className="prep-anchor">
       <SectionHeader title="Rules" trailing={ruleSet ? `${layerName} limits` : undefined} />
       <Card>
         {ruleSet ? (
@@ -32,11 +32,10 @@ export function RulesSection({ prep }: { prep: Prep }) {
                 ))}
               </div>
             )}
-            <Disclosure
-              open={open}
-              onToggle={() => setOpen((o) => !o)}
-              label={open ? "Hide rules for this Spot" : "All rules for this Spot"}
-            />
+            <button type="button" className="prep-disclosure" onClick={() => setOpen(!open)} aria-expanded={open}>
+              <span>{open ? "Hide rules for this Spot" : "All rules for this Spot"}</span>
+              <Glyph name="disclosure" size="0.8rem" weight={2.6} className={open ? "prep-chevron prep-chevron-open" : "prep-chevron"} />
+            </button>
             {open && (
               <div className="prep-rules">
                 {spotRules.length === 0 ? (
@@ -58,8 +57,8 @@ export function RulesSection({ prep }: { prep: Prep }) {
         ) : (
           // No reviewed edition is loaded: say so rather than show unchecked limits.
           <div className="prep-card-text">
-            <p className="prep-body">Limits aren't checked yet</p>
-            <p className="prep-sub">
+            <p className="t-body c-ink">Limits aren't checked yet</p>
+            <p className="t-subheadline c-ink-secondary">
               We show limits once each one is checked against the Commission Order 40 booklet. Check AZGFD before you go.
             </p>
             <RulesLink href={regulationsURL} />

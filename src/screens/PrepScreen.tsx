@@ -1,39 +1,29 @@
-// Port of Views/PrepView.swift (and PrepModel): the verdict and the conditions behind it,
-// then License, Rules, Gear and bait. Sample data: refreshing re-reads the same fixtures.
+// Port of Views/PrepView.swift (and PrepModel): the day picker, NWS alerts and the heat or cold notice, the Today
+// hero, the Details behind it, then License, Rules, Gear and bait. Sample data: refreshing re-reads the same fixtures.
 
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { conditions as fixtureConditions, prep as fixturePrep, spotDetail } from "../data/repository";
-import type { Conditions } from "../data/types";
-import type { Loaded } from "../logic/freshness";
+import { prep as fixturePrep, spotDetail } from "../data/repository";
 import { useOnline } from "../state/appState";
+import { useNav } from "../ui/navigation";
 import { Screen } from "../ui/Screen";
 import { PrepContent } from "./prep/PrepContent";
+import { loadConditions, useMinuteClock } from "./prep/prepModel";
+import { prepRulesRequest } from "./prep/prepRules";
 import { PullToRefresh } from "./prep/PullToRefresh";
 import "./prep/prep.css";
 
 /** How long a refresh shows its spinner; the sample data answers at once. */
 const refreshMs = 700;
 
-function loadConditions(spotId: number): Loaded<Conditions> {
-  const value = fixtureConditions(spotId);
-  return value
-    ? { kind: "live", value, fetchedAt: new Date() }
-    : { kind: "unavailable", reason: { kind: "failed", message: "No conditions for this Spot." } };
-}
-
-/** The clock Prep reads, ticking each minute like its TimelineView. */
-function useMinuteClock(): Date {
-  const [now, setNow] = useState(() => new Date());
-  useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 60_000);
-    return () => clearInterval(id);
-  }, []);
-  return now;
+/** After the species sheet has gone and Rules has laid out its rows. */
+function scrollToRules() {
+  setTimeout(() => document.getElementById("prep-rules")?.scrollIntoView({ behavior: "smooth", block: "start" }), 350);
 }
 
 export default function PrepScreen() {
   const spotId = Number(useParams().id);
+  const nav = useNav();
   const isOnline = useOnline();
   const now = useMinuteClock();
   const spot = spotDetail(spotId) ?? null;
@@ -41,6 +31,9 @@ export default function PrepScreen() {
   const [conditions, setConditions] = useState(() => loadConditions(spotId));
   const [isRefreshing, setRefreshing] = useState(false);
   const [isReloadingPrep, setReloadingPrep] = useState(false);
+  // Opened from the Spot's species sheet (app.prepRulesSpotID): Rules starts open.
+  const [rulesOpen, setRulesOpen] = useState(() => prepRulesRequest.spotID === spotId);
+  const [openedGearID, setOpenedGearID] = useState<number | null>(null);
 
   const refreshConditions = useCallback(() => {
     setRefreshing(true);
@@ -63,6 +56,18 @@ export default function PrepScreen() {
     if (!prep) reloadPrep();
   };
 
+  /** Shows Rules opened: the species sheet's rule line. */
+  const showRules = useCallback(() => {
+    setRulesOpen(true);
+    scrollToRules();
+  }, []);
+
+  useEffect(() => {
+    if (prepRulesRequest.spotID !== spotId) return;
+    prepRulesRequest.spotID = null;
+    scrollToRules();
+  }, [spotId]);
+
   return (
     <Screen title="Prep" titleDisplay="inline" subtitle={spot?.summary.name ?? ""}>
       <PullToRefresh refreshing={isRefreshing} onRefresh={refresh}>
@@ -76,6 +81,12 @@ export default function PrepScreen() {
           refreshConditions={refreshConditions}
           isReloadingPrep={isReloadingPrep}
           reloadPrep={reloadPrep}
+          rulesOpen={rulesOpen}
+          setRulesOpen={setRulesOpen}
+          showRules={showRules}
+          openedGearID={openedGearID}
+          setOpenedGearID={setOpenedGearID}
+          openVerdict={() => nav.push(`/spot/${spotId}/prep/verdict`)}
         />
       </PullToRefresh>
     </Screen>

@@ -3,6 +3,7 @@ import { createHashRouter, Navigate, Route, Routes, useLocation } from 'react-ro
 import { RouterProvider } from 'react-router/dom'
 import LicenseScreen from './screens/LicenseScreen'
 import PrepScreen from './screens/PrepScreen'
+import VerdictScreen from './screens/VerdictScreen'
 import SavedScreen from './screens/SavedScreen'
 import SpotScreen from './screens/SpotScreen'
 import TodayScreen from './screens/TodayScreen'
@@ -34,7 +35,7 @@ function useAppearance() {
 }
 
 function isAppPath(pathname: string): boolean {
-  return tabForRoot(pathname) !== null || /^\/spot\/\d+(\/prep)?$/.test(pathname)
+  return tabForRoot(pathname) !== null || /^\/spot\/\d+(\/prep(\/verdict)?)?$/.test(pathname)
 }
 
 /** Welcome on first launch, then the three tabs, each with its own push stack. */
@@ -165,6 +166,7 @@ function screenFor(path: string) {
       <Route path="/license" element={<LicenseScreen />} />
       <Route path="/spot/:id" element={<SpotScreen />} />
       <Route path="/spot/:id/prep" element={<PrepScreen />} />
+      <Route path="/spot/:id/prep/verdict" element={<VerdictScreen />} />
     </Routes>
   )
 }

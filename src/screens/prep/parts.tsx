@@ -1,15 +1,7 @@
-// Prep's disclosure row (brick label, rotating chevron) and the "Rules on azgfd.com" link.
+// Prep's "Rules on azgfd.com" link, and WindowViews.swift's NoteLine.
 
-import { Glyph } from "../../ui/Glyph";
-
-export function Disclosure({ open, onToggle, label }: { open: boolean; onToggle: () => void; label: string }) {
-  return (
-    <button type="button" className="prep-disclosure" onClick={onToggle} aria-expanded={open}>
-      <span>{label}</span>
-      <Glyph name="disclosure" size="0.95em" weight={2.4} className={open ? "prep-chevron prep-chevron-open" : "prep-chevron"} />
-    </button>
-  );
-}
+import type { ReactNode } from "react";
+import { Glyph, type GlyphName } from "../../ui/Glyph";
 
 export function RulesLink({ href }: { href: string }) {
   return (
@@ -17,5 +9,15 @@ export function RulesLink({ href }: { href: string }) {
       <Glyph name="rules" size="1.2em" />
       <span>Rules on azgfd.com</span>
     </a>
+  );
+}
+
+/** A footnote with an amber glyph: what limits a reading (old forecast, alerts unchecked). */
+export function NoteLine({ glyph, className, children }: { glyph: GlyphName; className?: string; children: ReactNode }) {
+  return (
+    <p className={`note-line ${className ?? ""}`}>
+      <Glyph name={glyph} className="note-line-glyph" size="1.05em" weight={2.3} />
+      <span>{children}</span>
+    </p>
   );
 }
