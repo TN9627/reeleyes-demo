@@ -1,6 +1,7 @@
 // Port of Logic/SkyCalculator.swift: sun and moon times for a Spot, computed on
 // the device (formulas from SunCalc, Vladimir Agafonkin, BSD-2-Clause).
 
+import type { GlyphName } from "../ui/Glyph";
 import { startDate, startOfDay, localDayFromDate } from "./localDay";
 
 export interface SkyDay {
@@ -9,6 +10,7 @@ export interface SkyDay {
   sunset: Date | null;
   dusk: Date | null;
   moonrise: Date | null;
+  moonset: Date | null;
   /** Lit fraction of the moon, 0...1. */
   moonIllumination: number;
   /** 0 new, 0.25 first quarter, 0.5 full, 0.75 last quarter. */
@@ -22,20 +24,70 @@ const j2000 = 2_451_545;
 const obliquity = rad * 23.4397;
 const j0 = 0.0009;
 
-/** "Waning crescent, 12%". */
+/** "Waxing crescent · 8%". */
 export function moonDescription(day: SkyDay): string {
-  return `${phaseName(day.moonPhase)}, ${Math.round(day.moonIllumination * 100)}%`;
+  return `${moonPhaseName(moonPhaseOf(day.moonPhase))} · ${Math.round(day.moonIllumination * 100)}%`;
 }
 
-export function phaseName(phase: number): string {
-  if (phase < 0.03 || phase >= 0.97) return "New moon";
-  if (phase < 0.22) return "Waxing crescent";
-  if (phase < 0.28) return "First quarter";
-  if (phase < 0.47) return "Waxing gibbous";
-  if (phase < 0.53) return "Full moon";
-  if (phase < 0.72) return "Waning gibbous";
-  if (phase < 0.78) return "Last quarter";
-  return "Waning crescent";
+/** The named phase, which also picks the moon's glyph. */
+export const skyDayMoon = (day: SkyDay): MoonPhase => moonPhaseOf(day.moonPhase);
+
+/** The lit side grows on the right from new to full (seen from Arizona). */
+export const isWaxing = (day: SkyDay): boolean => day.moonPhase < 0.5;
+
+/** The eight named phases of the moon. */
+export type MoonPhase =
+  | "new"
+  | "waxingCrescent"
+  | "firstQuarter"
+  | "waxingGibbous"
+  | "full"
+  | "waningGibbous"
+  | "lastQuarter"
+  | "waningCrescent";
+
+export function moonPhaseOf(phase: number): MoonPhase {
+  if (phase < 0.03 || phase >= 0.97) return "new";
+  if (phase < 0.22) return "waxingCrescent";
+  if (phase < 0.28) return "firstQuarter";
+  if (phase < 0.47) return "waxingGibbous";
+  if (phase < 0.53) return "full";
+  if (phase < 0.72) return "waningGibbous";
+  if (phase < 0.78) return "lastQuarter";
+  return "waningCrescent";
+}
+
+const MOON_NAMES: Record<MoonPhase, string> = {
+  new: "New moon",
+  waxingCrescent: "Waxing crescent",
+  firstQuarter: "First quarter",
+  waxingGibbous: "Waxing gibbous",
+  full: "Full moon",
+  waningGibbous: "Waning gibbous",
+  lastQuarter: "Last quarter",
+  waningCrescent: "Waning crescent",
+};
+export const moonPhaseName = (p: MoonPhase): string => MOON_NAMES[p];
+
+/** The moon drawn in this phase: every night icon and the moon line show the phase the words name. */
+export function moonPhaseGlyph(p: MoonPhase): GlyphName {
+  return `moon${p[0]!.toUpperCase()}${p.slice(1)}` as GlyphName;
+}
+
+/** The moon around a moment: up or down, the rise and set of the pass it's on, and its next rise. */
+export interface MoonNow {
+  isUp: boolean;
+  /** Up: when this pass rose (possibly yesterday). Down: null. */
+  rose: Date | null;
+  /** Up: when this pass sets (possibly tomorrow). Down: null. */
+  sets: Date | null;
+  /** Down: the next rise; null when up. */
+  nextRise: Date | null;
+}
+
+export interface DateInterval {
+  start: Date;
+  end: Date;
 }
 
 /** Sun and moon events on the Arizona calendar day containing `date`. */
@@ -43,15 +95,47 @@ export function skyDay(date: Date, lat: number, lng: number): SkyDay {
   const noon = new Date(startDate(localDayFromDate(date)).getTime() + 12 * 3_600_000);
   const sun = sunTimes(noon, lat, lng);
   const ill = moonIlluminationAt(date);
+  const crossings = moonCrossings(startOfDay(date), 24, lat, lng);
   return {
     dawn: sun.dawn,
     sunrise: sun.sunrise,
     sunset: sun.sunset,
     dusk: sun.dusk,
-    moonrise: moonrise(startOfDay(date), lat, lng),
+    moonrise: crossings.find((c) => c.rising)?.at ?? null,
+    moonset: crossings.find((c) => !c.rising)?.at ?? null,
     moonIllumination: ill.fraction,
     moonPhase: ill.phase,
   };
+}
+
+/** Whether the moon is up at `now` and the pass around it, from its rises and sets in the 26 hours either side. */
+export function moonAt(now: Date, lat: number, lng: number): MoonNow {
+  const window = 26;
+  const crossings = moonCrossings(new Date(now.getTime() - window * 3_600_000), window * 2, lat, lng);
+  const before = crossings.filter((c) => c.at <= now).at(-1);
+  const after = crossings.filter((c) => c.at > now);
+  const isUp = before ? before.rising : moonAltitude(now, lat, lng) > moonHorizon;
+  return isUp
+    ? { isUp: true, rose: before?.at ?? null, sets: after.find((c) => !c.rising)?.at ?? null, nextRise: null }
+    : { isUp: false, rose: null, sets: null, nextRise: after.find((c) => c.rising)?.at ?? null };
+}
+
+/** When the moon is up from `start` to `end`, each pass cut at both ends, in order (the 24-hour bar's moon track). */
+export function moonUp(start: Date, end: Date, lat: number, lng: number): DateInterval[] {
+  const hours = Math.ceil((end.getTime() - start.getTime()) / 3_600_000);
+  const crossings = moonCrossings(start, hours, lat, lng).filter((c) => c.at < end);
+  let rose: Date | null = moonAt(start, lat, lng).isUp ? start : null;
+  const passes: DateInterval[] = [];
+  for (const c of crossings) {
+    if (c.rising) {
+      if (rose === null) rose = c.at;
+    } else if (rose !== null) {
+      passes.push({ start: rose, end: c.at });
+      rose = null;
+    }
+  }
+  if (rose !== null) passes.push({ start: rose, end });
+  return passes;
 }
 
 const toJulian = (d: Date) => d.getTime() / dayMs - 0.5 + j1970;
@@ -139,13 +223,27 @@ function moonIlluminationAt(date: Date) {
   return { fraction: (1 + Math.cos(inc)) / 2, phase: 0.5 + (0.5 * inc * (angle < 0 ? -1 : 1)) / Math.PI };
 }
 
-/** The moon's rise on the day starting at `dayStart`, found by fitting a parabola to its altitude every two hours. */
-function moonrise(dayStart: Date, lat: number, lng: number): Date | null {
-  const hc = 0.133 * rad;
-  const at = (hours: number) => new Date(dayStart.getTime() + hours * 3_600_000);
-  const alt = (hours: number) => moonAltitude(at(hours), lat, lng) - hc;
+/** The moon's altitude at rise and set (SunCalc's 0.133°: its radius plus parallax, net of refraction). */
+const moonHorizon = 0.133 * rad;
+
+interface MoonCrossing {
+  at: Date;
+  rising: boolean;
+}
+
+/**
+ * Every moonrise and moonset from `start` to `hours` hours later, in order, found by fitting a parabola to the
+ * moon's altitude every two hours (SunCalc's getMoonTimes, kept going past the first rise and set).
+ */
+function moonCrossings(start: Date, hours: number, lat: number, lng: number): MoonCrossing[] {
+  const at = (h: number) => new Date(start.getTime() + h * 3_600_000);
+  const alt = (h: number) => moonAltitude(at(h), lat, lng) - moonHorizon;
+  const crossings: MoonCrossing[] = [];
+  const add = (offset: number, rising: boolean) => {
+    if (offset >= 0 && offset <= hours) crossings.push({ at: at(offset), rising });
+  };
   let h0 = alt(0);
-  for (let hour = 1; hour <= 24; hour += 2) {
+  for (let hour = 1; hour <= hours; hour += 2) {
     const h1 = alt(hour);
     const h2 = alt(hour + 1);
     const a = (h0 + h2) / 2 - h1;
@@ -161,10 +259,17 @@ function moonrise(dayStart: Date, lat: number, lng: number): Date | null {
       if (Math.abs(x1) <= 1) roots++;
       if (Math.abs(x2) <= 1) roots++;
       if (x1 < -1) x1 = x2;
-      if (roots === 1 && h0 < 0) return at(hour + x1);
-      if (roots === 2) return at(hour + (ye < 0 ? x2 : x1));
+      if (roots === 1) {
+        add(hour + x1, h0 < 0);
+      } else if (roots === 2) {
+        // Up and down (or down and up) within these two hours.
+        const rise = hour + (ye < 0 ? x2 : x1);
+        const set = hour + (ye < 0 ? x1 : x2);
+        add(Math.min(rise, set), rise < set);
+        add(Math.max(rise, set), rise > set);
+      }
     }
     h0 = h2;
   }
-  return null;
+  return crossings;
 }
