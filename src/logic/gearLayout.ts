@@ -1,6 +1,6 @@
 // Port of Logic/GearLayout.swift: how Prep's Gear and the Spot's Fish here order, trim and label species.
 
-import type { Gear, GearMethod, StockingEvent } from "../data/types";
+import { baitTagLabel, type Bait, type Gear, type GearMethod, type StockingEvent } from "../data/types";
 import { compareLocalDay, daysUntil, type LocalDay } from "./localDay";
 import { isRecent } from "./spotFacts";
 
@@ -127,9 +127,14 @@ export function methodSteps(method: GearMethod): GearStep[] {
 
 const count = (n: number, noun: string) => `${n} ${noun}${n === 1 ? "" : "s"}`;
 
-/** "For bobber · 5 items". */
+/** "For bobber · 5 items": the hardware lines and the baits. */
 export function bringHeader(m: GearMethod): string {
-  return `For ${m.name.toLowerCase()} · ${count(m.bring.length, "item")}`;
+  return `For ${m.name.toLowerCase()} · ${count(bringCount(m), "item")}`;
+}
+
+/** Bring's rows: the hardware lines, then one row per bait. */
+export function bringCount(m: GearMethod): number {
+  return m.bring.length + m.baits.length;
 }
 
 /** "4 steps": the actions and the bite. */
@@ -145,5 +150,51 @@ export function methodRowLabel(m: GearMethod): string {
 
 /** "Bobber. 5 items to bring, 4 steps." */
 export function methodAnnouncement(m: GearMethod): string {
-  return `${m.name}. ${count(m.bring.length, "item")} to bring, ${stepsHeader(m)}.`;
+  return `${m.name}. ${count(bringCount(m), "item")} to bring, ${stepsHeader(m)}.`;
+}
+
+// ---------- WhatTheyBite ----------
+// The species sheet's "What they bite" row. The backend has already dropped what an
+// artificial-only Spot bans, so nothing here filters by rule.
+
+export const whatTheyBiteHint = "Tap a bait for why it works and how to hook it.";
+export const artificialOnlyRuleLine = "Artificial flies and lures only here; bait isn't allowed.";
+
+/** Where the artificial-only rule line goes: under the row in place of the hint, or alone where the row would be. */
+export type RuleLine = "none" | "underRow" | "alone";
+
+export function ruleLine(gear: Gear): RuleLine {
+  if (!gear.artificialOnly) return "none";
+  return gear.baits.length === 0 ? "alone" : "underRow";
+}
+
+/** "3 baits". */
+export function whatTheyBiteHeader(gear: Gear): string {
+  return count(gear.baits.length, "bait");
+}
+
+/** "Fish it with": the methods that use the bait, in method order. */
+export function methodsForBait(bait: Bait, gear: Gear): GearMethod[] {
+  return gear.methods.filter((m) => bait.methods.includes(m.id));
+}
+
+/** A method's baits in its own order, for its Bring rows. */
+export function baitsOfMethod(method: GearMethod, gear: Gear): Bait[] {
+  return method.baits.flatMap((id) => gear.baits.find((b) => b.id === id) ?? []);
+}
+
+/** The next open bait after tapping `tapped`: tapping the open one closes it. */
+export function toggledBait(open: string | null, tapped: string): string | null {
+  return open === tapped ? null : tapped;
+}
+
+/** A card's screen-reader label: "PowerBait, smells like food". */
+export function baitCardLabel(bait: Bait): string {
+  return `${bait.name}, ${baitTagLabel(bait.tag).toLowerCase()}`;
+}
+
+/** Spoken when the explanation opens or closes, as method selection is. */
+export function baitAnnouncement(opened: Bait | null, closed: Bait | null): string | null {
+  if (opened) return `${opened.name}. Why it works, how to hook it and what to fish it with, below the row.`;
+  return closed ? `Closed ${closed.name}.` : null;
 }
