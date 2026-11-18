@@ -19,6 +19,7 @@ import { Glyph } from "../../ui/Glyph";
 import { SpeciesImage } from "../../ui/Media";
 import { SpeciesSheet } from "../spot/SpeciesSheet";
 import { Footnote, SectionHeader } from "../../ui/Surfaces";
+import "./gear.css";
 
 const columns = 2;
 
@@ -28,62 +29,80 @@ interface Props {
   spotName: string | null;
   stocking: StockingEvent[];
   today: LocalDay;
+  /** The species whose sheet is open; owned by the caller. */
+  selectedID: number | null;
+  onSelectedIDChange: (id: number | null) => void;
+  /** The sheet's artificial-only rule line, after the sheet has closed: show Prep's Rules. */
+  openRules: () => void;
 }
 
-export function GearSection({ gear, spotID, spotName, stocking, today }: Props) {
+export function GearSection({ gear, spotID, spotName, stocking, today, selectedID, onSelectedIDChange, openRules }: Props) {
   const [expansion, setExpansion] = useState(emptyGearExpansion);
-  const [selectedID, setSelectedID] = useState<number | null>(null);
-  const [announcement, setAnnouncement] = useState("");
   const entries = gearEntries(gear, stocking, today);
   const expanded = isGearExpanded(expansion, spotID);
   const selected = entries.find((e) => e.gear.speciesId === selectedID) ?? null;
-
-  const toggle = () => {
-    setAnnouncement(`Showing ${expanded ? collapsedCount : entries.length} species`);
-    setExpansion((e) => toggleGearExpansion(e, spotID));
-  };
 
   return (
     <section>
       <SectionHeader title="Gear and bait" trailing={entries.length === 0 ? undefined : `${entries.length} species`} />
       {entries.length === 0 ? (
         <>
-          <div className="prep-gear-empty">
-            <span className="prep-gear-empty-glyph" aria-hidden="true">
-              <Glyph name="species" size="22px" />
-            </span>
-            <p className="prep-gear-empty-title">No species listed for this Spot</p>
-            <p className="prep-sub">AZGFD lists no fish here, so there's no gear to suggest yet.</p>
-          </div>
+          <GearEmptyCard />
           <Footnote>Species and stocking from AZGFD.</Footnote>
         </>
       ) : (
         <>
-          <div className="prep-gear-grid">
+          <div className="gear-grid">
             {rows(visible(entries, expanded), columns).map((row, i) => (
-              <div key={i} className="prep-gear-row">
+              <div key={i} className="gear-row">
                 {row.map((entry) => (
-                  <SpeciesCard key={entry.gear.speciesId} entry={entry} onOpen={() => setSelectedID(entry.gear.speciesId)} />
-                ))}
-                {Array.from({ length: columns - row.length }, (_, j) => (
-                  <span key={`pad${j}`} />
+                  <SpeciesCard key={entry.gear.speciesId} entry={entry} onOpen={() => onSelectedIDChange(entry.gear.speciesId)} />
                 ))}
               </div>
             ))}
           </div>
           {canToggle(entries.length) && (
-            <button type="button" className="prep-show-all" onClick={toggle}>
-              {expanded ? "Show fewer" : `Show all ${entries.length} species`}
-            </button>
+            <ShowAllSpeciesButton
+              count={entries.length}
+              expanded={expanded}
+              toggle={() => setExpansion((e) => toggleGearExpansion(e, spotID))}
+            />
           )}
-          <span className="visually-hidden" aria-live="polite">
-            {announcement}
-          </span>
           <Footnote>Tap a fish for where they hang out, gear and steps. Adapted from AZGFD.</Footnote>
         </>
       )}
-      {selected && <SpeciesSheet entry={selected} spotName={spotName} onClose={() => setSelectedID(null)} />}
+      {selected && (
+        <SpeciesSheet
+          key={selected.gear.speciesId}
+          entry={selected}
+          spotName={spotName}
+          onClose={() => onSelectedIDChange(null)}
+          openRules={openRules}
+        />
+      )}
     </section>
+  );
+}
+
+/** "Show all N species" / "Show fewer" under a species list trimmed to `collapsedCount`. */
+function ShowAllSpeciesButton({ count, expanded, toggle }: { count: number; expanded: boolean; toggle: () => void }) {
+  const [announcement, setAnnouncement] = useState("");
+  return (
+    <>
+      <button
+        type="button"
+        className="gear-show-all t-body"
+        onClick={() => {
+          toggle();
+          setAnnouncement(`Showing ${expanded ? collapsedCount : count} species`);
+        }}
+      >
+        {expanded ? "Show fewer" : `Show all ${count} species`}
+      </button>
+      <span className="visually-hidden" aria-live="polite">
+        {announcement}
+      </span>
+    </>
   );
 }
 
@@ -93,14 +112,28 @@ function SpeciesCard({ entry, onOpen }: { entry: GearEntry; onOpen: () => void }
   return (
     <button
       type="button"
-      className={stocked ? "prep-species-card prep-species-card-stocked" : "prep-species-card"}
+      className="gear-species-card"
+      data-stocked={stocked || undefined}
       onClick={onOpen}
       aria-label={stocked ? `${entry.gear.name}, stocked ${entry.stockedAge}` : entry.gear.name}
       aria-description="Shows where they hang out, gear and steps."
     >
       <SpeciesImage slug={entry.gear.slug} height={64} symbolSize={34} />
-      <span className="prep-species-name">{entry.gear.name}</span>
-      {stocked && <span className="prep-species-stocked">{`Stocked ${entry.stockedAge}`}</span>}
+      <span className="t-subheadline-semibold c-ink">{entry.gear.name}</span>
+      {stocked && <span className="t-footnote-semibold c-data-ink">{`Stocked ${entry.stockedAge}`}</span>}
     </button>
+  );
+}
+
+/** The card for a Spot where AZGFD lists no fish. */
+function GearEmptyCard() {
+  return (
+    <div className="gear-empty">
+      <span className="gear-empty-glyph" aria-hidden="true">
+        <Glyph name="species" size="22px" />
+      </span>
+      <p className="t-headline c-ink">No species listed for this Spot</p>
+      <p className="t-subheadline c-ink-secondary">AZGFD lists no fish here, so there's no gear to suggest yet.</p>
+    </div>
   );
 }

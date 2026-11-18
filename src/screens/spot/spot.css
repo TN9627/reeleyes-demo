@@ -313,7 +313,18 @@
   min-height: 60px;
   padding: 12px 16px;
   text-align: left;
+  /* A "Fish it with" flash fades out over 0.6s. */
+  transition: opacity 0.12s, background-color 0.6s ease-out;
+}
+
+.sp-method-row[data-flashed] {
+  background: var(--fill-strong);
   transition: opacity 0.12s;
+}
+
+/* The rule line where What they bite would be, when the rule left no bait. */
+.sp-rule-alone {
+  padding-top: 22px;
 }
 
 .sp-press-row:active {

@@ -1,0 +1,181 @@
+/* What they bite (BaitViews.swift), inside the species sheet. */
+
+/* Runs edge to edge past the sheet's 14px inset; snaps card by card; room for the shadow. */
+.bait-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 calc(-1 * var(--space-screen-inset));
+  padding: 2px var(--space-screen-inset) 14px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 var(--space-screen-inset);
+}
+
+.bait-card {
+  position: relative;
+  flex: none;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+  scroll-snap-align: start;
+  transition: opacity 0.12s;
+}
+
+.bait-card > .bait-photo {
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.bait-card:active {
+  opacity: 0.7;
+}
+
+.bait-card[data-open]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 2px var(--accent);
+  pointer-events: none;
+}
+
+.bait-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 12px 12px;
+}
+
+.bait-photo {
+  flex: none;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--map-land);
+}
+
+.bait-photo.is-empty {
+  background: var(--fill-strong);
+}
+
+.bait-photo img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.bait-photo img.is-loaded {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+/* The hint sits 4px under the row: Footnote's 10px top less 10. */
+.bait-hint .footnote {
+  padding-top: 0;
+}
+
+.bait-explanation-slot {
+  padding-top: 2px;
+}
+
+.bait-ex-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 4px 10px 16px;
+}
+
+.bait-ex-title {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bait-ex-close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.12s;
+}
+
+.bait-ex-close:active {
+  opacity: 0.6;
+}
+
+.bait-ex-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 16px 13px;
+}
+
+/* One row of chips when they fit, else a column. */
+.bait-ex-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 6px;
+}
+
+.bait-credit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 16px 2px;
+}
+
+.bait-credit[data-stacked] {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.bait-credit[data-stacked] > :first-child {
+  padding-top: 10px;
+}
+
+.bait-credit-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 44px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.bait-rule-line {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 6px;
+  text-align: left;
+  transition: opacity 0.12s;
+}
+
+.bait-rule-line:active {
+  opacity: 0.6;
+}
+
+/* The Bring row's 36px thumbnail (GearBaitRow). */
+.bait-bring-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 16px;
+}
+
+.bait-bring-row > .bait-photo {
+  border-radius: 6px;
+}

@@ -24,6 +24,8 @@ import { SpeciesImage } from "../ui/Media";
 import { BarButton, Screen } from "../ui/Screen";
 import { Button } from "../ui/Controls";
 import { Card, EmptyState, Footnote, Row, SectionHeader } from "../ui/Surfaces";
+import { useNav } from "../ui/navigation";
+import { openPrepRules } from "./prep/prepRules";
 import { DirectionsDialog } from "./spot/DirectionsDialog";
 import { SpeciesSheet } from "./spot/SpeciesSheet";
 import { SpotHero } from "./spot/SpotHero";
@@ -46,6 +48,7 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [showsNavTitle, setShowsNavTitle] = useState(false);
   const [showsDriveDialog, setShowsDriveDialog] = useState(false);
+  const nav = useNav();
   const [openedSpeciesID, setOpenedSpeciesID] = useState<number | null>(null);
   const [showsAllSpecies, setShowsAllSpecies] = useState(false);
   const saved = useAppState((s) => s.favoriteIds.includes(spot.id));
@@ -172,7 +175,16 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
       </div>
 
       {showsDriveDialog && <DirectionsDialog spot={spot} driveMinutes={drive} onClose={() => setShowsDriveDialog(false)} />}
-      {openedEntry && <SpeciesSheet entry={openedEntry} spotName={spot.name} onClose={() => setOpenedSpeciesID(null)} />}
+      {openedEntry && (
+        <SpeciesSheet
+          key={openedEntry.gear.speciesId}
+          entry={openedEntry}
+          spotName={spot.name}
+          onClose={() => setOpenedSpeciesID(null)}
+          // Push Prep with its Rules open, as AppModel.openPrepRules does.
+          openRules={() => openPrepRules(nav, spot.id)}
+        />
+      )}
     </Screen>
   );
 }
