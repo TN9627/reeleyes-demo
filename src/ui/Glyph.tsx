@@ -26,6 +26,19 @@ import {
   TriangleExclamationPoint,
   WifiOff,
   X,
+  Undo2,
+  ThermometerSun,
+  Snowflake,
+  CloudLightning,
+  Wind,
+  ChevronDown,
+  Sun,
+  Moon,
+  Cloud,
+  CloudRain,
+  Gauge,
+  Sunrise,
+  Sunset,
   type LucideIcon,
 } from 'lucide-react'
 import type { CSSProperties } from 'react'
@@ -50,6 +63,26 @@ const inlineSVGs = {
   // xmark.circle.fill: a filled disc with the x knocked out in the field's color.
   clearFill:
     '<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="m15 9-6 6M9 9l6 6" stroke="var(--glyph-knockout, var(--background))"/>',
+  // moonrise / moonset: a crescent over the horizon with an up or down arrow, like the SF pair.
+  moonrise:
+    '<path d="M2 20h20"/><path d="M16 16.5A6 6 0 0 1 9.5 10a6 6 0 1 0 6.5 6.5z"/><path d="M19 9V3M17 5l2-2 2 2"/>',
+  moonset:
+    '<path d="M2 20h20"/><path d="M16 16.5A6 6 0 0 1 9.5 10a6 6 0 1 0 6.5 6.5z"/><path d="M19 3v6M17 7l2 2 2-2"/>',
+  // moonphase.*: SF draws these hierarchically (dark side pale, lit side full), so a waxing crescent
+  // can't read as a waning gibbous. Lit side on the right while waxing, as seen from Arizona.
+  moonNew: moonPhase(''),
+  moonWaxingCrescent: moonPhase('M12 3a9 9 0 0 1 0 18a6 9 0 0 0 0-18z'),
+  moonFirstQuarter: moonPhase('M12 3a9 9 0 0 1 0 18z'),
+  moonWaxingGibbous: moonPhase('M12 3a9 9 0 0 1 0 18a6 9 0 0 1 0-18z'),
+  moonFull: moonPhase('M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0-18z'),
+  moonWaningGibbous: moonPhase('M12 3a9 9 0 0 0 0 18a6 9 0 0 0 0-18z'),
+  moonLastQuarter: moonPhase('M12 3a9 9 0 0 0 0 18z'),
+  moonWaningCrescent: moonPhase('M12 3a9 9 0 0 0 0 18a6 9 0 0 1 0-18z'),
+}
+
+/** A moon disc: the dark side pale, `lit` (a path in the 24 grid) solid. */
+function moonPhase(lit: string): string {
+  return `<circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.22" stroke="none"/>${lit ? `<path d="${lit}" fill="currentColor" stroke="none"/>` : ''}<circle cx="12" cy="12" r="9"/>`
 }
 
 type Source =
@@ -93,6 +126,34 @@ export const GLYPHS = {
   refreshFailed: { sf: 'exclamationmark.arrow.circlepath', source: { kind: 'lucide', icon: RefreshCwOff } },
   error: { sf: 'exclamationmark.triangle', source: { kind: 'lucide', icon: TriangleExclamationPoint } },
   noSpotsNearby: { sf: 'safari', source: { kind: 'lucide', icon: Compass } },
+  backToNow: { sf: 'arrow.uturn.backward', source: { kind: 'lucide', icon: Undo2 } },
+  // Weather safety: NWS alerts, heat and cold notices, the hour list's toggle, sun or moon (#60)
+  heat: { sf: 'thermometer.high', source: { kind: 'lucide', icon: ThermometerSun } },
+  cold: { sf: 'snowflake', source: { kind: 'lucide', icon: Snowflake } },
+  storm: { sf: 'cloud.bolt', source: { kind: 'lucide', icon: CloudLightning } },
+  wind: { sf: 'wind', source: { kind: 'lucide', icon: Wind } },
+  weatherAlert: { sf: 'exclamationmark.triangle', source: { kind: 'lucide', icon: TriangleExclamationPoint } },
+  expand: { sf: 'chevron.down', source: { kind: 'lucide', icon: ChevronDown } },
+  sunUp: { sf: 'sun.max', source: { kind: 'lucide', icon: Sun } },
+  sunDown: { sf: 'moon', source: { kind: 'lucide', icon: Moon } },
+  // Prep's Today hero: sky, pressure chip, sun and moon events, the hour line
+  cloudy: { sf: 'cloud', source: { kind: 'lucide', icon: Cloud } },
+  rain: { sf: 'cloud.rain', source: { kind: 'lucide', icon: CloudRain } },
+  pressure: { sf: 'gauge.with.dots.needle.33percent', source: { kind: 'lucide', icon: Gauge } },
+  sunrise: { sf: 'sunrise', source: { kind: 'lucide', icon: Sunrise } },
+  sunset: { sf: 'sunset', source: { kind: 'lucide', icon: Sunset } },
+  moonrise: { sf: 'moonrise', source: { kind: 'inline', svg: inlineSVGs.moonrise } },
+  moonset: { sf: 'moonset', source: { kind: 'inline', svg: inlineSVGs.moonset } },
+  time: { sf: 'clock', source: { kind: 'lucide', icon: Clock } },
+  // The moon in each named phase (MoonPhase): the night icon and the moon line
+  moonNew: { sf: 'moonphase.new.moon', source: { kind: 'inline', svg: inlineSVGs.moonNew } },
+  moonWaxingCrescent: { sf: 'moonphase.waxing.crescent', source: { kind: 'inline', svg: inlineSVGs.moonWaxingCrescent } },
+  moonFirstQuarter: { sf: 'moonphase.first.quarter', source: { kind: 'inline', svg: inlineSVGs.moonFirstQuarter } },
+  moonWaxingGibbous: { sf: 'moonphase.waxing.gibbous', source: { kind: 'inline', svg: inlineSVGs.moonWaxingGibbous } },
+  moonFull: { sf: 'moonphase.full.moon', source: { kind: 'inline', svg: inlineSVGs.moonFull } },
+  moonWaningGibbous: { sf: 'moonphase.waning.gibbous', source: { kind: 'inline', svg: inlineSVGs.moonWaningGibbous } },
+  moonLastQuarter: { sf: 'moonphase.last.quarter', source: { kind: 'inline', svg: inlineSVGs.moonLastQuarter } },
+  moonWaningCrescent: { sf: 'moonphase.waning.crescent', source: { kind: 'inline', svg: inlineSVGs.moonWaningCrescent } },
   // The Spot's map
   mapPin: { sf: 'mappin', source: { kind: 'lucide', icon: MapPin } },
   // Fishing (custom symbols)
