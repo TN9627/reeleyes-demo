@@ -85,7 +85,7 @@ export function loadFixtures(now: Date): Fixtures {
   const offsetMs = now.getTime() - capturedAt.getTime();
   const dayShift = daysUntil(localDayFromDate(capturedAt), localDayFromDate(now));
   const decode = <T>(raw: unknown) => hydrate(raw, offsetMs, dayShift) as T;
-  const preps = decode<Prep[]>(prepJson);
+  const preps = decode<Prep[]>(prepJson).map(normalizePrep);
   const conditions = decode<Conditions[]>(conditionsJson);
   return {
     species: decode<Species[]>(speciesJson),
@@ -96,6 +96,19 @@ export function loadFixtures(now: Date): Fixtures {
     driveTable: driveTimesJson as Record<string, Record<string, number>>,
     dayShift,
     offsetMs,
+  };
+}
+
+/** Like Swift's tolerant Gear/GearMethod/Bait decoders: missing `baits`, `artificialOnly` and `methods` default to empty/false. */
+function normalizePrep(raw: Prep): Prep {
+  return {
+    ...raw,
+    gear: raw.gear.map((g) => ({
+      ...g,
+      methods: g.methods.map((m) => ({ ...m, baits: m.baits ?? [] })),
+      baits: (g.baits ?? []).map((b) => ({ ...b, methods: b.methods ?? [] })),
+      artificialOnly: g.artificialOnly ?? false,
+    })),
   };
 }
 

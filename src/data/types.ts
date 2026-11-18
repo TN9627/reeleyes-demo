@@ -21,6 +21,19 @@ export interface Species {
   slug: string;
   /** Trout, Bass, Catfish, Crappie, Striped bass, Walleye, Sunfish or Other. */
   group: string;
+  /** Where the species does best, as a water temperature from its cited study; absent when no source gives one. */
+  waterTempRange?: WaterTempRange | null;
+}
+
+/** A species' water-temperature range from one cited study. `lowC == highC` when the source gives a single value. */
+export interface WaterTempRange {
+  lowC: number;
+  highC: number;
+  /** "Adult growth", "Adults in reservoirs". */
+  basis: string;
+  /** "Stuber et al. 1982, USFWS". */
+  source: string;
+  url: string;
 }
 
 export type SpotKind = "lake" | "reservoir" | "river" | "community_pond";
@@ -145,6 +158,39 @@ export interface GearMethod {
   steps: string[];
   /** What to do when a fish bites; always shown as the last step. */
   bite: string;
+  /** Ids of the method's baits (in `Gear.baits`), in the order to try them; empty for one without bait. */
+  baits: string[];
+}
+
+export type BaitTag = "real-food" | "looks-like-food" | "smells-like-food";
+
+/** Swift `Bait.Tag.label`. */
+export function baitTagLabel(tag: BaitTag): string {
+  switch (tag) {
+    case "real-food":
+      return "Real food";
+    case "looks-like-food":
+      return "Looks like food";
+    case "smells-like-food":
+      return "Smells like food";
+  }
+}
+
+/** Anything on the hook that gets a fish to bite, with this species' advice. */
+export interface Bait {
+  id: string;
+  /** The shop name, capitalized ("PowerBait", "Inline spinner"). */
+  name: string;
+  tag: BaitTag;
+  description: string;
+  /** Why this species takes it. */
+  why: string;
+  /** How to put it on the hook, sized for this species. */
+  hook: string;
+  /** Ids of the methods that use it, in method order. */
+  methods: string[];
+  /** Square photo (`bait/<id>`); null until one exists. */
+  photo?: Photo | null;
 }
 
 export interface Gear {
@@ -153,8 +199,12 @@ export interface Gear {
   name: string;
   /** One short line about where the fish holds; null hides the sheet's section. (Swift: `where`.) */
   where?: string | null;
-  /** 1–3 methods in display order; exactly one is `recommended`. */
+  /** Up to 3 methods in display order; one is `recommended`. Empty at an artificial-only Spot whose rule bans every method's baits. */
   methods: GearMethod[];
+  /** The "What they bite" row: the recommended method's baits first, then the other methods', each once. Empty hides the section. */
+  baits: Bait[];
+  /** The Spot's rules allow only artificial flies and lures for this species. */
+  artificialOnly: boolean;
 }
 
 export interface Prep {
@@ -169,11 +219,6 @@ export interface Prep {
 
 export type PressureTrend = "rising" | "steady" | "falling";
 
-export interface Verdict {
-  line: string;
-  reasons: string[];
-}
-
 export interface Weather {
   airTempC: number;
   highC?: number | null;
@@ -184,6 +229,70 @@ export interface Weather {
   windDirection: string;
   observedAt: Date;
   source: string;
+  /** The Spot's NWS grid point, "PSR/154,78"; null without an NWS feed. */
+  gridPoint?: string | null;
+  /** Gusts this hour, mph; null when that fetch failed. */
+  gustMph?: number | null;
+  /** Sky cover this hour, percent 0–100; null when that fetch failed. */
+  cloudCoverPct?: number | null;
+}
+
+/** One hour of the Spot's NWS hourly forecast. */
+export interface HourlyPeriod {
+  startTime: Date;
+  endTime: Date;
+  tempC: number;
+  relativeHumidity?: number | null;
+  dewpointC?: number | null;
+  windMph: number;
+  /** Where the wind blows from; empty when calm. */
+  windDirection: string;
+  /** Probability of precipitation, percent. */
+  precipitationChance?: number | null;
+  /** "Chance Showers And Thunderstorms": the window reads thunder from it. */
+  shortForecast: string;
+  gustMph?: number | null;
+  cloudCoverPct?: number | null;
+}
+
+/** Every hour that starts today or on the next 4 days in Arizona that the server has, oldest first. */
+export interface HourlyForecast {
+  updatedAt: Date;
+  source: string;
+  periods: HourlyPeriod[];
+}
+
+/** MET Norway's forecast sea-level pressure from the start of today through the 4th day after, oldest first. */
+export interface PressureForecast {
+  source: string;
+  updatedAt: Date;
+  series: PressureReading[];
+}
+
+/** An active NWS alert for the Spot's point, with NWS's own text. */
+export interface NWSAlert {
+  id: string;
+  /** "Extreme Heat Warning", "Lake Wind Advisory", … */
+  event: string;
+  /** Extreme, Severe, Moderate, Minor or Unknown. */
+  severity: string;
+  headline?: string | null;
+  description: string;
+  instruction?: string | null;
+  areaDesc: string;
+  /** "NWS Phoenix AZ". */
+  senderName: string;
+  sent: Date;
+  onset?: Date | null;
+  ends?: Date | null;
+  expires: Date;
+}
+
+export interface NWSAlerts {
+  checkedAt: Date;
+  /** The latest check failed; `items` are from `checkedAt`. */
+  refreshFailed: boolean;
+  items: NWSAlert[];
 }
 
 export interface PressureReading {
@@ -234,12 +343,17 @@ export interface Conditions {
   /** When the server last refreshed; null when it never has. */
   fetchedAt?: Date | null;
   refreshFailed: boolean;
-  verdict?: Verdict | null;
   weather?: Weather | null;
   pressure?: Pressure | null;
   lakeLevel?: LakeLevel | null;
   flow?: RiverFlow | null;
   waterTemp?: WaterTemperature | null;
+  /** Null without an NWS feed. */
+  hourly?: HourlyForecast | null;
+  /** Null until MET Norway answered once for the Spot. */
+  pressureForecast?: PressureForecast | null;
+  /** Null when NWS alerts were never checked successfully for the Spot. */
+  alerts?: NWSAlerts | null;
 }
 
 /** An Arizona city or ZIP a typed query resolved to. */

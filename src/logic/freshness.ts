@@ -2,7 +2,7 @@
 // pressure wording and chart labels, and the Prep rules strip.
 // OfflinePolicy.load is not ported: the demo has no network fetches to fall back from.
 
-import { isForecast, type Conditions, type Pressure, type Prep, type Rule } from "../data/types";
+import { type Conditions, type Pressure, type Prep, type Rule } from "../data/types";
 import { inHg, roundHalfAway } from "./spotFacts";
 
 export type FallbackReason = { kind: "offline" } | { kind: "failed"; message: string };
@@ -37,12 +37,6 @@ export function readingDate(c: Conditions): Date | null {
   return c.pressure?.observedAt ?? c.weather?.observedAt ?? null;
 }
 
-/** The verdict shows only while the pressure behind it is at most 3 hours old. */
-export function showsVerdict(c: Conditions, now: Date): boolean {
-  if (!c.verdict || !c.pressure) return false;
-  return now.getTime() - c.pressure.observedAt.getTime() <= maxPressureAgeMs;
-}
-
 function staleBanner(c: Conditions, now: Date): ConditionsBanner | null {
   const date = readingDate(c);
   if (!date) return null;
@@ -63,47 +57,65 @@ export function conditionsBanner(loaded: Loaded<Conditions>, now: Date): Conditi
   }
 }
 
-// ---------- PressureTraceLabels ----------
-
-export interface PressureTraceLabels {
-  /** The tile's trailing label: "Last 3 hours" or "Next 3 hours". */
-  window: string;
-  start: string;
-  end: string;
-  accessibility: string;
-  /** The current reading is the first point of the series, not the last. */
-  currentIsFirst: boolean;
-}
-
-export function pressureTraceLabels(p: Pressure): PressureTraceLabels {
-  return isForecast(p)
-    ? { window: "Next 3 hours", start: "Now", end: "In 3 hr", accessibility: "Pressure forecast for the next 3 hours", currentIsFirst: true }
-    : { window: "Last 3 hours", start: "3 hr ago", end: "Now", accessibility: "Pressure over the last 3 hours", currentIsFirst: false };
-}
-
 // ---------- PressureWords ----------
 
-/** "Fast" from 1.7 hPa (0.05 inHg) in 3 hours. */
-export const fastHpa = 1.7;
+/** Which way pressure went in 3 hours: the pressure chip's word. */
+export type PressureDirection = "Falling" | "Steady" | "Rising";
 
-/** "Steady", "Falling slowly", "Rising fast". */
-export function pressureTrendWords(p: Pressure): string {
-  const speed = Math.abs(p.change3hHpa) >= fastHpa ? "fast" : "slowly";
-  switch (p.trend) {
-    case "steady":
-      return "Steady";
-    case "falling":
-      return `Falling ${speed}`;
-    case "rising":
-      return `Rising ${speed}`;
-  }
-}
+/**
+ * Wording for the pressure reading ("Falling slowly · −0.04 in 3 hr"), from the 3-hour change Δ in inHg
+ * rounded to the hundredth as shown, so the words always agree with the figure.
+ */
+export const PressureWords = {
+  /** |Δ| under this is steady. */
+  steadyInHg: 0.02,
+  /** |Δ| over this is fast (and a fast fall rates Slow). */
+  fastInHg: 0.06,
 
-/** "-0.05 in 3 hr", in inHg rounded to hundredths. */
-export function pressureChangeWords(p: Pressure): string {
-  const inches = roundHalfAway(inHg(p.change3hHpa) * 100) / 100;
-  return `${inches > 0 ? "+" : ""}${inches.toFixed(2)} in 3 hr`;
-}
+  /** The 3-hour change in inHg, rounded to the hundredth. */
+  changeInHg(p: Pressure): number {
+    return PressureWords.changeInHgFromHpa(p.change3hHpa);
+  },
+  /** A change in hPa as inHg, rounded to the hundredth. */
+  changeInHgFromHpa(hpa: number): number {
+    return roundHalfAway(inHg(hpa) * 100) / 100;
+  },
+  /** |Δ| < 0.02 steady; otherwise falling or rising. */
+  direction(changeInHg: number): PressureDirection {
+    if (Math.abs(changeInHg) < PressureWords.steadyInHg) return "Steady";
+    return changeInHg < 0 ? "Falling" : "Rising";
+  },
+  /** "Steady", "Falling slowly", "Rising fast" (fast past 0.06 inHg). */
+  trend(p: Pressure): string {
+    return PressureWords.trendFor(PressureWords.changeInHg(p));
+  },
+  trendFor(change: number): string {
+    const d = PressureWords.direction(change);
+    if (d === "Steady") return d;
+    return `${d} ${Math.abs(change) > PressureWords.fastInHg ? "fast" : "slowly"}`;
+  },
+  /** "−0.04 in 3 hr" with a true minus, "+0.06 in 3 hr", "0.00 in 3 hr". */
+  change(p: Pressure): string {
+    return PressureWords.changeFor(PressureWords.changeInHg(p));
+  },
+  changeFor(change: number): string {
+    const sign = change < 0 ? "\u2212" : change > 0 ? "+" : "";
+    return `${sign}${Math.abs(change).toFixed(2)} in 3 hr`;
+  },
+  /** The hero's pressure tile caption: the change, or "No change" when it rounds to 0.00. */
+  caption(change: number): string {
+    return change === 0 ? "No change" : PressureWords.changeFor(change);
+  },
+  /** Screen reader: "falling, down 0.04 inches in 3 hours". */
+  spoken(p: Pressure): string {
+    return PressureWords.spokenFor(PressureWords.changeInHg(p));
+  },
+  spokenFor(change: number): string {
+    const d = PressureWords.direction(change).toLowerCase();
+    if (change === 0) return `${d}, no change in 3 hours`;
+    return `${d}, ${change < 0 ? "down" : "up"} ${Math.abs(change).toFixed(2)} inches in 3 hours`;
+  },
+};
 
 // ---------- RuleSummary ----------
 
