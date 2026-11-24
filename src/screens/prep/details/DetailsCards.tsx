@@ -2,7 +2,8 @@
 // day, the sun and moon card with the 24-hour bar, then the water's card when the Spot has a feed, or one line when
 // it has none.
 
-import { useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
+import { Fragment, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
+import { OPEN_METEO_SOURCE } from "../../../data/openMeteo";
 import type { Conditions, Pressure, RiverFlow, SpotSummary } from "../../../data/types";
 import { PressureWords } from "../../../logic/freshness";
 import { dayRatingLevel, type PrepDay, type PrepForecast, type PressureTrace } from "../../../logic/prepDays";
@@ -11,6 +12,7 @@ import { moonPhaseGlyph } from "../../../logic/skyCalculator";
 import { Format, fahrenheit, inHg, roundHalfAway } from "../../../logic/spotFacts";
 import { moonPoint, skyCard, skyCardElapsed, skyPhase, skyPoint, type SkyCard } from "../../../logic/todayHero";
 import { Card, Glyph } from "../../../ui";
+import { OpenMeteoCredit } from "../parts";
 import { NowButton, ratingColor } from "../TodayHero";
 import "./details.css";
 
@@ -72,7 +74,7 @@ export function DetailsSection({ conditions, spot, forecast, day, date, isNow, n
 
 /**
  * "Air pressure", the value and trend at the selected time, and the day midnight to midnight: measured readings solid
- * up to the latest on Today, MET Norway's forecast dashed after, the selected time marked.
+ * up to the latest on Today, the forecast dashed after, the selected time marked.
  */
 export function PressureCard({
   day,
@@ -94,15 +96,16 @@ export function PressureCard({
   const hpa = isNow ? (live?.hpa ?? null) : trace.hpa(date);
   const change = isNow ? (live ? PressureWords.changeInHg(live) : null) : trace.changeInHg(date);
 
-  // Today: the station and its age, then MET Norway's credit for the dashed part; other days the credit alone.
-  // MET Norway's licence (CC BY 4.0) asks for credit wherever its data shows.
-  const footer = ((): string[] => {
-    const credit = "Hourly forecast from MET Norway (CC BY 4.0)";
-    if (!day.isToday || !live) return [credit];
+  // Today: the station and its age, then the forecast's credit for the dashed part; other days the credit alone.
+  // Open-Meteo's license (CC BY 4.0) asks for credit wherever its data shows.
+  const fromOpenMeteo = trace.samples.length > 0 && live?.source === OPEN_METEO_SOURCE;
+  const footer = ((): ReactNode[] => {
+    const credit = fromOpenMeteo ? <OpenMeteoCredit className="details-credit" /> : null;
+    if (!day.isToday || !live) return credit ? [credit] : [];
     const age = savedAt === null ? Format.age(live.observedAt, now) : Format.time(live.observedAt);
     const code = live.station.code;
-    if (!code) return [`${live.station.name} · ${age}`, credit];
-    return [`${live.station.name} (${code}), ${roundHalfAway(live.station.distanceMi)} mi away · ${age}`, `Dashed: ${credit}`];
+    if (!code) return [`${live.station.name} · ${age}`, ...(credit ? [credit] : [])];
+    return [`${live.station.name} (${code}), ${roundHalfAway(live.station.distanceMi)} mi away · ${age}`];
   })();
 
   return (
@@ -120,11 +123,15 @@ export function PressureCard({
           </div>
           <DayPressureChart start={day.start} end={day.end} trace={trace} selected={date} />
           <AxisLabels />
-          {footer.map((line) => (
-            <p key={line} className="t-caption c-ink-tertiary">
-              {line}
-            </p>
-          ))}
+          {footer.map((line, i) =>
+            typeof line === "string" ? (
+              <p key={line} className="t-caption c-ink-tertiary">
+                {line}
+              </p>
+            ) : (
+              <Fragment key={i}>{line}</Fragment>
+            ),
+          )}
         </>
       ) : (
         <p className="t-subheadline c-ink-secondary">

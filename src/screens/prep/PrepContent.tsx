@@ -28,7 +28,8 @@ import { ColdSignsSheet, HeatSignsSheet, SafetyNotice } from "./safety/WeatherSa
 import { GearSection } from "./GearSection";
 import { RulesSection } from "./RulesSection";
 import { DayPicker, TodayHeroCard } from "./TodayHero";
-import { NoteLine, RulesLink } from "./parts";
+import { FALLBACK_NOTE } from "../../data/openMeteo";
+import { NoteLine, OpenMeteoCredit, RulesLink } from "./parts";
 import { Banner, Card, SectionHeader } from "../../ui/Surfaces";
 import { Button } from "../../ui/Controls";
 import { Glyph } from "../../ui/Glyph";
@@ -41,6 +42,8 @@ interface Props {
   spot: SpotDetail | null;
   prep: Prep | null;
   conditions: Loaded<Conditions> | null;
+  /** The weather is Open-Meteo's; false when the sample weather stands in. */
+  weatherLive: boolean;
   now: Date;
   isRefreshing: boolean;
   isOnline: boolean;
@@ -71,6 +74,7 @@ export function PrepContent(props: Props) {
     <ConditionsHeader
       loaded={conditions}
       reading={reading}
+      weatherLive={props.weatherLive}
       now={now}
       isRefreshing={props.isRefreshing}
       isOnline={props.isOnline}
@@ -83,7 +87,7 @@ export function PrepContent(props: Props) {
   return (
     <div className="prep-content">
       {reading ? (
-        <PrepConditions reading={reading} openVerdict={props.openVerdict} header={header} />
+        <PrepConditions reading={reading} openVerdict={props.openVerdict} header={header} weatherLive={props.weatherLive} />
       ) : (
         <>
           {header ?? <SkeletonHeader />}
@@ -152,10 +156,11 @@ export function PrepContent(props: Props) {
 }
 
 /** Prep's header: the freshness banner, then NWS alerts, the heat and cold notices. */
-function ConditionsHeader({ loaded, reading, now, isRefreshing, isOnline, refresh, openAlert, openSheet }: {
+function ConditionsHeader({ loaded, reading, weatherLive, now, isRefreshing, isOnline, refresh, openAlert, openSheet }: {
   loaded: Loaded<Conditions>;
   /** Null until the Spot is loaded too (its place and class feed the hero and the rating). */
   reading: ConditionsReading | null;
+  weatherLive: boolean;
   now: Date;
   isRefreshing: boolean;
   isOnline: boolean;
@@ -197,6 +202,11 @@ function ConditionsHeader({ loaded, reading, now, isRefreshing, isOnline, refres
       {banner.kind === "couldNotRefresh" && (
         <Banner glyph="refreshFailed" title="Couldn't refresh." message="Showing the last readings with their age." action={refreshButton} />
       )}
+      {!weatherLive && value && (
+        <NoteLine glyph="offline" className="prep-header-note">
+          {FALLBACK_NOTE}
+        </NoteLine>
+      )}
       {reading && (
         <>
           {reading.active.map((alert) => (
@@ -233,7 +243,7 @@ function ConditionsHeader({ loaded, reading, now, isRefreshing, isOnline, refres
  * The day picker, `header` (banners and alerts), the Today hero and the Details, around the one selected day and
  * time. The five days' ratings (`forecast`) are worked out once per reading.
  */
-function PrepConditions({ reading, openVerdict, header }: { reading: ConditionsReading; openVerdict: () => void; header: ReactNode }) {
+function PrepConditions({ reading, openVerdict, header, weatherLive }: { reading: ConditionsReading; openVerdict: () => void; header: ReactNode; weatherLive: boolean }) {
   const forecast: PrepForecast = useMemo(() => prepForecast(reading), [reading]);
   const [selection, setSelection] = useState<DaySelection>(selectionNow);
   /** The 24-hour bar is being dragged: the hour row follows without animating. */
@@ -272,6 +282,7 @@ function PrepConditions({ reading, openVerdict, header }: { reading: ConditionsR
         backToNow={backToNow}
         open={day.isToday ? openVerdict : null}
       />
+      {weatherLive && <OpenMeteoCredit className="prep-credit" />}
       <div id="prep-conditions" className="prep-anchor">
         <SectionHeader title="Details" />
       </div>

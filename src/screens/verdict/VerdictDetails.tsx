@@ -2,6 +2,7 @@
 // age and distance, how sure, the Spot's class, its fish against the water temperature, and what it doesn't know.
 
 import type { ReactNode } from "react";
+import { OPEN_METEO_SOURCE } from "../../data/openMeteo";
 import type { Species, Weather, WaterTemperature, WaterTempRange } from "../../data/types";
 import type { ConditionsReading } from "../../logic/conditionsReading";
 import { Feels } from "../../logic/feels";
@@ -24,6 +25,7 @@ import {
 } from "../../logic/verdictRules";
 import { ClockWords } from "../../logic/windowTime";
 import { Source } from "../prep/details/DetailsCards";
+import { OpenMeteoCredit } from "../prep/parts";
 import { BulletList, CiteLink, SafetySources } from "../prep/safety/WeatherSafety";
 import { ratingColor } from "../prep/TodayHero";
 import { Card, Footnote, SectionHeader } from "../../ui/Surfaces";
@@ -38,7 +40,7 @@ function ConfidenceLine({ verdict }: { verdict: VerdictRead }) {
   );
 }
 
-export function VerdictDetails({ reading, species }: { reading: ConditionsReading; species: Species[] }) {
+export function VerdictDetails({ reading, species, weatherLive }: { reading: ConditionsReading; species: Species[]; weatherLive: boolean }) {
   const verdict = reading.verdict;
   const conditions = reading.conditions;
   const good = <strong>{ratingLevelLabel("good")}</strong>;
@@ -51,6 +53,7 @@ export function VerdictDetails({ reading, species }: { reading: ConditionsReadin
       <Card>
         <Inputs reading={reading} />
       </Card>
+      {weatherLive && <OpenMeteoCredit className="verdict-credit" />}
       <div id="verdict-rating" className="verdict-anchor">
         <SectionHeader title="How it's rated" />
       </div>
@@ -62,7 +65,7 @@ export function VerdictDetails({ reading, species }: { reading: ConditionsReadin
             <>{slow} when it's climbing 0.02 inHg or more, or dropping faster than 0.06.</>,
             "Wind over 15 mph or gusts over 25 mph hold it at Fair at best. Wind over 25 mph makes it Slow.",
             <>
-              An hour is {slow} when storms are likely (thunder in NWS's forecast with a {WindowRules.stormChance}% chance or more), when it
+              An hour is {slow} when storms are likely (thunder in the forecast with a {WindowRules.stormChance}% chance or more), when it
               feels like {WindowRules.heatF}°F or more, or when the wind chill is {WindowRules.coldF}°F or below.
             </>,
             `Ponds and community lakes drop one level when the high is ${VerdictRules.hotHighF}°F or more.`,
@@ -77,7 +80,7 @@ export function VerdictDetails({ reading, species }: { reading: ConditionsReadin
           items={[
             <>
               <strong>High</strong> when pressure comes from a station within 25 mi, reported in the last 75 min, and wind and air temperature come
-              from this Spot's NWS forecast.
+              from this Spot's hourly forecast.
             </>,
             "Each of these lowers it one step: a station farther than 25 mi, a reading 75 min to 3 hr old, pressure from a forecast instead of a station.",
             <>
@@ -179,6 +182,11 @@ function FlagLine({ flag }: { flag: Flag }) {
   );
 }
 
+/** "Open-Meteo forecast", or NWS's grid-point forecast for sample weather. */
+function forecastName(source: string): string {
+  return source === OPEN_METEO_SOURCE ? "Open-Meteo forecast" : "NWS forecast";
+}
+
 /** "26 min old", or offline "from 8:05 AM". */
 function age(reading: ConditionsReading, date: Date): string {
   return reading.savedAt === null ? ClockWords.ageOld(date, reading.now) : `from ${Format.time(date)}`;
@@ -219,14 +227,14 @@ function Inputs({ reading }: { reading: ConditionsReading }) {
         key="wind"
         title="Wind"
         value={`${roundHalfAway(weather.windMph)} mph${direction}${gusts}`}
-        source={`NWS forecast for this Spot's grid point${grid} · ${age(reading, weather.observedAt)}`}
+        source={`${forecastName(weather.source)} for this Spot${grid} · ${age(reading, weather.observedAt)}`}
         flags={[windFlag(weather)]}
       />,
       <InputRow
         key="air"
         title="Air temperature"
         value={`${fahrenheit(weather.airTempC)}°F now${weather.highC != null ? `, high ${fahrenheit(weather.highC)}°F` : ""}`}
-        source={`NWS forecast for this Spot's grid point · ${age(reading, weather.observedAt)}`}
+        source={`${forecastName(weather.source)} for this Spot · ${age(reading, weather.observedAt)}`}
         flags={[airFlag(verdict)]}
       />,
       <InputRow
@@ -237,7 +245,7 @@ function Inputs({ reading }: { reading: ConditionsReading }) {
             ? `${period.shortForecast}, ${Feels.whole(period.precipitationChance ?? 0)}% chance of rain, feels like ${Feels.whole(Feels.heatF(Feels.fahrenheit(period.tempC), period.relativeHumidity))}°F`
             : "No forecast for this hour."
         }
-        source="NWS hourly forecast for this Spot"
+        source={`${(conditions.hourly?.source ?? weather.source) === OPEN_METEO_SOURCE ? "Open-Meteo" : "NWS"} hourly forecast for this Spot`}
         flags={
           verdict.hazards.length === 0
             ? [{ kind: "ok", text: "No storms likely, dangerous heat or dangerous cold this hour" }]

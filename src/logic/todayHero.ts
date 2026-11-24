@@ -51,7 +51,7 @@ export interface TodayHero {
 
 /** A sky cover at or above this many percent counts as cloudy. */
 export const cloudyPct = 70;
-export const forecastFooter = "Forecast from NWS · less certain than a live read";
+export const forecastFooter = "Forecast from Open-Meteo · less certain than a live read";
 
 /** Between sunset and the next sunrise (no sun times: day). */
 export function isSunDown(now: Date, day: SkyDay): boolean {

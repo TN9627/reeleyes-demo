@@ -315,3 +315,9 @@
 .prep-ptr-settle {
   transition: height 0.3s var(--ease-ios);
 }
+
+/* Open-Meteo's credit under the hero, in the header's inset. */
+.prep-credit {
+  margin: 0;
+  padding: 0 var(--space-header-inset);
+}

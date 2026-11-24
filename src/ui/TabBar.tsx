@@ -1,4 +1,4 @@
-import { dataNotice } from '../data/repository'
+import { OPEN_METEO_URL } from '../data/openMeteo'
 import { Glyph, type GlyphName } from './Glyph'
 import { useNav, type Tab } from './navigation'
 
@@ -32,11 +32,15 @@ export function TabBar() {
   )
 }
 
-/** "Sample data: every value is made up.", always on screen (PRODUCT.md). */
+/** "Live weather by Open-Meteo.com · all else is sample data", always on screen (PRODUCT.md). */
 export function SampleDataNote() {
   return (
     <p className="sample-note t-caption" role="note">
-      {dataNotice}
+      Live weather by{' '}
+      <a className="credit-link" href={OPEN_METEO_URL} target="_blank" rel="noreferrer">
+        Open-Meteo.com
+      </a>{' '}
+      · all else is sample data
     </p>
   )
 }

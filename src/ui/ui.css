@@ -322,6 +322,13 @@
   pointer-events: none;
 }
 
+/* The Open-Meteo credit link (CC BY 4.0): clickable even inside the pointer-transparent sample note. */
+.credit-link {
+  color: inherit;
+  text-decoration: underline;
+  pointer-events: auto;
+}
+
 /* ---------- Glyph ---------- */
 
 .glyph {

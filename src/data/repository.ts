@@ -1,7 +1,7 @@
 // Port of Data/FixtureRepository.swift plus the sample-mode parts of
 // App/TodayModel.swift, Logic/DriveTimes.swift and Logic/TodayLayout.swift.
 //
-// API (all synchronous; every value is made up):
+// API (all synchronous; every value but the weather is made up; the weather comes from data/openMeteo.ts):
 //   dataNotice, startHint
 //   loadFixtures(now) / fixtures()         decoded, time-shifted fixture set
 //   species(), spotSummaries(), spotDetail(id), prep(spotId), conditions(spotId)
@@ -29,7 +29,7 @@ import { chipGroups, emptyFilters, makeTodayLayout, spotMetaLine, type SpotFilte
 import { spotCoordinate, speciesByID } from "./types";
 import type { Candidate, Conditions, Coordinate, Place, Prep, Recommendation, Species, SpotDetail, SpotSummary } from "./types";
 
-export const dataNotice = "Sample data: every value is made up.";
+export const dataNotice = "Weather is live from Open-Meteo.com; everything else is sample data.";
 export const startHint = "The sample data knows Phoenix, Tempe, Tucson, Flagstaff and Yuma.";
 
 /** A place the fixtures know, with the typed inputs that match it. */
