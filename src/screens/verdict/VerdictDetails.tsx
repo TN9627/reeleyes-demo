@@ -72,6 +72,32 @@ export function VerdictDetails({ reading, species, weatherLive }: { reading: Con
           ]}
         />
       </Card>
+      <div id="verdict-window" className="verdict-anchor">
+        <SectionHeader title="Best window" />
+      </div>
+      <Card padding={16}>
+        <BulletList
+          items={[
+            "Prep's Best window is the longest stretch of the day at its rating or better that these rules also leave open.",
+            <>
+              <strong>Daylight only.</strong> Civil dawn to civil dusk, inside the Spot's posted hours when we know them.
+            </>,
+            <>
+              <strong>{`Wind under ${WindowRules.maxWindMph} mph.`}</strong> Where the verdict starts calling it strong wind. On the Beaufort scale 13 to 18
+              mph is a moderate breeze that raises dust and small waves.
+            </>,
+            <>
+              <strong>At least 3 hours in a row.</strong> A shorter stretch isn't shown.
+            </>,
+            <>
+              <strong>Never an hour that's Tough.</strong> An hour with storms likely, dangerous heat or dangerous cold is left out, by the rule above.
+            </>,
+          ]}
+        />
+      </Card>
+      <div className="verdict-window-cite">
+        <CiteLink source={SafetySources.wind} />
+      </div>
       <div id="verdict-how" className="verdict-anchor">
         <SectionHeader title="How sure" />
       </div>

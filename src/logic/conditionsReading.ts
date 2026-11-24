@@ -5,12 +5,12 @@ import type { Conditions, NWSAlert, SpotSummary } from "../data/types";
 import { AlertRules } from "./alertRules";
 import { BestWindow, type DayWindow } from "./bestWindow";
 import { conditionsBanner, type ConditionsBanner, type Loaded } from "./freshness";
-import { addingDays, localDayFromDate } from "./localDay";
+import { localDayFromDate } from "./localDay";
 import { SafetyNotices } from "./safetyNotices";
 import { Format } from "./spotFacts";
 import { VerdictRules, type VerdictRead } from "./verdictRules";
 
-/** How the alerts check stands, for the window card's note. */
+/** How the alerts check stands, for the note over Prep's hero. */
 export type AlertsNote =
   | { kind: "none" }
   /** The last check failed (or none ever succeeded): an alert wouldn't show. */
@@ -27,7 +27,6 @@ export interface ConditionsReading {
   savedAt: Date | null;
   active: NWSAlert[];
   today: DayWindow | null;
-  tomorrow: DayWindow | null;
   verdict: VerdictRead;
   heatLine: string | null;
   coldLine: string | null;
@@ -41,7 +40,6 @@ export function conditionsReading(loaded: Loaded<Conditions>, conditions: Condit
   const day = localDayFromDate(now);
   const hourly = conditions.hourly;
   const today = hourly ? BestWindow.day(day, hourly, spot.lat, spot.lng, spot.hours) : null;
-  const tomorrow = hourly ? BestWindow.day(addingDays(day, 1), hourly, spot.lat, spot.lng, spot.hours) : null;
   let alertsNote: AlertsNote;
   if (savedAt && active.length === 0) alertsNote = { kind: "offlineNoneActive", savedAt };
   else if (savedAt === null && (conditions.alerts?.refreshFailed ?? true)) alertsNote = { kind: "checkFailed" };
@@ -54,7 +52,6 @@ export function conditionsReading(loaded: Loaded<Conditions>, conditions: Condit
     savedAt,
     active,
     today,
-    tomorrow,
     verdict: VerdictRules.read(conditions, spot, active, now),
     heatLine: SafetyNotices.heatLine(today, active),
     coldLine: SafetyNotices.coldLine(today, active),

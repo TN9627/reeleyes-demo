@@ -74,6 +74,11 @@
   padding: 10px var(--space-header-inset) 0;
 }
 
+.verdict-window-cite {
+  display: flex;
+  padding: 4px 6px 0;
+}
+
 .verdict-fish-intro {
   display: flex;
   flex-direction: column;

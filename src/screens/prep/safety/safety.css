@@ -112,10 +112,6 @@
   opacity: 0.6;
 }
 
-.safety-card-link-glyph {
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
 /* ---------- Reading sheet ---------- */
 
 .safety-reading {

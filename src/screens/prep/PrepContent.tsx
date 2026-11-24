@@ -222,7 +222,7 @@ function ConditionsHeader({ loaded, reading, weatherLive, now, isRefreshing, isO
               <SafetyNotice kind="cold" line={reading.coldLine} showSigns={() => openSheet("coldSigns")} />
             </div>
           )}
-          {/* The window card carried this note; with the card off Prep, it sits over the hero. */}
+          {/* Over the hero: when the NWS alerts check failed or, offline, which alerts were active when saved. */}
           {reading.alertsNote.kind === "checkFailed" && (
             <NoteLine glyph="weatherAlert" className="prep-header-note">
               Couldn't check NWS alerts, so a heat, cold, storm or wind alert wouldn't show here.

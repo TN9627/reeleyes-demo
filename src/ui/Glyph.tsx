@@ -31,9 +31,7 @@ import {
   Snowflake,
   CloudLightning,
   Wind,
-  ChevronDown,
   Sun,
-  Moon,
   Cloud,
   CloudRain,
   Gauge,
@@ -127,15 +125,13 @@ export const GLYPHS = {
   error: { sf: 'exclamationmark.triangle', source: { kind: 'lucide', icon: TriangleExclamationPoint } },
   noSpotsNearby: { sf: 'safari', source: { kind: 'lucide', icon: Compass } },
   backToNow: { sf: 'arrow.uturn.backward', source: { kind: 'lucide', icon: Undo2 } },
-  // Weather safety: NWS alerts, heat and cold notices, the hour list's toggle, sun or moon (#60)
+  // Weather safety: NWS alerts, heat and cold notices, the sun by day (#60)
   heat: { sf: 'thermometer.high', source: { kind: 'lucide', icon: ThermometerSun } },
   cold: { sf: 'snowflake', source: { kind: 'lucide', icon: Snowflake } },
   storm: { sf: 'cloud.bolt', source: { kind: 'lucide', icon: CloudLightning } },
   wind: { sf: 'wind', source: { kind: 'lucide', icon: Wind } },
   weatherAlert: { sf: 'exclamationmark.triangle', source: { kind: 'lucide', icon: TriangleExclamationPoint } },
-  expand: { sf: 'chevron.down', source: { kind: 'lucide', icon: ChevronDown } },
   sunUp: { sf: 'sun.max', source: { kind: 'lucide', icon: Sun } },
-  sunDown: { sf: 'moon', source: { kind: 'lucide', icon: Moon } },
   // Prep's Today hero: sky, pressure chip, sun and moon events, the hour line
   cloudy: { sf: 'cloud', source: { kind: 'lucide', icon: Cloud } },
   rain: { sf: 'cloud.rain', source: { kind: 'lucide', icon: CloudRain } },

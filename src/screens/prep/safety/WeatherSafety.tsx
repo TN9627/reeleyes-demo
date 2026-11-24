@@ -1,8 +1,8 @@
-// Views/WeatherSafety.swift: the sources behind the window's limits, the safety notices and the verdict's class rule
+// Views/WeatherSafety.swift: the sources behind the verdict's wind rule, the safety notices and the verdict's class rule
 // (#60, #62); the reading sheet and its parts; the heat and cold notices and their signs sheets.
 
 import type { ReactNode } from "react";
-import { Card, Glyph, Sheet, type GlyphName } from "../../../ui";
+import { Card, Glyph, Sheet } from "../../../ui";
 import "./safety.css";
 
 export interface SafetySource {
@@ -14,20 +14,8 @@ const source = (label: string, url: string): SafetySource => ({ label, url });
 
 export const SafetySources = {
   wind: source("Beaufort scale, NWS Miami", "https://www.weather.gov/mfl/beaufort"),
-  storm: source("NWS lightning safety", "https://www.weather.gov/safety/lightning-outdoors"),
-  heat: source("NWS heat index: 103°F is Danger", "https://www.weather.gov/ama/heatindex"),
-  heatEquation: source("NWS heat index equation", "https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml"),
   heatIllness: source("NWS: heat cramps, exhaustion, stroke", "https://www.weather.gov/safety/heat-illness"),
   azHeat: source("AZ State Parks via ADHS: outdoor heat", "https://directorsblog.health.azdhs.gov/safe-outdoor-recreation-in-arizonas-summer-heat/"),
-  windChill: source("NWS wind chill chart and formula", "https://www.weather.gov/safety/cold-wind-chill-chart"),
-  /**
-   * NWSI 10-515 Appendix B links this map; the White Mountains (AZ017) and Western Mogollon Rim (AZ015) list a
-   * Cold Weather Advisory at 0°F and an Extreme Cold Warning at −10°F (layer ColdCriteria2026, queried 2026-11-10).
-   */
-  coldCriteria: source(
-    "NWS cold criteria map (Flagstaff zones: 0°F)",
-    "https://noaa.maps.arcgis.com/apps/instant/basic/index.html?appid=59e3b7653a734e47aca16c5aa5b301c0",
-  ),
   coldSafety: source("NWS: cold weather safety", "https://www.weather.gov/safety/cold-during"),
   coldInjury: source("CDC: frostbite and hypothermia", "https://www.cdc.gov/winter-weather/prevention/preventing-frostbite.html"),
   /** Why a Spot's class changes how air temperature counts (#62). */
@@ -54,22 +42,12 @@ export function CardLinks({ inset = 18, children }: { inset?: number; children: 
   );
 }
 
-/** One tinted action in `CardLinks`: "How we pick it ›", "Hour by hour ⌄". */
-export function CardLinkButton({
-  title,
-  glyph = "disclosure",
-  rotation = 0,
-  onClick,
-}: {
-  title: string;
-  glyph?: GlyphName;
-  rotation?: number;
-  onClick: () => void;
-}) {
+/** One tinted action in `CardLinks`: "Signs of heat illness ›". */
+export function CardLinkButton({ title, onClick }: { title: string; onClick: () => void }) {
   return (
     <button type="button" className="safety-card-link t-footnote-semibold" onClick={onClick}>
       <span>{title}</span>
-      <Glyph name={glyph} size="0.85em" weight={2.6} className="safety-card-link-glyph" style={{ transform: `rotate(${rotation}deg)` }} />
+      <Glyph name="disclosure" size="0.85em" weight={2.6} className="safety-card-link-glyph" />
     </button>
   );
 }
