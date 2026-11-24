@@ -639,6 +639,10 @@
   gap: 2px;
 }
 
+.drive-time-approx {
+  margin-right: 1px;
+}
+
 .drive-time-gap {
   margin-left: 3px;
 }

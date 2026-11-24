@@ -5,9 +5,9 @@
 //   dataNotice, startHint
 //   loadFixtures(now) / fixtures()         decoded, time-shifted fixture set
 //   species(), spotSummaries(), spotDetail(id), prep(spotId), conditions(spotId)
-//   places(), placesMatching(query), cityName(near), nearestPlace(coord)
+//   places(), samplePlace(query), placesMatching(query), cityName(near), nearestPlace(coord)
 //   backendRecommendation(start, rangeMinutes, group)   the backend pre-filter
-//   driveMinutes(start, spotId)            sample drive time
+//   driveTime(start, spotId)               { minutes, estimated }: the sample table for a sample place, else an estimate
 //   recommendation({ start, rangeMinutes, group?, filters?, showFarther?, now? })  => TodayResult
 //
 // Like the Swift code, fixtures are captured at one instant (fixture-meta.json
@@ -22,7 +22,7 @@ import placesJson from "./fixtures/fixture-places.json";
 import prepJson from "./fixtures/fixture-prep.json";
 import speciesJson from "./fixtures/fixture-species.json";
 import spotsJson from "./fixtures/fixture-spots.json";
-import { minutes as driveMinutesValue, type DriveTime } from "../logic/driveTimes";
+import { estimateMinutes, minutes as driveMinutesValue, type DriveTime } from "../logic/driveTimes";
 import { miles } from "../logic/geo";
 import { addingDays, daysUntil, localDayFromDate, parseLocalDay, type LocalDay } from "../logic/localDay";
 import { chipGroups, emptyFilters, makeTodayLayout, spotMetaLine, type SpotFilters, type SpotMetaLine, type TodayLayout } from "../logic/todayLayout";
@@ -156,7 +156,14 @@ export function nearestPlace(c: Coordinate): FixturePlace {
   return places().reduce((best, p) => (miles(p, c) < miles(best, c) ? p : best));
 }
 
-/** Resolves a typed city or ZIP against the five sample places (alias, or a 3+ letter label prefix); at most 5. */
+/** The sample place a typed name or ZIP exactly names (its label or an alias), else null. */
+export function samplePlace(query: string): Place | null {
+  const q = query.trim().toLowerCase();
+  const p = places().find((p) => p.aliases.includes(q));
+  return p ? { label: p.label, zip: p.zip, lat: p.lat, lng: p.lng } : null;
+}
+
+/** Offline fallback for place search: the five sample places by alias, or a 3+ letter label prefix; at most 5. */
 export function placesMatching(query: string): Place[] {
   const q = query.trim().toLowerCase();
   if (q === "") return [];
@@ -192,18 +199,27 @@ export function backendRecommendation(start: Coordinate, rangeMinutes: number, g
   return { start, rangeMinutes, generatedAt: now, species: fx.species, groups, candidates: matching.slice(0, 40) };
 }
 
+/** A drive time from `start` to a Spot; `estimated` when it comes from distance, not the sample table. */
+export interface SpotDrive {
+  minutes: number;
+  estimated: boolean;
+}
+
+/** The sample place whose coordinates `start` is exactly (a sample start picked from search or Suggestions). */
+function samplePlaceAt(start: Coordinate): FixturePlace | undefined {
+  return places().find((p) => p.lat === start.lat && p.lng === start.lng);
+}
+
 /**
- * Sample drive minutes from `start` to a Spot. Swift's FixtureETAProvider uses the
- * table only within 5 mi of a sample place and otherwise estimates from distance;
- * here a raw coordinate (browser geolocation) always uses the NEAREST sample
- * place's table, so any start inside Arizona gets plausible times.
+ * Drive minutes from `start` to a Spot. A sample place uses the sample table; any other start
+ * (a searched place, the browser's location) is estimated from straight-line distance
+ * (`estimateMinutes` in logic/driveTimes.ts).
  */
-export function driveMinutes(start: Coordinate, spotId: number): number {
-  const fx = fixtures();
-  const table = fx.driveTable[nearestPlace(start).id]?.[String(spotId)];
-  if (table !== undefined) return table;
-  const spot = spotDetail(spotId)!.summary;
-  return Math.round(miles(start, spotCoordinate(spot)) * 1.3 + 6);
+export function driveTime(start: Coordinate, spotId: number): SpotDrive {
+  const sample = samplePlaceAt(start);
+  const table = sample ? fixtures().driveTable[sample.id]?.[String(spotId)] : undefined;
+  if (table !== undefined) return { minutes: table, estimated: false };
+  return { minutes: estimateMinutes(miles(start, spotCoordinate(spotDetail(spotId)!.summary))), estimated: true };
 }
 
 export interface TodayRow {
@@ -220,6 +236,8 @@ export interface TodaySectionRows {
 export interface TodayResult {
   recommendation: Recommendation;
   driveTimes: Map<number, DriveTime>;
+  /** The times are estimates from distance, not the sample table. */
+  estimated: boolean;
   layout: TodayLayout;
   /** Layout sections with each row's grey meta line already computed. */
   sections: TodaySectionRows[];
@@ -244,7 +262,7 @@ export function recommendation(input: RecommendationInput): TodayResult {
   const filters = input.filters ?? emptyFilters();
   const group = input.group === undefined ? filters.speciesGroup : input.group;
   const rec = backendRecommendation(input.start, input.rangeMinutes, group, now);
-  const driveTimes = new Map<number, DriveTime>(rec.candidates.map((c) => [c.spot.id, driveMinutesValue(driveMinutes(input.start, c.spot.id))]));
+  const driveTimes = new Map<number, DriveTime>(rec.candidates.map((c) => [c.spot.id, driveMinutesValue(driveTime(input.start, c.spot.id).minutes)]));
   const layout = makeTodayLayout(rec, driveTimes, filters, input.showFarther ?? false, now);
   const byID = speciesByID(rec.species);
   const today = localDayFromDate(now);
@@ -252,7 +270,7 @@ export function recommendation(input: RecommendationInput): TodayResult {
     title: s.title,
     rows: s.spots.map((r) => ({ ...r, meta: spotMetaLine(r.spot, byID, today, filters.speciesGroup) })),
   }));
-  return { recommendation: rec, driveTimes, layout, sections, chipGroups: chipGroups(rec.groups), speciesByID: byID };
+  return { recommendation: rec, driveTimes, estimated: samplePlaceAt(input.start) === undefined, layout, sections, chipGroups: chipGroups(rec.groups), speciesByID: byID };
 }
 
 export type { LocalDay };

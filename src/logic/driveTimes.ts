@@ -11,6 +11,16 @@ export type DriveTime = { kind: "minutes"; minutes: number } | { kind: "noRoute"
 export const minutes = (m: number): DriveTime => ({ kind: "minutes", minutes: m });
 export const noRoute: DriveTime = { kind: "noRoute" };
 
+/**
+ * Rule of thumb for any start that is not a sample place: straight-line miles x 1.3 for the road,
+ * at 45 mph, rounded to the minute. The one place these numbers live.
+ */
+export const ROAD_FACTOR = 1.3;
+export const AVERAGE_MPH = 45;
+
+/** Estimated drive minutes for a straight-line distance (ROAD_FACTOR, AVERAGE_MPH). */
+export const estimateMinutes = (straightLineMiles: number): number => Math.round(((straightLineMiles * ROAD_FACTOR) / AVERAGE_MPH) * 60);
+
 export interface DriveTimeEntry {
   time: DriveTime;
   at: Date;

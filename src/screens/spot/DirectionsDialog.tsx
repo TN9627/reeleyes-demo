@@ -9,10 +9,12 @@ import "./spot.css";
 interface DirectionsDialogProps {
   spot: SpotSummary;
   driveMinutes: number | null;
+  /** The drive time is an estimate from distance. */
+  estimated?: boolean;
   onClose: () => void;
 }
 
-export function DirectionsDialog({ spot, driveMinutes, onClose }: DirectionsDialogProps) {
+export function DirectionsDialog({ spot, driveMinutes, estimated = false, onClose }: DirectionsDialogProps) {
   const [closing, setClosing] = useState(false);
   const first = useRef<HTMLAnchorElement>(null);
 
@@ -43,7 +45,7 @@ export function DirectionsDialog({ spot, driveMinutes, onClose }: DirectionsDial
               Driving directions to {spot.name}
             </div>
             {/* The drive time on its own line, rather than wrapped onto one after the name. */}
-            {driveMinutes !== null && <div className="t-footnote">{formatDrive(driveMinutes)} drive</div>}
+            {driveMinutes !== null && <div className="t-footnote">{estimated ? "About " : ""}{formatDrive(driveMinutes)} drive{estimated ? ", estimated from distance" : ""}</div>}
           </div>
           <a ref={first} className="sp-dialog-action" href={mapsURL} target="_blank" rel="noreferrer" onClick={close}>
             Open in Apple Maps

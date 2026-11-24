@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router";
-import { dataNotice, driveMinutes, prep, spotDetail } from "../data/repository";
+import { dataNotice, driveTime, prep, spotDetail } from "../data/repository";
 import { kindTitle, type Species, type SpotDetail } from "../data/types";
 import { canToggle, collapsedCount, gearEntries, ordered, recentStocking, visible } from "../logic/gearLayout";
 import { localDayFromDate, type LocalDay } from "../logic/localDay";
@@ -54,7 +54,7 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
   const saved = useAppState((s) => s.favoriteIds.includes(spot.id));
   const start = useAppState((s) => s.start);
   const today = localDayFromDate(new Date());
-  const drive = start ? driveMinutes(start.coordinate, spot.id) : null;
+  const drive = start ? driveTime(start.coordinate, spot.id) : null;
 
   /** Gear for the Spot's species, in Prep's order. */
   const entries = gearEntries(prep(spot.id)?.gear ?? [], detail.stocking, today);
@@ -121,7 +121,7 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
         </p>
         <div className="sp-actions">
           <Button glyph="drive" glyphVariant="fill" onClick={() => setShowsDriveDialog(true)}>
-            {drive !== null ? formatDrive(drive) : "Directions"}
+            {drive !== null ? `${drive.estimated ? "~" : ""}${formatDrive(drive.minutes)}` : "Directions"}
           </Button>
           <Link to={`/spot/${spot.id}/prep`} className="button button-secondary t-headline">
             <Glyph name="prep" />
@@ -174,7 +174,7 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
         <Footnote>{`Spot, species and stocking from AZGFD. ${dataNotice}`}</Footnote>
       </div>
 
-      {showsDriveDialog && <DirectionsDialog spot={spot} driveMinutes={drive} onClose={() => setShowsDriveDialog(false)} />}
+      {showsDriveDialog && <DirectionsDialog spot={spot} driveMinutes={drive?.minutes ?? null} estimated={drive?.estimated ?? false} onClose={() => setShowsDriveDialog(false)} />}
       {openedEntry && (
         <SpeciesSheet
           key={openedEntry.gear.speciesId}

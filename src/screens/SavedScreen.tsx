@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { driveMinutes, species, spotSummaries } from "../data/repository";
+import { driveTime, species, spotSummaries } from "../data/repository";
 import { speciesByID } from "../data/types";
 import { localDayFromDate } from "../logic/localDay";
 import { spotMetaLine } from "../logic/todayLayout";
@@ -126,7 +126,8 @@ function SavedList() {
             key={spot.id}
             spot={spot}
             meta={spotMetaLine(spot, speciesMap, today, null)}
-            driveMinutes={start ? driveMinutes(start.coordinate, spot.id) : null}
+            driveMinutes={start ? driveTime(start.coordinate, spot.id).minutes : null}
+            estimated={start ? driveTime(start.coordinate, spot.id).estimated : false}
             onClick={() => nav.push(`/spot/${spot.id}`)}
           />
         ))}

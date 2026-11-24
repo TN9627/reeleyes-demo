@@ -118,14 +118,15 @@ export function EmptyState({ glyph, title, message, children }: { glyph: GlyphNa
   )
 }
 
-/** "42 min", "1 hr 5 min": numbers in Headline (tabular), units in Footnote Ink Secondary. */
-export function DriveTimeText({ minutes }: { minutes: number }) {
+/** "42 min", "1 hr 5 min": numbers in Headline (tabular), units in Footnote Ink Secondary. `estimated` leads with "~". */
+export function DriveTimeText({ minutes, estimated = false }: { minutes: number; estimated?: boolean }) {
   const hours = Math.floor(minutes / 60)
   const rest = minutes % 60
   return (
     <span className="drive-time">
-      <span className="visually-hidden">{`${formatDrive(minutes)} drive`}</span>
+      <span className="visually-hidden">{`${estimated ? 'About ' : ''}${formatDrive(minutes)} drive`}</span>
       <span className="drive-time-figures" aria-hidden="true">
+      {estimated && <span className="t-headline c-ink-secondary drive-time-approx">~</span>}
       {hours > 0 ? (
         <>
           <span className="t-headline tnum c-ink">{hours}</span>

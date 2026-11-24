@@ -360,6 +360,8 @@ export interface Conditions {
 export interface Place {
   label: string;
   zip?: string | null;
+  /** The county, shown in place of a missing ZIP (searched places). */
+  county?: string | null;
   lat: number;
   lng: number;
 }

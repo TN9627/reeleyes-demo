@@ -34,7 +34,7 @@ export function RecommendationList({
           title={`No Spots within ${range} of ${place}`}
           message={
             empty.nearest
-              ? `The nearest is ${empty.nearest.spot.name}, ${formatDrive(empty.nearest.driveMinutes ?? 0)} away.`
+              ? `The nearest is ${empty.nearest.spot.name}, ${result.estimated ? "about " : ""}${formatDrive(empty.nearest.driveMinutes ?? 0)} away.`
               : `None within ${formatRange(2 * recommendation.rangeMinutes)} either.`
           }
         >
@@ -76,6 +76,7 @@ export function RecommendationList({
                     spot={row.spot}
                     meta={row.meta}
                     driveMinutes={row.driveMinutes}
+                    estimated={result.estimated}
                     distanceMi={row.distanceMi}
                     onClick={() => nav.push(`/spot/${row.spot.id}`)}
                   />
@@ -93,7 +94,7 @@ export function RecommendationList({
         </>
       )}
       <div className="today-footnote">
-        <Footnote>{`Ranked by drive time from ${place} (Apple Maps). ${dataNotice}`}</Footnote>
+        <Footnote>{`Ranked by drive time from ${place}${result.estimated ? ". Drive times are estimated from distance" : " (Apple Maps)"}. ${dataNotice}`}</Footnote>
       </div>
     </>
   );

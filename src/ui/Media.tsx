@@ -139,12 +139,14 @@ export interface SpotRowProps {
   meta: SpotMetaLine
   /** Trailing drive time; while unknown, `distanceMi` shows as "~18 mi". */
   driveMinutes: number | null
+  /** The drive time is an estimate from distance: shown with a leading "~". */
+  estimated?: boolean
   distanceMi?: number
   onClick: () => void
 }
 
 /** The Recommendation's unit: thumbnail, name, one meta line, drive time trailing. */
-export function SpotRow({ spot, meta, driveMinutes, distanceMi, onClick }: SpotRowProps) {
+export function SpotRow({ spot, meta, driveMinutes, estimated, distanceMi, onClick }: SpotRowProps) {
   return (
     <button type="button" className="row is-tappable spot-row" onClick={onClick}>
       <SpotThumb spot={spot} />
@@ -167,7 +169,7 @@ export function SpotRow({ spot, meta, driveMinutes, distanceMi, onClick }: SpotR
         </span>
       </span>
       {driveMinutes !== null ? (
-        <DriveTimeText minutes={driveMinutes} />
+        <DriveTimeText minutes={driveMinutes} estimated={estimated} />
       ) : (
         distanceMi !== undefined && (
           <span className="t-subheadline c-ink-secondary" aria-label={`About ${Math.round(distanceMi)} miles away, drive time pending`}>
