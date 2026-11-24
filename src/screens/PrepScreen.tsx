@@ -1,5 +1,5 @@
 // Port of Views/PrepView.swift (and PrepModel): the day picker, NWS alerts and the heat or cold notice, the Today
-// hero, the Details behind it, then License, Rules, Gear and bait. Sample data: refreshing re-reads the same fixtures.
+// hero, the Details behind it, then License, Rules, Gear and bait. Weather is live from Open-Meteo; refreshing asks it again.
 
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -8,12 +8,12 @@ import { useOnline } from "../state/appState";
 import { useNav } from "../ui/navigation";
 import { Screen } from "../ui/Screen";
 import { PrepContent } from "./prep/PrepContent";
-import { loadConditions, useMinuteClock } from "./prep/prepModel";
+import { loadConditions, useConditions, useMinuteClock, type ConditionsLoad } from "./prep/prepModel";
 import { prepRulesRequest } from "./prep/prepRules";
 import { PullToRefresh } from "./prep/PullToRefresh";
 import "./prep/prep.css";
 
-/** How long a refresh shows its spinner; the sample data answers at once. */
+/** How long reloading Prep's rules shows its spinner; the sample data answers at once. */
 const refreshMs = 700;
 
 /** After the species sheet has gone and Rules has laid out its rows. */
@@ -28,7 +28,9 @@ export default function PrepScreen() {
   const now = useMinuteClock();
   const spot = spotDetail(spotId) ?? null;
   const [prep, setPrep] = useState(() => fixturePrep(spotId) ?? null);
-  const [conditions, setConditions] = useState(() => loadConditions(spotId));
+  const loadedConditions = useConditions(spotId);
+  const [refreshed, setRefreshed] = useState<{ spotId: number; load: ConditionsLoad } | null>(null);
+  const load = refreshed?.spotId === spotId ? refreshed.load : loadedConditions;
   const [isRefreshing, setRefreshing] = useState(false);
   const [isReloadingPrep, setReloadingPrep] = useState(false);
   // Opened from the Spot's species sheet (app.prepRulesSpotID): Rules starts open.
@@ -37,10 +39,10 @@ export default function PrepScreen() {
 
   const refreshConditions = useCallback(() => {
     setRefreshing(true);
-    setTimeout(() => {
-      setConditions(loadConditions(spotId));
+    void loadConditions(spotId, true).then((result) => {
+      setRefreshed({ spotId, load: result });
       setRefreshing(false);
-    }, refreshMs);
+    });
   }, [spotId]);
 
   const reloadPrep = useCallback(() => {
@@ -74,7 +76,8 @@ export default function PrepScreen() {
         <PrepContent
           spot={spot}
           prep={prep}
-          conditions={conditions}
+          conditions={load?.loaded ?? null}
+          weatherLive={load?.weatherLive ?? true}
           now={now}
           isRefreshing={isRefreshing}
           isOnline={isOnline}

@@ -18,7 +18,7 @@ export default defineConfig({
         id: './',
         name: 'ReelEyes',
         short_name: 'ReelEyes',
-        description: 'Plan an Arizona fishing trip: Spots ranked by drive time, with conditions, rules and gear. Demo on sample data.',
+        description: 'Plan an Arizona fishing trip: Spots ranked by drive time, with conditions, rules and gear. Demo with live weather and sample data.',
         start_url: './',
         scope: './',
         display: 'standalone',
@@ -37,6 +37,11 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         cleanupOutdatedCaches: true,
         runtimeCaching: [
+          {
+            // Live weather is never served stale by the worker: the app keeps its own 30-minute cache.
+            urlPattern: /^https:\/\/api\.open-meteo\.com\//,
+            handler: 'NetworkOnly',
+          },
           {
             // Map tiles seen once stay available offline.
             urlPattern: /^https:\/\/server\.arcgisonline\.com\/ArcGIS\/rest\/services\//,
