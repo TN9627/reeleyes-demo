@@ -218,7 +218,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -523,7 +537,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -641,7 +669,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "dough-bait",
@@ -679,7 +721,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/nymph",
+              "width": 450,
+              "height": 450,
+              "title": "A Pheasant Tail nymph",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:American_Pheasant_Tail_Nymph.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -1045,7 +1101,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -1350,7 +1420,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -1768,7 +1852,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -1922,7 +2020,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -2040,7 +2152,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "dough-bait",
@@ -2078,7 +2204,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/nymph",
+              "width": 450,
+              "height": 450,
+              "title": "A Pheasant Tail nymph",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:American_Pheasant_Tail_Nymph.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -2321,7 +2461,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-soft-plastic",
+              "width": 450,
+              "height": 450,
+              "title": "Three soft plastic crayfish lures",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Gummikrebse.jpg"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -2359,7 +2513,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/plastic-worm",
+              "width": 450,
+              "height": 450,
+              "title": "A straight soft plastic worm",
+              "author": "サミー",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:ストレートワーム.jpg"
+              }
+            }
           },
           {
             "id": "swimbait",
@@ -2423,7 +2591,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -2787,7 +2969,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -2982,7 +3178,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -2994,7 +3204,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -3349,7 +3573,21 @@
             "methods": [
               "bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/anchovy",
+              "width": 450,
+              "height": 450,
+              "title": "Fresh anchovies at a fish market in Rome",
+              "author": "Thomas Oboe Lee",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Anchovies_in_the_fish_market_in_Rome,_Italy.jpg"
+              }
+            }
           },
           {
             "id": "spoon",
@@ -3361,7 +3599,21 @@
             "methods": [
               "spoon"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/spoon",
+              "width": 450,
+              "height": 450,
+              "title": "A Little Cleo spoon lure",
+              "author": "Hubert Derus",
+              "license": {
+                "name": "CC BY 2.5",
+                "url": "https://creativecommons.org/licenses/by/2.5/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Little_Cleo_lure_P5300030.jpg"
+              }
+            }
           },
           {
             "id": "swimbait",
@@ -3399,7 +3651,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -3724,7 +3990,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -4070,7 +4350,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -4241,7 +4535,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/leech",
+              "width": 450,
+              "height": 450,
+              "title": "A North American medicinal leech",
+              "author": "Owen Strickland",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:North_American_Medicinal_Leech_imported_from_iNaturalist_photo_44633056_on_28_November_2024.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -4253,7 +4561,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -4369,7 +4691,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -4381,7 +4717,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -4543,7 +4893,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -4889,7 +5253,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -5060,7 +5438,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/leech",
+              "width": 450,
+              "height": 450,
+              "title": "A North American medicinal leech",
+              "author": "Owen Strickland",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:North_American_Medicinal_Leech_imported_from_iNaturalist_photo_44633056_on_28_November_2024.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -5072,7 +5464,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -5188,7 +5594,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -5200,7 +5620,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -5350,7 +5784,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -5468,7 +5916,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "dough-bait",
@@ -5506,7 +5968,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/nymph",
+              "width": 450,
+              "height": 450,
+              "title": "A Pheasant Tail nymph",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:American_Pheasant_Tail_Nymph.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -5649,7 +6125,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -5661,7 +6151,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6019,7 +6523,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-soft-plastic",
+              "width": 450,
+              "height": 450,
+              "title": "Three soft plastic crayfish lures",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Gummikrebse.jpg"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -6057,7 +6575,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/plastic-worm",
+              "width": 450,
+              "height": 450,
+              "title": "A straight soft plastic worm",
+              "author": "サミー",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:ストレートワーム.jpg"
+              }
+            }
           },
           {
             "id": "swimbait",
@@ -6121,7 +6653,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6284,7 +6830,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -6402,7 +6962,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "dough-bait",
@@ -6440,7 +7014,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/nymph",
+              "width": 450,
+              "height": 450,
+              "title": "A Pheasant Tail nymph",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:American_Pheasant_Tail_Nymph.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6583,7 +7171,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -6595,7 +7197,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6953,7 +7569,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-soft-plastic",
+              "width": 450,
+              "height": 450,
+              "title": "Three soft plastic crayfish lures",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Gummikrebse.jpg"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -6991,7 +7621,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/plastic-worm",
+              "width": 450,
+              "height": 450,
+              "title": "A straight soft plastic worm",
+              "author": "サミー",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:ストレートワーム.jpg"
+              }
+            }
           },
           {
             "id": "swimbait",
@@ -7055,7 +7699,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -7392,7 +8050,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -7587,7 +8259,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -7599,7 +8285,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -7893,7 +8593,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -8107,7 +8821,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -8302,7 +9030,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -8314,7 +9056,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8585,7 +9341,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/leech",
+              "width": 450,
+              "height": 450,
+              "title": "A North American medicinal leech",
+              "author": "Owen Strickland",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:North_American_Medicinal_Leech_imported_from_iNaturalist_photo_44633056_on_28_November_2024.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -8597,7 +9367,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8713,7 +9497,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -8725,7 +9523,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/clouser-minnow",
+              "width": 450,
+              "height": 450,
+              "title": "A Fire Tiger Clouser minnow fly",
+              "author": "Mike Cline",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Fire_Tiger_Clouser_Deep_Minnow.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -9389,7 +10201,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/corn",
+              "width": 450,
+              "height": 450,
+              "title": "Loose corn kernels",
+              "author": "Gaurav Dhwaj Khadka",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Corn_Kernel.jpg"
+              }
+            }
           },
           {
             "id": "inline-spinner",
@@ -9694,7 +10520,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -9889,7 +10729,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -9901,7 +10755,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -10366,7 +11234,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/chicken-liver",
+              "width": 450,
+              "height": 450,
+              "title": "Raw chicken livers on a cutting board",
+              "author": "Poupou l'quourouce",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
+              }
+            }
           },
           {
             "id": "stink-bait",
@@ -10561,7 +11443,21 @@
             "methods": [
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/curly-tail-grub",
+              "width": 450,
+              "height": 450,
+              "title": "Two curly-tail grubs",
+              "author": "Danndorfer1914",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Zwei_Twister.jpg"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -10573,7 +11469,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/streamer",
+              "width": 450,
+              "height": 450,
+              "title": "A Mickey Finn streamer fly",
+              "author": "DeliciousDunder",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Mickey_Finn_streamer.jpg"
+              }
+            }
           }
         ],
         "artificialOnly": false
