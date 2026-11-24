@@ -166,7 +166,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -367,7 +381,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -379,7 +407,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -455,7 +497,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -479,7 +535,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -491,7 +561,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -569,7 +653,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/dough-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Dough bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nymph",
@@ -667,7 +765,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -679,7 +791,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -867,7 +993,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -1068,7 +1208,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -1080,7 +1234,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -1156,7 +1324,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -1180,7 +1362,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -1192,7 +1388,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -1278,7 +1488,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -1290,7 +1514,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -1478,7 +1716,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -1644,7 +1896,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -1668,7 +1934,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -1680,7 +1960,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -1758,7 +2052,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/dough-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Dough bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nymph",
@@ -1856,7 +2164,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -1868,7 +2190,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -1997,7 +2333,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "plastic-worm",
@@ -2021,7 +2371,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/swimbait",
+              "width": 450,
+              "height": 450,
+              "title": "Swimbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "crayfish-fly",
@@ -2033,7 +2397,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-fly",
+              "width": 450,
+              "height": 450,
+              "title": "Crayfish fly",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -2267,7 +2645,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -2279,7 +2671,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -2355,7 +2761,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -2379,7 +2799,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -2391,7 +2825,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -2481,7 +2929,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -2494,7 +2956,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -2593,7 +3069,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -2705,7 +3195,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -2717,7 +3221,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -2855,7 +3373,21 @@
             "methods": [
               "spoon"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/swimbait",
+              "width": 450,
+              "height": 450,
+              "title": "Swimbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "clouser-minnow",
@@ -3050,7 +3582,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -3062,7 +3608,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -3138,7 +3698,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -3162,7 +3736,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -3174,7 +3762,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -3260,7 +3862,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -3272,7 +3888,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -3388,7 +4018,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -3873,7 +4517,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -3897,7 +4555,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -3909,7 +4581,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -3995,7 +4681,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -4007,7 +4707,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -4123,7 +4837,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -4596,7 +5324,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -4620,7 +5362,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -4632,7 +5388,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -4710,7 +5480,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/dough-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Dough bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nymph",
@@ -4812,7 +5596,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -4825,7 +5623,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -4924,7 +5736,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -5036,7 +5862,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -5048,7 +5888,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -5177,7 +6031,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "plastic-worm",
@@ -5201,7 +6069,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/swimbait",
+              "width": 450,
+              "height": 450,
+              "title": "Swimbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "crayfish-fly",
@@ -5213,7 +6095,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-fly",
+              "width": 450,
+              "height": 450,
+              "title": "Crayfish fly",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -5362,7 +6258,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -5386,7 +6296,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -5398,7 +6322,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -5476,7 +6414,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/dough-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Dough bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nymph",
@@ -5578,7 +6530,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -5591,7 +6557,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -5690,7 +6670,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -5802,7 +6796,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -5814,7 +6822,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -5943,7 +6965,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "plastic-worm",
@@ -5967,7 +7003,21 @@
             "methods": [
               "drop-shot"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/swimbait",
+              "width": 450,
+              "height": 450,
+              "title": "Swimbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "crayfish-fly",
@@ -5979,7 +7029,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/crayfish-fly",
+              "width": 450,
+              "height": 450,
+              "title": "Crayfish fly",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "streamer",
@@ -6186,7 +7250,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -6198,7 +7276,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6274,7 +7366,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -6298,7 +7404,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -6310,7 +7430,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -6400,7 +7534,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -6413,7 +7561,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -6523,7 +7685,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -6535,7 +7711,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -6651,7 +7841,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -6877,7 +8081,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -6901,7 +8119,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -6913,7 +8145,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -7003,7 +8249,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -7016,7 +8276,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -7126,7 +8400,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -7138,7 +8426,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -7659,7 +8961,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -7671,7 +8987,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": true
@@ -7766,7 +9096,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -7778,7 +9122,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -7979,7 +9337,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/powerbait",
+              "width": 450,
+              "height": 450,
+              "title": "PowerBait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -8180,7 +9552,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -8192,7 +9578,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8268,7 +9668,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -8292,7 +9706,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -8304,7 +9732,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8394,7 +9836,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -8407,7 +9863,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -8517,7 +9987,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -8529,7 +10013,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
@@ -8726,7 +10224,21 @@
             "methods": [
               "jig"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "foam-spider",
@@ -8738,7 +10250,21 @@
             "methods": [
               "fly"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/foam-spider",
+              "width": 450,
+              "height": 450,
+              "title": "Foam spider",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8814,7 +10340,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/hot-dog",
+              "width": 450,
+              "height": 450,
+              "title": "Hot dog",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "chicken-liver",
@@ -8838,7 +10378,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/stink-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Stink bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "cut-bait",
@@ -8850,7 +10404,21 @@
             "methods": [
               "cut-bait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           }
         ],
         "artificialOnly": false
@@ -8940,7 +10508,21 @@
             "methods": [
               "float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/marabou-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Marabou jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "tube-jig",
@@ -8953,7 +10535,21 @@
               "float",
               "slip-float"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/tube-jig",
+              "width": 450,
+              "height": 450,
+              "title": "Tube jig",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "curly-tail-grub",
@@ -9052,7 +10648,21 @@
             "methods": [
               "bottom"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/cut-bait",
+              "width": 450,
+              "height": 450,
+              "title": "Cut bait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "nightcrawler",
@@ -9164,7 +10774,21 @@
             "methods": [
               "worm"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/senko",
+              "width": 450,
+              "height": 450,
+              "title": "Senko",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "squarebill-crankbait",
@@ -9176,7 +10800,21 @@
             "methods": [
               "crankbait"
             ],
-            "photo": null
+            "photo": {
+              "key": "bait/squarebill-crankbait",
+              "width": 450,
+              "height": 450,
+              "title": "Squarebill crankbait",
+              "author": "",
+              "license": {
+                "name": "CC0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "source": {
+                "name": "AI-generated placeholder",
+                "url": "https://github.com/enaluz/fishing-app/blob/main/.claude/skills/bait-photos/SHOOT-LIST.md"
+              }
+            }
           },
           {
             "id": "popper",
