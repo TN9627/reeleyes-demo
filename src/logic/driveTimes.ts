@@ -1,6 +1,6 @@
 // Port of Logic/DriveTimes.swift. The MapKit fetcher (DriveTimeFetcher) has no
-// web counterpart: sample drive times come synchronously from
-// data/repository.ts (`driveTimesFor`). The value type and the cache are here.
+// web counterpart: road drive times come from OSRM (data/osrm.ts) and the distance
+// estimate below stands in when it fails. The value type and the cache are here.
 
 import type { Coordinate } from "../data/types";
 import { roundedKey } from "./geo";
@@ -11,8 +11,11 @@ export type DriveTime = { kind: "minutes"; minutes: number } | { kind: "noRoute"
 export const minutes = (m: number): DriveTime => ({ kind: "minutes", minutes: m });
 export const noRoute: DriveTime = { kind: "noRoute" };
 
+/** Road minutes from one start to each Spot id (OSRM); null where OSRM found no route. */
+export type RoadMinutes = Record<number, number | null>;
+
 /**
- * Rule of thumb for any start that is not a sample place: straight-line miles x 1.3 for the road,
+ * Rule of thumb for when OSRM can't answer (no route, or the server is down): straight-line miles x 1.3 for the road,
  * at 45 mph, rounded to the minute. The one place these numbers live.
  */
 export const ROAD_FACTOR = 1.3;

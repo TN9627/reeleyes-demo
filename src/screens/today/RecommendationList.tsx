@@ -5,6 +5,7 @@ import { setFilters, setShowFarther, type SpotFilters } from "../../state/appSta
 import { Button } from "../../ui/Controls";
 import { SpotRow } from "../../ui/Media";
 import { useNav } from "../../ui/navigation";
+import { OsrmCredit } from "./OsrmCredit";
 import { Card, EmptyState, Footnote, SectionHeader } from "../../ui/Surfaces";
 
 /** Bands, the farther button and the footnote for a loaded Recommendation (Swift RecommendationList). */
@@ -76,7 +77,7 @@ export function RecommendationList({
                     spot={row.spot}
                     meta={row.meta}
                     driveMinutes={row.driveMinutes}
-                    estimated={result.estimated}
+                    estimated={row.estimated}
                     distanceMi={row.distanceMi}
                     onClick={() => nav.push(`/spot/${row.spot.id}`)}
                   />
@@ -94,7 +95,8 @@ export function RecommendationList({
         </>
       )}
       <div className="today-footnote">
-        <Footnote>{`Ranked by drive time from ${place}${result.estimated ? ". Drive times are estimated from distance" : " (Apple Maps)"}. ${dataNotice}`}</Footnote>
+        <Footnote>{`Ranked by drive time from ${place}${result.estimated ? ". Drive times are estimated from distance" : " (OSRM routes)"}. ${dataNotice}`}</Footnote>
+        {!result.estimated && <OsrmCredit />}
       </div>
     </>
   );

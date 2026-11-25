@@ -7,7 +7,7 @@
 //   species(), spotSummaries(), spotDetail(id), prep(spotId), conditions(spotId)
 //   places(), samplePlace(query), placesMatching(query), cityName(near), nearestPlace(coord)
 //   backendRecommendation(start, rangeMinutes, group)   the backend pre-filter
-//   driveTime(start, spotId)               { minutes, estimated }: the sample table for a sample place, else an estimate
+//   driveTime(start, spotId, roads)        { minutes, estimated }: OSRM road minutes, else a distance estimate
 //   recommendation({ start, rangeMinutes, group?, filters?, showFarther?, now? })  => TodayResult
 //
 // Like the Swift code, fixtures are captured at one instant (fixture-meta.json
@@ -16,13 +16,12 @@
 // 8 min ago" and "Stocked this week" read as authored on any day.
 
 import conditionsJson from "./fixtures/fixture-conditions.json";
-import driveTimesJson from "./fixtures/fixture-drive-times.json";
 import metaJson from "./fixtures/fixture-meta.json";
 import placesJson from "./fixtures/fixture-places.json";
 import prepJson from "./fixtures/fixture-prep.json";
 import speciesJson from "./fixtures/fixture-species.json";
 import spotsJson from "./fixtures/fixture-spots.json";
-import { estimateMinutes, minutes as driveMinutesValue, type DriveTime } from "../logic/driveTimes";
+import { estimateMinutes, minutes as driveMinutesValue, type DriveTime, type RoadMinutes } from "../logic/driveTimes";
 import { miles } from "../logic/geo";
 import { addingDays, daysUntil, localDayFromDate, parseLocalDay, type LocalDay } from "../logic/localDay";
 import { chipGroups, emptyFilters, makeTodayLayout, spotMetaLine, type SpotFilters, type SpotMetaLine, type TodayLayout } from "../logic/todayLayout";
@@ -48,7 +47,6 @@ export interface Fixtures {
   preps: Map<number, Prep>;
   conditionsBySpot: Map<number, Conditions>;
   places: FixturePlace[];
-  driveTable: Record<string, Record<string, number>>;
   /** Days added to every fixture day, and ms added to every fixture instant. */
   dayShift: number;
   offsetMs: number;
@@ -93,7 +91,6 @@ export function loadFixtures(now: Date): Fixtures {
     preps: new Map(preps.map((p) => [p.spotId, p])),
     conditionsBySpot: new Map(conditions.map((c) => [c.spotId, c])),
     places: placesJson as FixturePlace[],
-    driveTable: driveTimesJson as Record<string, Record<string, number>>,
     dayShift,
     offsetMs,
   };
@@ -199,26 +196,19 @@ export function backendRecommendation(start: Coordinate, rangeMinutes: number, g
   return { start, rangeMinutes, generatedAt: now, species: fx.species, groups, candidates: matching.slice(0, 40) };
 }
 
-/** A drive time from `start` to a Spot; `estimated` when it comes from distance, not the sample table. */
+/** A drive time from `start` to a Spot; `estimated` when it comes from distance, not an OSRM route. */
 export interface SpotDrive {
   minutes: number;
   estimated: boolean;
 }
 
-/** The sample place whose coordinates `start` is exactly (a sample start picked from search or Suggestions). */
-function samplePlaceAt(start: Coordinate): FixturePlace | undefined {
-  return places().find((p) => p.lat === start.lat && p.lng === start.lng);
-}
-
 /**
- * Drive minutes from `start` to a Spot. A sample place uses the sample table; any other start
- * (a searched place, the browser's location) is estimated from straight-line distance
- * (`estimateMinutes` in logic/driveTimes.ts).
+ * Drive minutes from `start` to a Spot: OSRM's road minutes (`roads`, from data/osrm.ts) when it has a
+ * route, else an estimate from straight-line distance (`estimateMinutes` in logic/driveTimes.ts).
  */
-export function driveTime(start: Coordinate, spotId: number): SpotDrive {
-  const sample = samplePlaceAt(start);
-  const table = sample ? fixtures().driveTable[sample.id]?.[String(spotId)] : undefined;
-  if (table !== undefined) return { minutes: table, estimated: false };
+export function driveTime(start: Coordinate, spotId: number, roads: RoadMinutes | null): SpotDrive {
+  const road = roads?.[spotId];
+  if (road !== undefined && road !== null) return { minutes: road, estimated: false };
   return { minutes: estimateMinutes(miles(start, spotCoordinate(spotDetail(spotId)!.summary))), estimated: true };
 }
 
@@ -226,6 +216,8 @@ export interface TodayRow {
   spot: SpotSummary;
   distanceMi: number;
   driveMinutes: number | null;
+  /** The time is a distance estimate, not an OSRM route. */
+  estimated: boolean;
   meta: SpotMetaLine;
 }
 export interface TodaySectionRows {
@@ -236,7 +228,7 @@ export interface TodaySectionRows {
 export interface TodayResult {
   recommendation: Recommendation;
   driveTimes: Map<number, DriveTime>;
-  /** The times are estimates from distance, not the sample table. */
+  /** Some times are estimates from distance (OSRM had no route or failed). */
   estimated: boolean;
   layout: TodayLayout;
   /** Layout sections with each row's grey meta line already computed. */
@@ -254,6 +246,8 @@ export interface RecommendationInput {
   filters?: SpotFilters;
   showFarther?: boolean;
   now?: Date;
+  /** OSRM's road minutes from `start`; null when it failed, so every time is estimated. */
+  roads: RoadMinutes | null;
 }
 
 /** What Today shows in sample mode: candidates, drive times, bands, filters. */
@@ -262,15 +256,16 @@ export function recommendation(input: RecommendationInput): TodayResult {
   const filters = input.filters ?? emptyFilters();
   const group = input.group === undefined ? filters.speciesGroup : input.group;
   const rec = backendRecommendation(input.start, input.rangeMinutes, group, now);
-  const driveTimes = new Map<number, DriveTime>(rec.candidates.map((c) => [c.spot.id, driveMinutesValue(driveTime(input.start, c.spot.id).minutes)]));
+  const drives = new Map(rec.candidates.map((c) => [c.spot.id, driveTime(input.start, c.spot.id, input.roads)]));
+  const driveTimes = new Map<number, DriveTime>([...drives].map(([id, d]) => [id, driveMinutesValue(d.minutes)]));
   const layout = makeTodayLayout(rec, driveTimes, filters, input.showFarther ?? false, now);
   const byID = speciesByID(rec.species);
   const today = localDayFromDate(now);
   const sections = layout.sections.map((s) => ({
     title: s.title,
-    rows: s.spots.map((r) => ({ ...r, meta: spotMetaLine(r.spot, byID, today, filters.speciesGroup) })),
+    rows: s.spots.map((r) => ({ ...r, estimated: drives.get(r.spot.id)!.estimated, meta: spotMetaLine(r.spot, byID, today, filters.speciesGroup) })),
   }));
-  return { recommendation: rec, driveTimes, estimated: samplePlaceAt(input.start) === undefined, layout, sections, chipGroups: chipGroups(rec.groups), speciesByID: byID };
+  return { recommendation: rec, driveTimes, estimated: [...drives.values()].some((d) => d.estimated), layout, sections, chipGroups: chipGroups(rec.groups), speciesByID: byID };
 }
 
 export type { LocalDay };

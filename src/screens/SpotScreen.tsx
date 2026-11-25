@@ -19,6 +19,7 @@ import {
   type StockingLine,
 } from "../logic/spotFacts";
 import { favoriteTapped, useAppState } from "../state/appState";
+import { useRoutes } from "../state/useRoutes";
 import { Glyph, spotKindGlyph } from "../ui/Glyph";
 import { SpeciesImage } from "../ui/Media";
 import { BarButton, Screen } from "../ui/Screen";
@@ -54,7 +55,8 @@ function SpotContent({ detail }: { detail: SpotDetail }) {
   const saved = useAppState((s) => s.favoriteIds.includes(spot.id));
   const start = useAppState((s) => s.start);
   const today = localDayFromDate(new Date());
-  const drive = start ? driveTime(start.coordinate, spot.id) : null;
+  const { loading: routing, routes } = useRoutes(start?.coordinate ?? null);
+  const drive = start && !routing ? driveTime(start.coordinate, spot.id, routes) : null;
 
   /** Gear for the Spot's species, in Prep's order. */
   const entries = gearEntries(prep(spot.id)?.gear ?? [], detail.stocking, today);

@@ -6,7 +6,8 @@ import { recommendation } from "../data/repository";
 import { formatDrive, formatRange } from "../logic/spotFacts";
 import { activeToggleCount } from "../logic/todayLayout";
 import { DriveRange, setFilters, setRange, useAppState, type SpotFilters } from "../state/appState";
-import { Chip, ChipRow } from "../ui/Controls";
+import { useRoutes } from "../state/useRoutes";
+import { Chip, ChipRow, Spinner } from "../ui/Controls";
 import { AppearanceMenu, PickerMenu } from "../ui/Menu";
 import { BarButton, Screen, ToolbarGroup } from "../ui/Screen";
 import { StartPrompt, StartSheet } from "./start";
@@ -49,11 +50,13 @@ export default function TodayScreen() {
     }, 700);
   };
 
+  // One OSRM request per start; the list waits for it so it doesn't show estimates and then reorder.
+  const { loading, routes } = useRoutes(start?.coordinate ?? null);
   const result = useMemo(
-    () => (start ? recommendation({ start: start.coordinate, rangeMinutes, filters, showFarther, now }) : null),
+    () => (start && !loading ? recommendation({ start: start.coordinate, rangeMinutes, filters, showFarther, now, roads: routes }) : null),
     // `reloads` re-reads on pull to refresh.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [start, rangeMinutes, filters, showFarther, now, reloads],
+    [start, rangeMinutes, filters, showFarther, now, reloads, loading, routes],
   );
   const toggles = activeToggleCount(filters);
 
@@ -77,8 +80,16 @@ export default function TodayScreen() {
 
   return (
     <Screen title="Today" titleDisplay="large" leading={<AppearanceMenu />} trailing={toolbar || undefined}>
-      {!start || !result ? (
+      {!start ? (
         <StartPrompt />
+      ) : !result ? (
+        <>
+          <StartLine start={start} onChange={() => setStartSheetOpen(true)} />
+          <div className="today-loading t-subheadline c-ink-secondary" role="status">
+            <Spinner size={24} />
+            <span>Getting drive times…</span>
+          </div>
+        </>
       ) : (
         <PullToRefresh refreshing={refreshing} onRefresh={refresh}>
           <StartLine start={start} onChange={() => setStartSheetOpen(true)} />

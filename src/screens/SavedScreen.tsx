@@ -10,6 +10,7 @@ import { localDayFromDate } from "../logic/localDay";
 import { spotMetaLine } from "../logic/todayLayout";
 import { deleteAccount, refreshFavorites, signOut, useAppState } from "../state/appState";
 import { Alert } from "../ui/Alert";
+import { useRoutes } from "../state/useRoutes";
 import { Spinner } from "../ui/Controls";
 import { SpotRow } from "../ui/Media";
 import { ActionMenu, AppearanceMenu } from "../ui/Menu";
@@ -102,6 +103,8 @@ function SavedList() {
   const favoriteIds = useAppState((s) => s.favoriteIds);
   const start = useAppState((s) => s.start);
   const nav = useNav();
+  const { loading, routes } = useRoutes(start?.coordinate ?? null);
+  const drives = start && !loading ? (id: number) => driveTime(start.coordinate, id, routes) : null;
 
   const byID = new Map(spotSummaries().map((spot) => [spot.id, spot]));
   const favorites = favoriteIds.flatMap((id) => byID.get(id) ?? []);
@@ -126,8 +129,8 @@ function SavedList() {
             key={spot.id}
             spot={spot}
             meta={spotMetaLine(spot, speciesMap, today, null)}
-            driveMinutes={start ? driveTime(start.coordinate, spot.id).minutes : null}
-            estimated={start ? driveTime(start.coordinate, spot.id).estimated : false}
+            driveMinutes={drives ? drives(spot.id).minutes : null}
+            estimated={drives ? drives(spot.id).estimated : false}
             onClick={() => nav.push(`/spot/${spot.id}`)}
           />
         ))}
